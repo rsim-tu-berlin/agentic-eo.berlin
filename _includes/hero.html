@@ -1,0 +1,80 @@
+{% assign bg = page.hero_image | default: site.hero_image %}
+{% comment %}
+  Vertical position of hero title block (hero-banner__body), via CSS variable --hero-body-padding-top:
+  - page.hero_body_padding_top or site.hero_body_padding_top: any CSS length (e.g. 8vh, 12%, calc(1.5rem + 6vh))
+  - page.hero_body_offset_vh or site.hero_body_offset_vh: number N → calc(1.5rem + Nvh) — each vh is 1% of viewport height
+  - page.hero_body_offset_percent or site.hero_body_offset_percent: same as offset_vh (alias; uses vh units for predictable vertical % of viewport)
+{% endcomment %}
+{% assign hero_body_pad_var = "" %}
+{% if page.hero_body_padding_top != nil and page.hero_body_padding_top != "" %}
+  {% assign hero_body_pad_var = page.hero_body_padding_top %}
+{% elsif site.hero_body_padding_top != nil and site.hero_body_padding_top != "" %}
+  {% assign hero_body_pad_var = site.hero_body_padding_top %}
+{% elsif page.hero_body_offset_vh != nil %}
+  {% assign hero_body_pad_var = "calc(1.5rem + " | append: page.hero_body_offset_vh | append: "vh)" %}
+{% elsif page.hero_body_offset_percent != nil %}
+  {% assign hero_body_pad_var = "calc(1.5rem + " | append: page.hero_body_offset_percent | append: "vh)" %}
+{% elsif site.hero_body_offset_vh != nil %}
+  {% assign hero_body_pad_var = "calc(1.5rem + " | append: site.hero_body_offset_vh | append: "vh)" %}
+{% elsif site.hero_body_offset_percent != nil %}
+  {% assign hero_body_pad_var = "calc(1.5rem + " | append: site.hero_body_offset_percent | append: "vh)" %}
+{% endif %}
+{% assign hero_section_style = "" %}
+{% if bg %}
+  {% assign bg_rel = bg | relative_url %}
+  {% assign hero_section_style = hero_section_style | append: "background-image:url('" | append: bg_rel | append: "');" %}
+{% endif %}
+{% if hero_body_pad_var != "" %}
+  {% assign hero_section_style = hero_section_style | append: "--hero-body-padding-top:" | append: hero_body_pad_var | append: ";" %}
+{% endif %}
+<section
+  class="hero-banner d-flex flex-column text-white"
+  {% if hero_section_style != "" %}style="{{ hero_section_style }}"{% endif %}
+>
+  <div class="hero-banner__overlay"></div>
+  {% comment %}
+    Hero partner logos: page.hero_logos in front matter.
+    Optional per-logo sizing (CSS values as strings): logo_height, logo_width, logo_max_width, logo_min_width.
+    no_invert: true skips the hero white-wash filter (for dark-background logo assets).
+  {% endcomment %}
+  {% if page.hero_logos %}
+  <div class="hero-banner__logos w-100 position-relative">
+    <div class="container text-center position-relative">
+      <div class="hero-logos d-flex justify-content-center align-items-center gap-4">
+        {% for logo in page.hero_logos %}
+        {% assign logo_style = "" %}
+        {% if logo.logo_height != nil and logo.logo_height != "" %}
+          {% assign logo_style = logo_style | append: "height:" | append: logo.logo_height | append: ";" %}
+        {% endif %}
+        {% if logo.logo_width != nil and logo.logo_width != "" %}
+          {% assign logo_style = logo_style | append: "width:" | append: logo.logo_width | append: ";" %}
+        {% endif %}
+        {% if logo.logo_max_width != nil and logo.logo_max_width != "" %}
+          {% assign logo_style = logo_style | append: "max-width:" | append: logo.logo_max_width | append: ";" %}
+        {% endif %}
+        {% if logo.logo_min_width != nil and logo.logo_min_width != "" %}
+          {% assign logo_style = logo_style | append: "min-width:" | append: logo.logo_min_width | append: ";" %}
+        {% endif %}
+        <a {% if logo.url %}href="{{ logo.url }}"{% endif %} target="_blank" rel="noopener noreferrer">
+          <img
+            src="{{ logo.image | relative_url }}"
+            alt="{{ logo.name }}"
+            class="hero-logo{% if logo.no_invert %} hero-logo--no-filter{% endif %}"
+            {% if logo_style != "" %}style="{{ logo_style }}"{% endif %}
+          >
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <div class="hero-banner__body flex-grow-1 d-flex align-items-center justify-content-center position-relative">
+    <div class="container text-center position-relative">
+      <h2 class="display-3 fw-bold mb-3">{{ site.title }}</h2>
+      <p class="fs-5">19-20 October 2026 | Langenbeck Virchow Haus 26 | Berlin</p>
+      <!-- <a href="{{ '/schedule/' | relative_url }}" class="btn btn-light btn-lg mt-3 fw-semibold">
+        View the Schedule
+      </a> -->
+    </div>
+  </div>
+</section>

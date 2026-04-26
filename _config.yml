@@ -1,0 +1,20 @@
+title: "Agentic AI for Earth Observation"
+description: "The workshop for agentic AI and earth observation in Berlin"
+baseurl: ""
+url: ""
+hero_image: /assets/images/backgrounds/poster.jpg
+
+
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

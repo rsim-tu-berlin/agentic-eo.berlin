@@ -1,0 +1,29 @@
+- name: "European Space Agency"
+  tier: "platinum"
+  logo: "https://placehold.co/200x80?text=ESA"
+  url: "https://www.esa.int"
+
+- name: "Planet Labs"
+  tier: "platinum"
+  logo: "https://placehold.co/200x80?text=Planet+Labs"
+  url: "https://www.planet.com"
+
+- name: "TU Berlin"
+  tier: "gold"
+  logo: "https://placehold.co/200x80?text=TU+Berlin"
+  url: "https://www.tu.berlin"
+
+- name: "GeoForschungsZentrum Potsdam"
+  tier: "gold"
+  logo: "https://placehold.co/200x80?text=GFZ"
+  url: "https://www.gfz-potsdam.de"
+
+- name: "TerraSense AI"
+  tier: "silver"
+  logo: "https://placehold.co/200x80?text=TerraSense"
+  url: "https://example.com/terrasense"
+
+- name: "DeepGeo Labs"
+  tier: "silver"
+  logo: "https://placehold.co/200x80?text=DeepGeo"
+  url: "https://example.com/deepgeo"

@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
+  <div class="container">
+    {% assign nav_brand = site.title %}
+    {% if nav_brand == "" or nav_brand == nil %}
+      {% assign nav_brand = "Agentic EO Berlin" %}
+    {% endif %}
+    <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}" style="color: var(--color-primary);">
+      {{ nav_brand }}
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        {% assign nav_items = "Home|/,Speakers|/speakers/,Schedule|/schedule/,Sponsors|/sponsors/,Venue|/venue/" | split: "," %}
+        {% for item in nav_items %}
+          {% assign parts = item | split: "|" %}
+          {% assign nav_label = parts[0] %}
+          {% assign nav_url = parts[1] %}
+          <li class="nav-item">
+            <a
+              class="nav-link{% if page.url == nav_url %} active fw-semibold{% endif %}"
+              href="{{ nav_url | relative_url }}"
+            >
+              {{ nav_label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

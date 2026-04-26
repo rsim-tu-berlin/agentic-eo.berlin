@@ -1,0 +1,70 @@
+---
+layout: page
+title: Venue
+---
+
+<div class="row g-5">
+  <div class="col-lg-6">
+    <h2 class="section-heading">Location</h2>
+    <p class="lead">
+      The event takes place at the <strong>Langenbeck-Virchow-Haus</strong>, located
+      in the heart of the city with excellent public transport connections.
+    </p>
+    <ul class="list-unstyled mt-4">
+      <li class="mb-3">
+        <img src="/assets/images/logos/LVH_Logo_Horizontal_RGB_Bronzeum.svg" alt="Langenbeck-Virchow-Haus" class="img-fluid mb-3" style="width: 300px; height: auto;"><br>
+        <strong>Address:</strong><br>
+        Langenbeck-Virchow-Haus<br>
+        Luisenstraße 58/59<br>
+        10117 Berlin, Mitte
+      </li>
+      <li class="mb-3">
+        <strong>Public Transport:</strong><br>
+        U-Bahn: Alexanderplatz (U2, U5, U8)<br>
+        S-Bahn: Alexanderplatz (S5, S7, S75)
+      </li>
+      <li>
+        <strong>From Airports:</strong><br>
+        BER Airport → Berlin Hbf via FEX (30 min), then S-Bahn to Alexanderplatz (5 min)
+      </li>
+    </ul>
+  </div>
+  <div class="col-lg-6">
+    <h2 class="section-heading">Map</h2>
+    <div class="ratio ratio-4x3 bg-light border rounded d-flex align-items-center justify-content-center">
+      <div class="text-center text-body-secondary p-4">
+        <iframe width="550" height="400" src="https://www.openstreetmap.org/export/embed.html?bbox=13.376908600330355%2C52.52480878138444%2C13.382165729999542%2C52.52683719103691&amp;layer=mapnik&amp;marker=52.5258229979198%2C13.379537165164948" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=52.525823&amp;mlon=13.379537#map=19/52.525823/13.379537">View Larger Map</a></small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="mt-5">
+  <h2 class="section-heading">Nearby Hotels</h2>
+  <div class="row g-4 mt-2">
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title fw-bold" style="color: var(--color-primary);">Park Inn by Radisson</h5>
+          <p class="card-text">Directly at Alexanderplatz, walking distance to the venue.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title fw-bold" style="color: var(--color-primary);">Motel One Alexanderplatz</h5>
+          <p class="card-text">Budget-friendly design hotel, 5 minutes on foot.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title fw-bold" style="color: var(--color-primary);">Hotel Indigo Berlin</h5>
+          <p class="card-text">Boutique hotel in the Alexanderplatz area with modern amenities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,12 @@
+# Jekyll files and folders
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Mac hidden files
+.DS_Store
+Thumbs.db
+
+# Git config file
+.gitconfig

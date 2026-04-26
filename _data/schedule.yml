@@ -1,0 +1,93 @@
+- day: "Day 1 — October 15, 2026"
+  sessions:
+    - time: "09:00"
+      title: "Registration & Welcome Coffee"
+      speaker: ""
+      type: "break"
+
+    - time: "09:30"
+      title: "Opening Keynote: The Rise of Agentic Earth Observation"
+      speaker: "Dr. Elena Fischer"
+      type: "keynote"
+
+    - time: "10:30"
+      title: "Multi-Agent Pipelines for Satellite Data Processing"
+      speaker: "Prof. Marcus Chen"
+      type: "talk"
+
+    - time: "11:15"
+      title: "Coffee Break"
+      speaker: ""
+      type: "break"
+
+    - time: "11:45"
+      title: "From Pixels to Action: Agentic Workflows at TerraSense"
+      speaker: "Sarah Okonkwo"
+      type: "talk"
+
+    - time: "12:30"
+      title: "Lunch"
+      speaker: ""
+      type: "break"
+
+    - time: "14:00"
+      title: "Foundation Models for Daily Satellite Imagery"
+      speaker: "Dr. James Park"
+      type: "talk"
+
+    - time: "15:00"
+      title: "Panel: Scaling AI Agents for Global Monitoring"
+      speaker: "All Day-1 Speakers"
+      type: "panel"
+
+    - time: "16:00"
+      title: "Networking Reception"
+      speaker: ""
+      type: "break"
+
+- day: "Day 2 — October 16, 2026"
+  sessions:
+    - time: "09:00"
+      title: "Morning Coffee"
+      speaker: ""
+      type: "break"
+
+    - time: "09:30"
+      title: "AI-Driven Geodesy and Seismic Monitoring"
+      speaker: "Anika Meier"
+      type: "talk"
+
+    - time: "10:30"
+      title: "RL Agents for Adaptive Mission Planning"
+      speaker: "Dr. Raj Patel"
+      type: "talk"
+
+    - time: "11:15"
+      title: "Coffee Break"
+      speaker: ""
+      type: "break"
+
+    - time: "11:45"
+      title: "Workshop: Building Your First EO Agent"
+      speaker: "Prof. Marcus Chen & Sarah Okonkwo"
+      type: "workshop"
+
+    - time: "13:00"
+      title: "Lunch"
+      speaker: ""
+      type: "break"
+
+    - time: "14:30"
+      title: "Lightning Talks: Community Projects"
+      speaker: "Various"
+      type: "talk"
+
+    - time: "15:30"
+      title: "Closing Keynote & Awards"
+      speaker: "Dr. Elena Fischer"
+      type: "keynote"
+
+    - time: "16:30"
+      title: "Farewell & Closing"
+      speaker: ""
+      type: "break"
