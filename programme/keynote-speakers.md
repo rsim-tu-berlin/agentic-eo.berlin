@@ -1,8 +1,6 @@
 ---
 layout: page
-title: Speakers
-hero_image: /assets/images/backgrounds/poster.jpg
-
+title: Keynote Speakers
 ---
 
 <div class="row g-4">

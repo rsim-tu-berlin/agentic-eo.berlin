@@ -6,13 +6,13 @@
       type: "break"
 
     - time: "09:30"
-      title: "Opening Keynote: The Rise of Agentic Earth Observation"
-      speaker: "Dr. Elena Fischer"
+      title: "Opening Keynote: ..."
+      speaker: "..."
       type: "keynote"
 
     - time: "10:30"
-      title: "Multi-Agent Pipelines for Satellite Data Processing"
-      speaker: "Prof. Marcus Chen"
+      title: "..."
+      speaker: "..."
       type: "talk"
 
     - time: "11:15"
@@ -21,8 +21,8 @@
       type: "break"
 
     - time: "11:45"
-      title: "From Pixels to Action: Agentic Workflows at TerraSense"
-      speaker: "Sarah Okonkwo"
+      title: "..."
+      speaker: "..."
       type: "talk"
 
     - time: "12:30"
@@ -31,12 +31,12 @@
       type: "break"
 
     - time: "14:00"
-      title: "Foundation Models for Daily Satellite Imagery"
-      speaker: "Dr. James Park"
+      title: "..."
+      speaker: "..."
       type: "talk"
 
     - time: "15:00"
-      title: "Panel: Scaling AI Agents for Global Monitoring"
+      title: "Panel: ..."
       speaker: "All Day-1 Speakers"
       type: "panel"
 
@@ -53,13 +53,13 @@
       type: "break"
 
     - time: "09:30"
-      title: "AI-Driven Geodesy and Seismic Monitoring"
-      speaker: "Anika Meier"
+      title: "..."
+      speaker: "..."
       type: "talk"
 
     - time: "10:30"
-      title: "RL Agents for Adaptive Mission Planning"
-      speaker: "Dr. Raj Patel"
+      title: "..."
+      speaker: "..."
       type: "talk"
 
     - time: "11:15"
@@ -68,8 +68,8 @@
       type: "break"
 
     - time: "11:45"
-      title: "Workshop: Building Your First EO Agent"
-      speaker: "Prof. Marcus Chen & Sarah Okonkwo"
+      title: "Workshop: ..."
+      speaker: "..."
       type: "workshop"
 
     - time: "13:00"
@@ -78,13 +78,13 @@
       type: "break"
 
     - time: "14:30"
-      title: "Lightning Talks: Community Projects"
+      title: "Lightning Talks: ..."
       speaker: "Various"
       type: "talk"
 
     - time: "15:30"
-      title: "Closing Keynote & Awards"
-      speaker: "Dr. Elena Fischer"
+      title: "Closing Keynote & Awards: ..."
+      speaker: "..."
       type: "keynote"
 
     - time: "16:30"

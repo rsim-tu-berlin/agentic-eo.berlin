@@ -14,9 +14,8 @@ title: Venue
       <li class="mb-3">
         <img src="/assets/images/logos/LVH_Logo_Horizontal_RGB_Bronzeum.svg" alt="Langenbeck-Virchow-Haus" class="img-fluid mb-3" style="width: 300px; height: auto;"><br>
         <strong>Address:</strong><br>
-        Langenbeck-Virchow-Haus<br>
-        Luisenstraße 58/59<br>
-        10117 Berlin, Mitte
+        {{ site.venue_name }}<br>
+        {{ site.venue_address }}
       </li>
       <li class="mb-3">
         <strong>Public Transport:</strong><br>
@@ -28,6 +27,9 @@ title: Venue
         BER Airport → Berlin Hbf via FEX (30 min), then S-Bahn to Alexanderplatz (5 min)
       </li>
     </ul>
+    <p class="mt-4">
+      <a href="{{ '/attend/accommodation/' | relative_url }}">Hotels and accommodation</a> near the venue.
+    </p>
   </div>
   <div class="col-lg-6">
     <h2 class="section-heading">Map</h2>
@@ -38,33 +40,3 @@ title: Venue
     </div>
   </div>
 </div>
-
-<!-- <div class="mt-5">
-  <h2 class="section-heading">Nearby Hotels</h2>
-  <div class="row g-4 mt-2">
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title fw-bold" style="color: var(--color-primary);">Park Inn by Radisson</h5>
-          <p class="card-text">Directly at Alexanderplatz, walking distance to the venue.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title fw-bold" style="color: var(--color-primary);">Motel One Alexanderplatz</h5>
-          <p class="card-text">Budget-friendly design hotel, 5 minutes on foot.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title fw-bold" style="color: var(--color-primary);">Hotel Indigo Berlin</h5>
-          <p class="card-text">Boutique hotel in the Alexanderplatz area with modern amenities.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
