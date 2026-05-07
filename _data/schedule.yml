@@ -1,4 +1,4 @@
-- day: "Day 1 — October 15, 2026"
+- day: "Day 1 — October 19, 2026"
   sessions:
     - time: "09:00"
       title: "Registration & Welcome Coffee"
@@ -45,7 +45,7 @@
       speaker: ""
       type: "break"
 
-- day: "Day 2 — October 16, 2026"
+- day: "Day 2 — October 20, 2026"
   sessions:
     - time: "09:00"
       title: "Morning Coffee"
@@ -87,7 +87,55 @@
       speaker: "..."
       type: "keynote"
 
+
+- day: "Day 3 — October 21, 2026"
+  sessions:
+    - time: "09:00"
+      title: "Morning Coffee"
+      speaker: ""
+      type: "break"
+
+    - time: "09:30"
+      title: "..."
+      speaker: "..."
+      type: "talk"
+
+    - time: "10:30"
+      title: "..."
+      speaker: "..."
+      type: "talk"
+
+    - time: "11:15"
+      title: "Coffee Break"
+      speaker: ""
+      type: "break"
+
+    - time: "11:45"
+      title: "..."
+      speaker: "..."
+      type: "talk"
+
+    - time: "12:30"
+      title: "Lunch"
+      speaker: ""
+      type: "break"
+
+    - time: "14:00"
+      title: "..."
+      speaker: "..."
+      type: "talk"
+
+    - time: "15:00"
+      title: "Panel: ..."
+      speaker: "All Day-3 Speakers"
+      type: "panel"
+
+    - time: "16:00"
+      title: "Networking Reception"
+      speaker: ""
+      type: "break" 
+    
     - time: "16:30"
       title: "Farewell & Closing"
       speaker: ""
-      type: "break"
+      type: "break"    

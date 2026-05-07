@@ -9,7 +9,8 @@ title: Dates
 
 <ul class="list-unstyled fs-5 mt-4">
   <li class="mb-3"><strong>Day 1:</strong> Monday, 19 October 2026</li>
-  <li><strong>Day 2:</strong> Tuesday, 20 October 2026</li>
+  <li class="mb-3"><strong>Day 2:</strong> Tuesday, 20 October 2026</li>
+  <li class="mb-3"><strong>Day 3:</strong> Wednesday, 21 October 2026</li>
 </ul>
 
 <p class="text-body-secondary mt-4">

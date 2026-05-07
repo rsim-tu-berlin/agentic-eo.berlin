@@ -2,7 +2,11 @@ title: "Agentic AI for Earth Observation"
 description: "The workshop for agentic AI and earth observation in Berlin"
 baseurl: ""
 url: ""
-hero_image: /assets/images/backgrounds/poster.jpg
+hero_image: /assets/images/backgrounds/Agentic_AI_EO_footer_1024x160.png
+venue_name: "Langenbeck-Virchow-Haus"
+venue_address: |
+  Luisenstraße 58/59<br>
+  10117 Berlin, Mitte
 
 
 permalink: pretty
