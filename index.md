@@ -24,8 +24,8 @@ hero_body_offset_percent: 22
 
 {% include hero.html %}
 
-<div class="container py-5">
-  <div class="row mt-4 mb-4">
+<div class="container my-5">
+  <div class="row">
     <div class="col-lg-12">
       <p class="text-justify">
         The Agentic AI for Earth Observation Workshop, organized by the Berlin Institute for the Foundations of Learning and Data and the European Space Agency, will convene researchers, practitioners, and decision-makers from artificial intelligence, geospatial analytics, climate and weather science, remote sensing, and space mission operations. It provides a platform for exchange, discussion, and collaboration on the emerging role of agentic AI in Earth observation (EO).
@@ -33,7 +33,7 @@ hero_body_offset_percent: 22
       <p class="text-justify">
         Agentic AI marks a significant evolution beyond recent advances in foundation models, enabling autonomous, goal-driven systems that can reason, plan, and collaborate with humans and other agents. In the EO domain, these capabilities enable intelligent orchestration across data processing chains, missions, and multi-agent ecosystems. Their integration into EO workflows promises to significantly enhance both analytical capabilities and operational efficiency. Within the ground segment, agentic systems can autonomously optimize data processing chains, trigger context‑aware workflows, and support real‑time decision-making, minimizing manual intervention and reducing response latencies. For the onboard segment, future agentic capabilities pave the way for adaptive mission planning, intelligent tasking, opportunistic data acquisition, and inter-satellite cooperation. These advancements constitute essential steps toward Cognitive Cloud Computing in Space (3CS), where satellites and ground systems collaborate seamlessly through distributed AI agents. Beyond automation, agentic AI also amplifies geospatial semantic reasoning by combining LLM-driven planning with geospatial embeddings from foundation models, enabling sophisticated information extraction, predictive analytics, and prescriptive intelligence across EO systems.
       </p>
-      <p class="text-justify">
+      <p class="text-justify mb-0">
         This workshop fosters exchange, discussions across academia and industry on cutting-edge research, practical challenges, and transformative innovations, where autonomous agents can transform how we acquire, process, and act on geospatial and satellite data.
       </p>
     </div>
