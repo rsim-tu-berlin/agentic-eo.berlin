@@ -18,8 +18,6 @@ title: Schedule
       <li>Hands-on sessions dedicated to Agentic AI for EO: Practical training opportunities enabling participants to experiment with planning agents, LLM-based orchestrators, EO-aware multi-agent frameworks, geospatial reasoning tools, and prototype implementations of agentic workflows.</li>
       <li>Demonstration sessions for organisations to showcase their latest agentic AI innovations: Open to agencies, industry, research organisations, and startups, these demos will allow entities to present their most recent prototypes, tools, and operational systems in a dynamic and interactive format.</li>
   </ul>
-
-  Demonstration sessions for organisations to showcase their latest agentic AI innovations: Open to agencies, industry, research organisations, and startups, these demos will allow entities to present their most recent prototypes, tools, and operational systems in a dynamic and interactive format.
 </p>
 
 

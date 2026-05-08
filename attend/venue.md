@@ -3,6 +3,8 @@ layout: page
 title: Venue
 ---
 
+<h2 class="section-heading">{{ page.title }}</h2>
+
 <div class="row g-5">
   <div class="col-lg-6">
     <h2 class="section-heading">Location</h2>
@@ -27,9 +29,6 @@ title: Venue
         BER Airport → Berlin Hbf via FEX (30 min), then S-Bahn to Alexanderplatz (5 min)
       </li>
     </ul>
-    <p class="mt-4">
-      <a href="{{ '/attend/accommodation/' | relative_url }}">Hotels and accommodation</a> near the venue.
-    </p>
   </div>
   <div class="col-lg-6">
     <h2 class="section-heading">Map</h2>

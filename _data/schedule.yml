@@ -1,34 +1,9 @@
 - day: "Day 1 — October 19, 2026"
   sessions:
-    - time: "09:00"
-      title: "Registration & Welcome Coffee"
-      speaker: ""
-      type: "break"
-
-    - time: "09:30"
-      title: "Opening Keynote: ..."
-      speaker: "..."
-      type: "keynote"
-
-    - time: "10:30"
+    - time: "13:00"
       title: "..."
       speaker: "..."
       type: "talk"
-
-    - time: "11:15"
-      title: "Coffee Break"
-      speaker: ""
-      type: "break"
-
-    - time: "11:45"
-      title: "..."
-      speaker: "..."
-      type: "talk"
-
-    - time: "12:30"
-      title: "Lunch"
-      speaker: ""
-      type: "break"
 
     - time: "14:00"
       title: "..."
@@ -36,11 +11,18 @@
       type: "talk"
 
     - time: "15:00"
+      title: "Coffee Break"
+      speaker: ""
+      type: "break"
+
+
+
+    - time: "15:30"
       title: "Panel: ..."
       speaker: "All Day-1 Speakers"
       type: "panel"
 
-    - time: "16:00"
+    - time: "18:00"
       title: "Networking Reception"
       speaker: ""
       type: "break"
@@ -78,15 +60,14 @@
       type: "break"
 
     - time: "14:30"
-      title: "Lightning Talks: ..."
-      speaker: "Various"
-      type: "talk"
-
-    - time: "15:30"
-      title: "Closing Keynote & Awards: ..."
+      title: "Keynote: ..."
       speaker: "..."
       type: "keynote"
 
+    - time: "15:30"
+      title: "Lightning Talks: ..."
+      speaker: "Various"
+      type: "talk"
 
 - day: "Day 3 — October 21, 2026"
   sessions:
@@ -129,11 +110,6 @@
       title: "Panel: ..."
       speaker: "All Day-3 Speakers"
       type: "panel"
-
-    - time: "16:00"
-      title: "Networking Reception"
-      speaker: ""
-      type: "break" 
     
     - time: "16:30"
       title: "Farewell & Closing"
