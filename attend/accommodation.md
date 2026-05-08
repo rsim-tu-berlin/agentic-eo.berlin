@@ -3,7 +3,7 @@ layout: page
 title: Accommodation / Hotels
 ---
 
-<p class="lead">
+<p>
   Please find below all the information regarding hotels located near the venue.
 </p>
 

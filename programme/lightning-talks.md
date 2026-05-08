@@ -3,10 +3,8 @@ layout: page
 title: Lightning Talks
 ---
 
-<p class="lead">
-  Short, focused presentations give participants a fast overview of new ideas, tools, and work in progress.
-</p>
+<h2 class="section-heading">{{ page.title }}</h2>
 
-<p class="text-body-secondary">
+<p>
   To be defined.
 </p>

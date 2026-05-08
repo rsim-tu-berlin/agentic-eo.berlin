@@ -6,7 +6,7 @@ title: Venue
 <div class="row g-5">
   <div class="col-lg-6">
     <h2 class="section-heading">Location</h2>
-    <p class="lead">
+    <p>  
       The event takes place at the <strong>Langenbeck-Virchow-Haus</strong>, located
       in the heart of the city with excellent public transport connections.
     </p>

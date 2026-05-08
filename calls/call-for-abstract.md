@@ -3,13 +3,15 @@ layout: page
 title: Call for Abstract
 ---
 
-<p class="lead">
+<h2 class="section-heading">{{ page.title }}</h2>
+
+<p>
 The workshop will include both oral presentations and poster sessions that will be organised based on abstract submissions. 
 <br />
 All submissions will be reviewed by the Organizing Committee for technical merit and alignment with the workshop's objectives. If you would like to present your work, please submit an abstract of 300 to 500 words (approximately one A4 page, single-spaced).
 </p>
 
-<p class="text-body-secondary">
+<p>
 Your submission should include:
 
 <ul>

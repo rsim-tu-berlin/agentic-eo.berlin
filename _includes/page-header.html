@@ -1,12 +1,11 @@
-{% assign bg = page.hero_image | default: site.hero_image %}
-<section
-  class="hero-banner hero-banner--compact d-flex align-items-center justify-content-center text-center text-white"
-  {% if bg %}style="background-image: url('{{ bg | relative_url }}');"{% endif %}
->
-  <div class="hero-banner__overlay"></div>
-  <div class="container position-relative">
-    {% if page.title %}
-      <h1 class="display-6 fw-bold mb-0">{{ page.title }}</h1>
-    {% endif %}
+<section class="hero-banner hero-banner--compact">
+  <div class="hero-banner__image-strip w-100">
+    <div class="container">
+      <img
+        src="{{ '/assets/images/backgrounds/Agentic_AI_EO_header_2560x160.png' | relative_url }}"
+        alt="Agentic AI for Earth Observation — 19–21 October 2026 | Berlin"
+        class="img-fluid w-100 d-block"
+      >
+    </div>
   </div>
 </section>

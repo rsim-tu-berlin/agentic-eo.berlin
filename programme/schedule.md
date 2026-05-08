@@ -3,11 +3,13 @@ layout: page
 title: Schedule
 ---
 
-<p class="lead">
+<h2 class="section-heading">{{ page.title }}</h2>
+
+<p>
   The schedule of the workshop is to be defined.
 </p>
 
-<p class="text-body-secondary">
+<p>
   The workshop will include:
   <ul>
       <li>Plenary sessions with expert keynote speakers from diverse domains—both within and beyond EO</li>

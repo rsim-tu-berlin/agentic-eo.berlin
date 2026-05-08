@@ -3,7 +3,7 @@ layout: page
 title: Objectives
 ---
 
-<p class="lead">
+<p>
   The workshop connects researchers, engineers, and practitioners who work at the intersection of
   <strong>agentic artificial intelligence</strong> and <strong>earth observation</strong>.
 </p>

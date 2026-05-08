@@ -3,13 +3,13 @@ layout: page
 title: Call for Hands-on Sessions
 ---
 
-<p class="lead">
-The hands-on sessions will be organized based on submitted proposals, which will be reviewed by the Organization Committee. If you would like to organize your own hands-on session, please submit a proposal of no more than two pages. 
+<h2 class="section-heading">{{ page.title }}</h2>
 
-
+<p>
+  The hands-on sessions will be organized based on submitted proposals, which will be reviewed by the Organization Committee. If you would like to organize your own hands-on session, please submit a proposal of no more than two pages.
 </p>
 
-<p class="text-body-secondary">
+<p>
   Your proposal should include:
   <ul>
       <li>Title of the session</li>
