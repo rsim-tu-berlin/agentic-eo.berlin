@@ -37,3 +37,23 @@ title: Venue
     </div>
   </div>
 </div>
+
+<h3 class="section-heading mt-5 mb-3">Impressions</h3>
+
+<div class="row g-4">
+  {% for image in site.data.venue_images %}
+  <div class="col-md-6 col-lg-4">
+    <figure class="figure w-100 m-0">
+      <img
+        src="{{ image.src }}"
+        class="figure-img img-fluid rounded shadow-sm w-100"
+        alt="{{ image.name }}"
+        loading="lazy">
+      <figcaption class="figure-caption d-flex justify-content-between align-items-baseline gap-2">
+        <strong>{{ image.name }}</strong>
+        <span class="text-body-secondary">&copy; {{ image.copyright }}</span>
+      </figcaption>
+    </figure>
+  </div>
+  {% endfor %}
+</div>
