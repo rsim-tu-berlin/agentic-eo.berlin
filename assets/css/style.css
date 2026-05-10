@@ -54,6 +54,27 @@ body {
   background-color: var(--color-bg-light);
 }
 
+/* Open dropdowns on hover on desktop (>= lg). Mobile keeps the default
+   click/tap behavior since :hover is unreliable on touch devices. */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover > .dropdown-menu,
+  .navbar .dropdown:focus-within > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+
+  /* Invisible bridge so the menu doesn't close when the cursor crosses
+     the gap between the toggle and the menu. */
+  .navbar .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    right: 0;
+    height: 0.5rem;
+  }
+}
+
 /* Hero banner — shared base */
 .hero-banner {
   position: relative;
