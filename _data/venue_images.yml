@@ -2,20 +2,20 @@
   src: "/assets/images/venue/lvh-langenbeck-virchow-haus-historischer-hoersaal-berlin-veranstaltungsraum-filmaufnahmen-scaled.jpg"
   copyright: "Langenbeck-Virchow-Haus"
 
-- name: "Robert Koch Conference Room" 
-  src: "/assets/images/venue/langenbeck-virchow-haus-lvh-robert-koch-konferenzraum-schulung-berlin-scaled.jpg"
+- name: "Historic Lecture Hall" 
+  src: "/assets/images/venue/lvh-langenbeck-virchow-haus-historischer-hoersaal-berlin-veranstaltungsraum-sitzreihen-scaled.jpg"
   copyright: "Langenbeck-Virchow-Haus"
 
-- name: "Expertisium Room" 
-  src: "/assets/images/venue/lvh-langenbeck-virchow-haus-berlin-expertisium-vortragsbestuhlung-scaled.jpg"
-  copyright: "Langenbeck-Virchow-Haus"
-
-- name: "Bernhard von Langenbeck Room" 
-  src: "/assets/images/venue/bernhard-von-langenbeck-saal-lvh-langenbeck-virchow-haus-u-form-portrait-1-scaled.jpg"
+- name: "Historic Foyer"
+  src: "/assets/images/venue/lvh-langenbeck-virchow-haus-berlin-historisches-foyer-erdgeschoss-treppe-scaled.jpg"
   copyright: "Langenbeck-Virchow-Haus"
 
 - name: "Historic Foyer"
   src: "/assets/images/venue/lvh-langenbeck-virchow-haus-berlin-historisches-foyer-erdgeschoss-empfang-scaled.jpg"
+  copyright: "Langenbeck-Virchow-Haus"
+
+- name: "Historic Foyer"
+  src: "/assets/images/venue/lvh-langenbeck-virchow-haus-berlin-historisches-foyer-erdgeschoss-1-scaled.jpg"
   copyright: "Langenbeck-Virchow-Haus"
 
 - name: "Wandelhalle"
