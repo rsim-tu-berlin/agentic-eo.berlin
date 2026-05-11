@@ -7,8 +7,22 @@
         class="img-fluid w-100 d-block"
       >
     </div>
+
     <hr class="footer-divider my-4">
-    <p class="text-center small pb-4 footer-copy">
+
+    <ul class="list-inline text-center small pb-2 footer-legal mb-0">
+      <li class="list-inline-item">
+        <a href="{{ '/legal/impressum/' | relative_url }}">Impressum</a>
+      </li>
+      <li class="list-inline-item" aria-hidden="true">&middot;</li>
+      <li class="list-inline-item">
+        <a href="{{ '/legal/privacy/' | relative_url }}">Data Privacy</a>
+      </li>
+    </ul>
+
+    <hr class="footer-divider my-4">
+
+    <p class="text-center small pb-2 footer-copy mb-0">
       &copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.
     </p>
   </div>
