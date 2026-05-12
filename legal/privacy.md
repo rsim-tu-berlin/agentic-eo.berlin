@@ -12,34 +12,7 @@ title: Data Privacy
   Data Protection Act (BDSG) are protected.
 </p>
 
-<h3 class="section-heading mb-2">1. Controller</h3>
-
-<p>
-  The controller responsible for the processing of personal data on this website within the
-  meaning of Art. 4 No. 7 GDPR is:
-</p>
-
-<address class="mt-0">
-  __ADD_RESPONSIBLE_ENTITY_HERE__<br>
-  __ADD_STREET_AND_NUMBER_HERE__<br>
-  __ADD_POSTAL_CODE_AND_CITY_HERE__<br>
-  Germany<br>
-  E-mail: <a href="mailto:__ADD_EMAIL_HERE__">__ADD_EMAIL_HERE__</a>
-</address>
-
-<h3 class="section-heading mb-2">2. Data Protection Officer</h3>
-
-<p>
-  You can reach our Data Protection Officer at:
-</p>
-
-<address class="mt-0">
-  __ADD_DPO_NAME_HERE__<br>
-  __ADD_DPO_ADDRESS_HERE__<br>
-  E-mail: <a href="mailto:__ADD_DPO_EMAIL_HERE__">__ADD_DPO_EMAIL_HERE__</a>
-</address>
-
-<h3 class="section-heading mb-2">3. Hosting and Server Log Files</h3>
+<h3 class="section-heading mb-2">Hosting and Server Log Files</h3>
 
 <p>
   This website is hosted on GitHub Pages, a service provided by GitHub, Inc., 88 Colin P.
@@ -71,7 +44,7 @@ title: Data Privacy
   <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub General Privacy Statement</a>.
 </p>
 
-<h3 class="section-heading mb-2">4. Cookies</h3>
+<h3 class="section-heading mb-2">Cookies</h3>
 
 <p>
   This website does not set any tracking cookies and does not use third-party advertising
@@ -79,14 +52,14 @@ title: Data Privacy
   cookie preferences), they will be processed on the basis of § 25 (2) No. 2 TTDSG.
 </p>
 
-<h3 class="section-heading mb-2">5. Web Analytics and Tracking</h3>
+<h3 class="section-heading mb-2">Web Analytics and Tracking</h3>
 
 <p>
   This website does not use web analytics services (such as Google Analytics or Matomo) and
   does not perform behaviour-based tracking of visitors.
 </p>
 
-<h3 class="section-heading mb-2">6. Contact by E-mail</h3>
+<h3 class="section-heading mb-2">Contact by E-mail</h3>
 
 <p>
   If you contact us via e-mail (for example, the addresses provided on the
@@ -98,7 +71,7 @@ title: Data Privacy
   apply.
 </p>
 
-<h3 class="section-heading mb-2">7. Workshop Registration</h3>
+<h3 class="section-heading mb-2">Workshop Registration</h3>
 
 <p>
   When you register for the workshop, the data you provide (such as name, affiliation, and
@@ -109,7 +82,7 @@ title: Data Privacy
   registration.
 </p>
 
-<h3 class="section-heading mb-2">8. External Links and Embedded Content</h3>
+<h3 class="section-heading mb-2">External Links and Embedded Content</h3>
 
 <p>
   This website may contain links to external websites (e.g. ESA, BIFOLD, partner
@@ -118,7 +91,7 @@ title: Data Privacy
   data processing carried out by these third parties.
 </p>
 
-<h3 class="section-heading mb-2">9. Your Rights</h3>
+<h3 class="section-heading mb-2">Your Rights</h3>
 
 <p>Under the GDPR, you have the following rights with regard to your personal data:</p>
 
@@ -139,7 +112,7 @@ title: Data Privacy
   work, or place of the alleged infringement.
 </p>
 
-<h3 class="section-heading mb-2">10. Changes to This Privacy Notice</h3>
+<h3 class="section-heading mb-2">Changes to This Privacy Notice</h3>
 
 <p>
   We may update this privacy notice from time to time to reflect changes in our practices or
@@ -148,5 +121,5 @@ title: Data Privacy
 </p>
 
 <p class="text-body-secondary small">
-  Last updated: __ADD_LAST_UPDATED_DATE_HERE__
+  Last updated: 12 May 2026
 </p>
