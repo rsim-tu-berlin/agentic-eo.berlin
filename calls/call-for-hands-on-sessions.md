@@ -12,13 +12,12 @@ title: Call for Hands-on Sessions
 <p>
   Your proposal should include:
   <ul>
-      <li>Title of the session</li>
-      <li>Main point of contact details (including email address)</li>
-      <li>Abstract: A brief summary of the session (max 250 words)</li>
-      <li>Technical Description: An overview of the underlying technology and the specific functionality being showcased</li>
-      <li>Interactive Elements: A description of how the audience will interact with the demo</li>
-      <li>Names of all presenters, along with a short biography for each</li>
-      <li>Technical Requirements</li>
+    <li>Title of the hands-on session</li>
+    <li>Main point of contact details (including email address)</li>
+    <li>Session description</li>
+    <li>Planned duration</li>
+    <li>Names of all instructors, along with a short biography for each, highlighting relevant research and educational expertise/experience</li>
+    <li>Any specific technical requirements</li>
   </ul>
 
   Please directly send your proposal to <i><a href="mailto:{{ site.hands_on_email }}">{{ site.hands_on_email }}</a></i>

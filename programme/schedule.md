@@ -21,8 +21,9 @@ title: Schedule
 </p>
 
 
+
 {% for day in site.data.schedule %}
-<h2 class="section-heading mt-4">{{ day.day }}</h2>
+<!-- <h2 class="section-heading mt-4">{{ day.day }}</h2>
 
 <div class="table-responsive mt-3 mb-5">
   <table class="table schedule-table align-middle">
@@ -54,5 +55,5 @@ title: Schedule
       {% endfor %}
     </tbody>
   </table>
-</div>
+</div> -->
 {% endfor %}

@@ -15,12 +15,14 @@ title: Call for Demos
   Your proposal should include:
   <ul>
       <li>Title of the demo</li>
+      <li>Names of all presenters, along with a short biography for each</li>
       <li>Main point of contact details (including email address)</li>
       <li>Abstract: A brief summary of what will be demonstrated (max 250 words)</li>
-      <li>Technical Description: An overview of the underlying technology and the specific functionality being showcased</li>
-      <li>Interactive Elements: A description of how the audience will interact with the demo</li>
-      <li>Names of all presenters, along with a short biography for each</li>
-      <li>Technical Requirements</li>
+      <ul>
+        <li>Technical Description: An overview of the underlying technology and the specific functionality being showcased</li>
+        <li>Interactive Elements: A description of how the audience will interact with the demo</li>
+        <li>Technical Requirements</li>
+      </ul>
   </ul>
 
   Please directly send your proposal to <i><a href="mailto:{{ site.demo_email }}">{{ site.demo_email }}</a></i>

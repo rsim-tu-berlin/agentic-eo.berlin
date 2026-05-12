@@ -20,7 +20,6 @@ Your submission should include:
     <li>Preferred Presentation Type: Please specify whether you are applying for an Oral or Poster session</li>
     <li>Main point of contact details (including email address)</li>
     <li>Abstract Text: A concise summary of the research, methodology, and key results (300–500 words)</li>
-    <li>Keywords: 3–5 keywords that describe the scope of the work</li>
 </ul>
 
 Please directly send your abstract to <i><a href="mailto:{{ site.paper_email }}">{{ site.paper_email }}</a></i>
