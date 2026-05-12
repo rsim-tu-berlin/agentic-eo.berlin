@@ -1,3 +1,10 @@
+- name: "Christopher Forrest Brown"
+  role: "Staff Research Scientist"
+  affiliation: "Google DeepMind"
+  link: "https://www.deepmind.com"
+  topic: "To be announced"
+  image: "https://placehold.co/300x300?text=CFB"
+
 - name: "Steve Chien"
   role: "Head, Artificial Intelligence Group"
   affiliation: "Jet Propulsion Laboratory (JPL), NASA"
@@ -11,6 +18,13 @@
   link: "https://salman-h-khan.github.io"
   topic: "Agentic AI for Earth Observation and Climate Resilience"
   image: "/assets/images/keynotes/Salman_Khan_1.png"
+
+- name: "James Zou"
+  role: "Professor"
+  affiliation: "Stanford University"
+  link: "https://www.james-zou.com"
+  topic: "Harnessing the Collective Intelligence of AI Agents for Discoveries"
+  image: "/assets/images/keynotes/James_Zou_1.jpg"
 
 
 # - name: "Sarah Okonkwo"
