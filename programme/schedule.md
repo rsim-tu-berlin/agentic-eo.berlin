@@ -6,7 +6,7 @@ title: Schedule
 <h2 class="section-heading">{{ page.title }}</h2>
 
 <p>
-  The schedule of the workshop is to be defined.
+  The final programme will be announced on 15 September 2026.
 </p>
 
 <p>
