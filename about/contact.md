@@ -21,12 +21,3 @@ title: Contact
 <p>
   <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
 </p>
-
-<h2 class="section-heading">Social Media</h2>
-
-<p>
-  <a href="https://twitter.com/__ADD_TWITTER_HANDLE__">Twitter</a>
-  <a href="https://linkedin.com/__ADD_LINKEDIN_HANDLE__">LinkedIn</a>
-  <a href="https://facebook.com/__ADD_FACEBOOK_HANDLE__">Facebook</a>
-  <a href="https://instagram.com/__ADD_INSTAGRAM_HANDLE__">Instagram</a>
-</p>
