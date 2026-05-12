@@ -226,6 +226,103 @@ h3.section-heading {
   background-color: var(--color-bg-light);
 }
 
+/* Dates timeline */
+.dates-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dates-timeline__item {
+  position: relative;
+  padding: 4px 0 1.5rem 2.25rem;
+}
+
+.dates-timeline__item::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 15px;
+  height: 100%;
+  width: 2px;
+  background: rgba(0, 48, 99, 0.2);
+}
+
+.dates-timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.dates-timeline__item:last-child::before {
+  display: none;
+}
+
+.dates-timeline__marker {
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--color-primary);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.dates-timeline__item:hover .dates-timeline__marker {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 4px rgba(0, 48, 99, 0.1);
+}
+
+.dates-timeline__item--highlight .dates-timeline__marker {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 5px rgba(46, 186, 213, 0.2);
+}
+
+.dates-timeline__date {
+  display: block;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.15rem;
+}
+
+.dates-timeline__title {
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+
+.dates-timeline__item--highlight .dates-timeline__date {
+  font-size: 1rem;
+}
+
+.dates-timeline__item--highlight .dates-timeline__title {
+  font-weight: 500;
+}
+
+.dates-timeline__item--past {
+  opacity: 0.5;
+}
+
+.dates-timeline__item--past .dates-timeline__date {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.dates-timeline__item--past .dates-timeline__marker,
+.dates-timeline__item--past.dates-timeline__item--highlight .dates-timeline__marker {
+  background: var(--color-bg-light);
+  border-color: rgba(0, 48, 99, 0.35);
+  box-shadow: none;
+}
+
+.dates-timeline__item--past:hover .dates-timeline__marker {
+  transform: none;
+  box-shadow: none;
+}
+
 /* Sponsor logos */
 .sponsor-logo {
   max-height: 80px;
