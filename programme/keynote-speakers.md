@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Keynote Speakers
+title: Keynote Speakers (More to Be Announced)
 ---
 
 <h2 class="section-heading">{{ page.title }}</h2>
