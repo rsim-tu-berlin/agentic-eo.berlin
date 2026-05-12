@@ -7,8 +7,8 @@ title: Contact
 
 <p class="text-body-secondary mb-5">
   For questions about the workshop, the programme, or your participation,
-  please reach out to the organising team. Use the address that best matches
-  your topic — we'll route everything else from <em>{{ site.contact_email }}</em>.
+  please reach out to the organising team. Please use the address that best matches
+  your topic.
 </p>
 
 <h2 class="section-heading">E-mail</h2>
@@ -41,9 +41,7 @@ title: Contact
     <a class="contact-card" href="mailto:{{ site.demo_email }}">
       <span class="contact-card__icon" aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
-          <path d="M2.5 1A1.5 1.5 0 0 0 1 2.5v9A1.5 1.5 0 0 0 2.5 13h6.086a1.5 1.5 0 0 1 1.06.44l3.182 3.181A.5.5 0 0 0 13 16.45V13.5h.5a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 13.5 1z" opacity=".0"/>
-          <path d="M0 12V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1.5l-2.74 2.92a.5.5 0 0 1-.853-.36V14H2a2 2 0 0 1-2-2m2-11a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h7.5a.5.5 0 0 1 .5.5v2.193l2.146-2.286a.5.5 0 0 1 .354-.157H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-          <path d="M5 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5"/>
+          <path d="M8 0a.5.5 0 0 1 .473.337L8.71 1H12.5A1.5 1.5 0 0 1 14 2.5v7a1.5 1.5 0 0 1-1.5 1.5h-2.945l1.74 4.34a.5.5 0 1 1-.928.372L9.07 13H6.93l-1.297 2.712a.5.5 0 1 1-.928-.372L6.445 11H3.5A1.5 1.5 0 0 1 2 9.5v-7A1.5 1.5 0 0 1 3.5 1h3.79l.237-.663A.5.5 0 0 1 8 0M3.5 2a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5z"/>
         </svg>
       </span>
       <span class="contact-card__label">Demo proposals</span>
@@ -54,7 +52,7 @@ title: Contact
     <a class="contact-card" href="mailto:{{ site.hands_on_email }}">
       <span class="contact-card__icon" aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
-          <path d="M3 2.5a2.5 2.5 0 0 1 5 0V8.207l3.146-3.147a2.5 2.5 0 0 1 3.536 3.536L9.232 14.07A4.97 4.97 0 0 1 5.7 15.5H4.5a4.5 4.5 0 0 1-4.5-4.5V8a2.5 2.5 0 0 1 3-2.45zM4 1.5a1 1 0 0 0-1 1V8.5a.5.5 0 0 1-.854.354l-.853-.853A1.5 1.5 0 0 0 1 9V11a3.5 3.5 0 0 0 3.5 3.5h1.2a3.97 3.97 0 0 0 2.825-1.17l5.45-5.45a1.5 1.5 0 0 0-2.122-2.122l-4 4A.5.5 0 0 1 7 9.5V2.5a1 1 0 0 0-1-1z"/>
+          <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zM2.5 2A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
         </svg>
       </span>
       <span class="contact-card__label">Hands-on sessions</span>
