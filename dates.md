@@ -7,7 +7,7 @@ hero_image: /assets/images/backgrounds/Agentic_AI_EO_header_2560x160.png
 <h2 class="section-heading">{{ page.title }}</h2>
 
 <p>
-  Below are the key milestones for the workshop — from the submission window to
+  Below are the key dates for the workshop — from the submission window to
   the event itself in Berlin.
 </p>
 
