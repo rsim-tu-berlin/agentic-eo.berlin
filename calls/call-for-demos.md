@@ -23,5 +23,5 @@ title: Call for Demos
       <li>Technical Requirements</li>
   </ul>
 
-  Please directly send your proposal to <i>__ADD_EMAIL_HERE__</i>
+  Please directly send your proposal to <i><a href="mailto:{{ site.demo_email }}">{{ site.demo_email }}</a></i>
 </p>

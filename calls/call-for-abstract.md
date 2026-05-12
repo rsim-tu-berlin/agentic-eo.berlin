@@ -23,5 +23,5 @@ Your submission should include:
     <li>Keywords: 3–5 keywords that describe the scope of the work</li>
 </ul>
 
-Please directly send your abstract to <i>__ADD_EMAIL_HERE__</i>
+Please directly send your abstract to <i><a href="mailto:{{ site.paper_email }}">{{ site.paper_email }}</a></i>
 </p>

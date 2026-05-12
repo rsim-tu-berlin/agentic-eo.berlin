@@ -19,7 +19,7 @@ title: Contact
 <h2 class="section-heading">E-mail</h2>
 
 <p>
-  <a href="mailto:__ADD_EMAIL_HERE__">__ADD_EMAIL_HERE__</a>
+  <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
 </p>
 
 <h2 class="section-heading">Social Media</h2>

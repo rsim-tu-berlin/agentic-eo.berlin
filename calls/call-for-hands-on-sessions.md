@@ -21,5 +21,5 @@ title: Call for Hands-on Sessions
       <li>Technical Requirements</li>
   </ul>
 
-  Please directly send your proposal to <i>__ADD_EMAIL_HERE__</i>
+  Please directly send your proposal to <i><a href="mailto:{{ site.hands_on_email }}">{{ site.hands_on_email }}</a></i>
 </p>
