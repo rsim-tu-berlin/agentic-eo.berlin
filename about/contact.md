@@ -5,7 +5,7 @@ title: Contact
 
 <h2 class="section-heading">{{ page.title }}</h2>
 
-<p class="lead text-body-secondary mb-5">
+<p class="text-body-secondary mb-5">
   For questions about the workshop, the programme, or your participation,
   please reach out to the organising team. Use the address that best matches
   your topic — we'll route everything else from <em>{{ site.contact_email }}</em>.
