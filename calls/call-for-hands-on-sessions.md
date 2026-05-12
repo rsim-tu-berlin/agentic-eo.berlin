@@ -20,5 +20,7 @@ title: Call for Hands-on Sessions
     <li>Any specific technical requirements</li>
   </ul>
 
+  <p>Template for the hands-on session proposal: <a href="/assets/docs/HandsOnTemplate-AAI4EO.docx">HandsOnTemplate-AAI4EO.docx</a></p>
+
   Please directly send your proposal to <i><a href="mailto:{{ site.hands_on_email }}">{{ site.hands_on_email }}</a></i>
 </p>

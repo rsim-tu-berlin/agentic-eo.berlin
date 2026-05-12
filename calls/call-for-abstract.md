@@ -22,5 +22,7 @@ Your submission should include:
     <li>Abstract Text: A concise summary of the research, methodology, and key results (300–500 words)</li>
 </ul>
 
+<p>Template for the abstract: <a href="/assets/docs/AbstractTemplate-AAI4EO.docx">AbstractTemplate-AAI4EO.docx</a></p>
+
 Please directly send your abstract to <i><a href="mailto:{{ site.paper_email }}">{{ site.paper_email }}</a></i>
 </p>

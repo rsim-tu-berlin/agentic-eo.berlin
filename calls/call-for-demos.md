@@ -25,5 +25,7 @@ title: Call for Demos
       </ul>
   </ul>
 
+  <p>Template for the demo proposal: <a href="/assets/docs/DemoTemplate-AAI4EO.docx">DemoTemplate-AAI4EO.docx</a></p>
+
   Please directly send your proposal to <i><a href="mailto:{{ site.demo_email }}">{{ site.demo_email }}</a></i>
 </p>

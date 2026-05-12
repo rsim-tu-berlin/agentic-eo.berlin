@@ -20,12 +20,12 @@ title: Venue
       </li>
       <li class="mb-3">
         <strong>Public Transport:</strong><br>
-        U-Bahn: Alexanderplatz (U2, U5, U8)<br>
-        S-Bahn: Alexanderplatz (S5, S7, S75)
+        U-Bahn: Berlin Hauptbahnhof (Berlin Central Station) (U5)<br>
+        S-Bahn: Berlin Hauptbahnhof (Berlin Central Station) (S3, S5, S7, S9)
       </li>
       <li>
         <strong>From Airports:</strong><br>
-        BER Airport → Berlin Hbf via FEX (30 min), then S-Bahn to Alexanderplatz (5 min)
+        BER Airport → Berlin Hbf via FEX (30 min).
       </li>
     </ul>
   </div>
