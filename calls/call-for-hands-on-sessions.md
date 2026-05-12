@@ -13,11 +13,17 @@ title: Call for Hands-on Sessions
   Your proposal should include:
   <ul>
     <li>Title of the hands-on session</li>
+    <li>Names of all instructors, along with a short biography for each, highlighting relevant research and educational expertise/experience</li>    
     <li>Main point of contact details (including email address)</li>
-    <li>Session description</li>
-    <li>Planned duration</li>
-    <li>Names of all instructors, along with a short biography for each, highlighting relevant research and educational expertise/experience</li>
-    <li>Any specific technical requirements</li>
+    <li>Session description - A brief summary of the session (max 250 words)</li>
+    <ul>
+      <li>Methods and tools used</li>
+      <li>Expected learning outcomes</li>
+      <li>Relevance to the workshop themes</li>
+      <li>Potential impact for attendees</li>
+      <li>Technical requirements</li>
+      <li>Planned duration</li>
+    </ul>
   </ul>
 
   <p>Template for the hands-on session proposal: <a href="/assets/docs/HandsOnTemplate-AAI4EO.docx">HandsOnTemplate-AAI4EO.docx</a></p>
