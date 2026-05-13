@@ -1,0 +1,42 @@
+- name: Home
+  url: /
+- name: Dates
+  url: /dates/
+- name: About
+  match: /about/
+  submenu:
+    - name: Objectives
+      url: /about/objectives/
+    - name: Main Topics
+      url: /about/main-topics/
+    - name: Organizers
+      url: /about/organizers/
+    - name: Contact
+      url: /about/contact/
+- name: Calls
+  match: /calls/
+  submenu:
+    - name: Call for Abstract
+      url: /calls/call-for-abstract/
+    - name: Call for Demos
+      url: /calls/call-for-demos/
+    - name: Call for Hands-on Sessions
+      url: /calls/call-for-hands-on-sessions/
+- name: Programme
+  match: /programme/
+  submenu:
+    - name: Schedule
+      url: /programme/schedule/
+    - name: Keynote Speakers
+      url: /programme/keynote-speakers/
+    # - name: Lightning Talks
+    #   url: /programme/lightning-talks/
+- name: Attend
+  match: /attend/
+  submenu:
+    - name: Registration
+      url: /attend/registration/
+    - name: Venue
+      url: /attend/venue/
+    - name: Accommodation / Hotels
+      url: /attend/accommodation/

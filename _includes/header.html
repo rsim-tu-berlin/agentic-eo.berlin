@@ -1,10 +1,7 @@
 {% assign u = page.url %}
+{% assign nav_brand = site.title | default: "Agentic EO Berlin" %}
 <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
   <div class="container">
-    {% assign nav_brand = site.title %}
-    {% if nav_brand == "" or nav_brand == nil %}
-      {% assign nav_brand = "Agentic EO Berlin" %}
-    {% endif %}
     <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}" style="color: var(--color-primary);">
       {{ nav_brand }}
     </a>
@@ -21,105 +18,47 @@
     </button>
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item">
-          <a
-            class="nav-link{% if u == '/' or u == '/index.html' %} active fw-semibold{% endif %}"
-            href="{{ '/' | relative_url }}"
-          >Home</a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link{% if u == '/dates/' %} active fw-semibold{% endif %}"
-            href="{{ '/dates/' | relative_url }}"
-          >Dates</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle{% if u contains '/about/' %} active fw-semibold{% endif %}"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            data-bs-display="static"
-            aria-expanded="false"
-          >About</a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li>
-              <a class="dropdown-item{% if u == '/about/objectives/' %} active{% endif %}" href="{{ '/about/objectives/' | relative_url }}">Objectives</a>
+        {% for item in site.data.nav_menu %}
+          {% if item.submenu %}
+            {% assign parent_active = false %}
+            {% if item.match and u contains item.match %}
+              {% assign parent_active = true %}
+            {% endif %}
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle{% if parent_active %} active fw-semibold{% endif %}"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                data-bs-display="static"
+                aria-expanded="false"
+              >{{ item.name }}</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                {% for sub in item.submenu %}
+                  <li>
+                    <a
+                      class="dropdown-item{% if u == sub.url %} active{% endif %}"
+                      href="{{ sub.url | relative_url }}"
+                    >{{ sub.name }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
             </li>
-            <li>
-              <a class="dropdown-item{% if u == '/about/main-topics/' %} active{% endif %}" href="{{ '/about/main-topics/' | relative_url }}">Main Topics</a>
+          {% else %}
+            {% assign is_active = false %}
+            {% if item.url == '/' %}
+              {% if u == '/' or u == '/index.html' %}{% assign is_active = true %}{% endif %}
+            {% elsif u == item.url %}
+              {% assign is_active = true %}
+            {% endif %}
+            <li class="nav-item">
+              <a
+                class="nav-link{% if is_active %} active fw-semibold{% endif %}"
+                href="{{ item.url | relative_url }}"
+              >{{ item.name }}</a>
             </li>
-            <li>
-              <a class="dropdown-item{% if u == '/about/organizers/' %} active{% endif %}" href="{{ '/about/organizers/' | relative_url }}">Organizers</a>
-            </li>
-            <li>
-              <a class="dropdown-item{% if u == '/about/contact/' %} active{% endif %}" href="{{ '/about/contact/' | relative_url }}">Contact</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle{% if u contains '/calls/' %} active fw-semibold{% endif %}"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            data-bs-display="static"
-            aria-expanded="false"
-          >Calls</a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li>
-              <a class="dropdown-item{% if u == '/calls/call-for-abstract/' %} active{% endif %}" href="{{ '/calls/call-for-abstract/' | relative_url }}">Call for Abstract</a>
-            </li>
-            <li>
-              <a class="dropdown-item{% if u == '/calls/call-for-demos/' %} active{% endif %}" href="{{ '/calls/call-for-demos/' | relative_url }}">Call for Demos</a>
-            </li>
-            <li>
-              <a class="dropdown-item{% if u == '/calls/call-for-hands-on-sessions/' %} active{% endif %}" href="{{ '/calls/call-for-hands-on-sessions/' | relative_url }}">Call for Hands-on Sessions</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle{% if u contains '/programme/' %} active fw-semibold{% endif %}"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            data-bs-display="static"
-            aria-expanded="false"
-          >Programme</a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li>
-              <a class="dropdown-item{% if u == '/programme/schedule/' %} active{% endif %}" href="{{ '/programme/schedule/' | relative_url }}">Schedule</a>
-            </li>
-            <li>
-              <a class="dropdown-item{% if u == '/programme/keynote-speakers/' %} active{% endif %}" href="{{ '/programme/keynote-speakers/' | relative_url }}">Keynote Speakers</a>
-            </li>
-            <!-- <li>
-              <a class="dropdown-item{% if u == '/programme/lightning-talks/' %} active{% endif %}" href="{{ '/programme/lightning-talks/' | relative_url }}">Lightning Talks</a>
-            </li> -->
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle{% if u contains '/attend/' %} active fw-semibold{% endif %}"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            data-bs-display="static"
-            aria-expanded="false"
-          >Attend</a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li>
-              <a class="dropdown-item{% if u == '/attend/registration/' %} active{% endif %}" href="{{ '/attend/registration/' | relative_url }}">Registration</a>
-            </li>
-            <li>
-              <a class="dropdown-item{% if u == '/attend/venue/' %} active{% endif %}" href="{{ '/attend/venue/' | relative_url }}">Venue</a>
-            </li>
-            <li>
-              <a class="dropdown-item{% if u == '/attend/accommodation/' %} active{% endif %}" href="{{ '/attend/accommodation/' | relative_url }}">Accommodation / Hotels</a>
-            </li>
-          </ul>
-        </li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </div>
   </div>
