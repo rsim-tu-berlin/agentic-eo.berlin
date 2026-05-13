@@ -57,10 +57,26 @@ body {
 /* Open dropdowns on hover on desktop (>= lg). Mobile keeps the default
    click/tap behavior since :hover is unreliable on touch devices. */
 @media (min-width: 992px) {
-  .navbar .dropdown:hover > .dropdown-menu,
-  .navbar .dropdown:focus-within > .dropdown-menu {
-    display: block;
+  /* Because the toggles use data-bs-display="static" (disables Popper.js so
+     the click-opened menu matches the hover-opened menu), Bootstrap's
+     [data-bs-popper] positioning rules don't apply. Define explicit
+     positioning here so both interactions render identically. */
+  .navbar .dropdown-menu {
+    top: 100%;
+    left: 0;
+    right: auto;
     margin-top: 0;
+  }
+  .navbar .dropdown-menu-end {
+    left: auto;
+    right: 0;
+  }
+
+  /* Open on hover only. We intentionally do NOT use :focus-within here:
+     clicking a toggle focuses it, and :focus-within would keep that menu
+     open via CSS even after JS hides it when the user hovers a sibling. */
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block;
   }
 
   /* Invisible bridge so the menu doesn't close when the cursor crosses
