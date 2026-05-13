@@ -13,6 +13,19 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  /* Sticky-footer layout: footer sits at the bottom of the viewport on short
+     pages, and is pushed below the fold when content overflows. */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body > main {
+  flex: 1 0 auto;
+}
+
+body > .site-footer {
+  flex-shrink: 0;
 }
 
 
