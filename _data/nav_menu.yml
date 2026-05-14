@@ -38,5 +38,5 @@
       url: /attend/registration/
     - name: Venue
       url: /attend/venue/
-    - name: Accommodation / Hotels
+    - name: Accommodation
       url: /attend/accommodation/

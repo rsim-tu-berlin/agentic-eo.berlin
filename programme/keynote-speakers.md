@@ -7,7 +7,7 @@ title: Keynote Speakers (More to Be Announced)
 
 <div class="row g-4">
   {% for speaker in site.data.speakers %}
-  <div class="col-md-6 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-3">
     <div class="card speaker-card h-100 shadow-sm">
       <img
         src="{{ speaker.image }}"

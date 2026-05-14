@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Accommodation / Hotels
+title: Accommodation
 ---
 
 <h2 class="section-heading">{{ page.title }}</h2>
@@ -10,7 +10,7 @@ title: Accommodation / Hotels
 </p>
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-2">
-  {% for hotel in site.data.accommodation_hotels %}
+  {% for hotel in site.data.accommodation %}
   <div class="col">
     <div class="card h-100 shadow-sm hotel-card">
       <div class="card-body d-flex flex-column">

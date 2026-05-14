@@ -8,22 +8,22 @@
       >
     </div>
 
-    <hr class="footer-divider my-4">
+    <!-- <hr class="footer-divider my-4"> -->
 
-    <ul class="list-inline text-center small pb-2 footer-legal mb-0">
-      <li class="list-inline-item">
-        <a href="{{ '/legal/imprint/' | relative_url }}">Imprint</a>
-      </li>
-      <li class="list-inline-item" aria-hidden="true">&middot;</li>
-      <li class="list-inline-item">
-        <a href="{{ '/legal/privacy/' | relative_url }}">Data Privacy</a>
-      </li>
-    </ul>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2 small my-3">
+      <ul class="list-inline footer-legal mb-0">
+        <li class="list-inline-item">
+          <a href="{{ '/legal/imprint/' | relative_url }}">Imprint</a>
+        </li>
+        <li class="list-inline-item" aria-hidden="true">&middot;</li>
+        <li class="list-inline-item">
+          <a href="{{ '/legal/privacy/' | relative_url }}">Data Privacy</a>
+        </li>
+      </ul>
 
-    <hr class="footer-divider my-4">
-
-    <p class="text-center small pb-2 footer-copy mb-0">
-      &copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.
-    </p>
+      <p class="footer-copy mb-0">
+        &copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.
+      </p>
+    </div>
   </div>
 </footer>
