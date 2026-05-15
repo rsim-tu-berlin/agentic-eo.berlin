@@ -25,6 +25,58 @@ body {
   padding-bottom: 1rem;  
 }
 
+/* Mobile navbar: keep burger pinned top-right, allow brand to wrap to two lines,
+   and let the collapsed menu drop to a full-width row below the top bar. */
+@media (max-width: 991.98px) {
+  .navbar > .container {
+    align-items: center;
+  }
+
+  .navbar .navbar-brand {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: calc(100% - 4rem);
+    margin-right: 0.75rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.2;
+    font-size: 1rem;
+  }
+
+  .navbar .navbar-toggler {
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  /* Make the collapsed mobile menu render as a stacked list below the top bar */
+  .navbar .navbar-collapse {
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+
+  .navbar .navbar-nav {
+    width: 100%;
+  }
+
+  /* Inline dropdown submenu inside the stacked mobile menu (no floating panel) */
+  .navbar .dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+    background-color: transparent;
+    padding-left: 1rem;
+    margin-top: 0;
+  }
+
+  .navbar .dropdown-menu-end {
+    left: auto;
+    right: auto;
+  }
+}
+
 .navbar .nav-link {
   color: var(--color-text);
   transition: color 0.2s ease;
@@ -104,6 +156,15 @@ body {
   min-height: 700px;
   max-height: 70vh;
   padding: 0;
+}
+
+/* Mobile hero: fill the full viewport width without horizontal cropping bands */
+@media (max-width: 767.98px) {
+  .hero-banner {
+    background-size: cover;
+    min-height: 60vh;
+    max-height: none;
+  }
 }
 
 .hero-banner__image-strip {
