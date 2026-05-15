@@ -159,9 +159,10 @@ body {
 }
 
 /* Mobile hero: show the full keyvisual image with no cropping by matching the
-   container to the image's 16:9 aspect ratio. */
+   container to the image's 16:9 aspect ratio. Compact sub-page banners (which
+   embed a real <img>) are excluded — they already size themselves to the image. */
 @media (max-width: 767.98px) {
-  .hero-banner {
+  .hero-banner:not(.hero-banner--compact) {
     background-size: contain;
     background-position: center center;
     aspect-ratio: 16 / 9;
