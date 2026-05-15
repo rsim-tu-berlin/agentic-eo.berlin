@@ -158,12 +158,16 @@ body {
   padding: 0;
 }
 
-/* Mobile hero: fill the full viewport width without horizontal cropping bands */
+/* Mobile hero: show the full keyvisual image with no cropping by matching the
+   container to the image's 16:9 aspect ratio. */
 @media (max-width: 767.98px) {
   .hero-banner {
-    background-size: cover;
-    min-height: 60vh;
+    background-size: contain;
+    background-position: center center;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
     max-height: none;
+    height: auto;
   }
 }
 

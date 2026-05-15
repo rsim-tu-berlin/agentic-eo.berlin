@@ -30,11 +30,18 @@ title: Venue
     </ul>
   </div>
   <div class="col-lg-6">
-    <div class="ratio ratio-4x3 bg-light border rounded d-flex align-items-center justify-content-center">
-      <div class="text-center text-body-secondary p-4">
-        <iframe width="550" height="400" src="https://www.openstreetmap.org/export/embed.html?bbox=13.376908600330355%2C52.52480878138444%2C13.382165729999542%2C52.52683719103691&amp;layer=mapnik&amp;marker=52.5258229979198%2C13.379537165164948" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=52.525823&amp;mlon=13.379537#map=19/52.525823/13.379537">View Larger Map</a></small>
-      </div>
+    <div class="ratio ratio-4x3 bg-light border rounded overflow-hidden">
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=13.376908600330355%2C52.52480878138444%2C13.382165729999542%2C52.52683719103691&amp;layer=mapnik&amp;marker=52.5258229979198%2C13.379537165164948"
+        title="Map of {{ site.venue_name }}"
+        style="border: 0;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
     </div>
+    <p class="small text-center mt-2 mb-0">
+      <a href="https://www.openstreetmap.org/?mlat=52.525823&amp;mlon=13.379537#map=19/52.525823/13.379537" target="_blank" rel="noopener">View Larger Map</a>
+    </p>
   </div>
 </div>
 
