@@ -2,8 +2,8 @@
   role: "Staff Research Scientist"
   affiliation: "Google DeepMind"
   link: "https://www.deepmind.com"
-  topic: "To be announced"
-  image: "https://placehold.co/300x300?text=CFB"
+  topic: "Why Mature Agents Require a Paradigm Shift in Tooling"
+  image: "/assets/images/keynotes/Christopher_Brown_1.jpeg"
 
 - name: "Steve Chien"
   role: "Head, Artificial Intelligence Group"
