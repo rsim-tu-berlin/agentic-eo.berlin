@@ -9,7 +9,7 @@ title: Main Topics
   Topics will include but not limited to:
 
   <ul class="mt-3"> 
-    <li>Multi-agent systems for Earth observation (EO);</li>
+    <li>Multi-agent systems for Earth Observation (EO);</li>
     <li>Design of efficient and self-improving EO agents;</li>
     <li>Reasoning, planning, and workflow automation in agentic EO systems;</li>
     <li>Integration of EO foundation models within agentic systems;</li>
