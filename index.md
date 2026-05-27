@@ -4,6 +4,10 @@ title: Home
 # hero_image: /assets/images/backgrounds/Agentic_AI_EO_keyvisual-NOtxt-260506.png
 hero_image: /assets/images/backgrounds/Agentic_AI_EO_keyvisual_260506.png
 # hero_image: /assets/images/backgrounds/Agentic_AI_EO_header_October.jpg
+# Hero background video. Plays muted/looping behind the overlay; falls back to
+# hero_image (poster) when paused by prefers-reduced-motion or unsupported.
+hero_video: /assets/images/backgrounds/Agentic_AI_EO_KV_animation.mp4
+# hero_video_webm: /assets/images/backgrounds/Agentic_AI_EO_KV_animation.webm
 # Hero title block vertical offset: hero_body_offset_percent (or hero_body_offset_vh) adds that many vh to base padding (1vh = 1% of viewport height). Or set hero_body_padding_top to any CSS value, e.g. 10vh or calc(1.5rem + 8vh).
 hero_body_offset_percent: 22
 # Hero logos: per entry use logo_height, logo_width, logo_max_width, logo_min_width (CSS strings, e.g. 48px, auto, min(300px,85vw)). no_invert: true skips the white filter on dark-ready assets.

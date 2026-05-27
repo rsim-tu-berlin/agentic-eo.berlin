@@ -1,9 +1,17 @@
 {% assign bg = page.hero_image | default: site.hero_image %}
+{% assign hero_video = page.hero_video | default: site.hero_video %}
+{% assign hero_video_webm = page.hero_video_webm | default: site.hero_video_webm %}
 {% comment %}
   Vertical position of hero title block (hero-banner__body), via CSS variable --hero-body-padding-top:
   - page.hero_body_padding_top or site.hero_body_padding_top: any CSS length (e.g. 8vh, 12%, calc(1.5rem + 6vh))
   - page.hero_body_offset_vh or site.hero_body_offset_vh: number N → calc(1.5rem + Nvh) — each vh is 1% of viewport height
   - page.hero_body_offset_percent or site.hero_body_offset_percent: same as offset_vh (alias; uses vh units for predictable vertical % of viewport)
+
+  Background media:
+  - hero_image (page/site): rendered as CSS background-image when no video is set,
+    and as the <video> poster (fallback) when hero_video is set.
+  - hero_video (page/site): path to an MP4 played muted/looped behind the overlay.
+  - hero_video_webm (page/site): optional WebM source, preferred by supporting browsers.
 {% endcomment %}
 {% assign hero_body_pad_var = "" %}
 {% if page.hero_body_padding_top != nil and page.hero_body_padding_top != "" %}
@@ -21,6 +29,8 @@
 {% endif %}
 {% assign hero_section_style = "" %}
 {% if bg %}
+  {% comment %} Always emit the bg image: it's the poster/fallback shown when the
+     video is hidden by prefers-reduced-motion or fails to load. {% endcomment %}
   {% assign bg_rel = bg | relative_url %}
   {% assign hero_section_style = hero_section_style | append: "background-image:url('" | append: bg_rel | append: "');" %}
 {% endif %}
@@ -28,9 +38,25 @@
   {% assign hero_section_style = hero_section_style | append: "--hero-body-padding-top:" | append: hero_body_pad_var | append: ";" %}
 {% endif %}
 <section
-  class="hero-banner d-flex flex-column text-white"
+  class="hero-banner d-flex flex-column text-white{% if hero_video %} hero-banner--has-video{% endif %}"
   {% if hero_section_style != "" %}style="{{ hero_section_style }}"{% endif %}
 >
+  {% if hero_video %}
+  <video
+    class="hero-banner__video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    {% if bg %}poster="{{ bg | relative_url }}"{% endif %}
+    aria-hidden="true"
+    tabindex="-1"
+  >
+    {% if hero_video_webm %}<source src="{{ hero_video_webm | relative_url }}" type="video/webm">{% endif %}
+    <source src="{{ hero_video | relative_url }}" type="video/mp4">
+  </video>
+  {% endif %}
   <div class="hero-banner__overlay"></div>
   {% comment %}
     Hero partner logos: page.hero_logos in front matter.

@@ -170,6 +170,24 @@ body {
     max-height: none;
     height: auto;
   }
+  .hero-banner--has-video .hero-banner__video {
+    /* Mirror the image hero's mobile `background-size: contain` behavior:
+       letterbox the full keyvisual inside the section's 16/9 box. */
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+/* Respect user motion preferences: hide the autoplaying video and fall back to
+   the poster, which we re-apply as a CSS background-image on the section. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-banner--has-video .hero-banner__video {
+    display: none;
+  }
 }
 
 .hero-banner__image-strip {
@@ -182,6 +200,25 @@ body {
   /* background: linear-gradient(90deg, rgba(0, 48, 99, 0.88) 0%, rgba(46, 186, 213, 0.85) 100%); */
   z-index: 0;
   opacity: 0.7;
+}
+
+/* Hero video — sits behind the overlay and mirrors the image hero sizing:
+   height-fit the container at the video's natural aspect ratio, centered
+   horizontally. This is the <video> equivalent of `background-size: auto 100%;
+   background-position: center center;` used on .hero-banner above. On wide
+   viewports the section background color shows on the sides, exactly like the
+   image hero — no full-bleed stretching, no cropping. */
+.hero-banner__video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+  max-width: none;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-banner .container {
