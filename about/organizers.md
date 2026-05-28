@@ -22,4 +22,6 @@ title: Organizers
   <li>Giuseppe Borghi, Head of Φ-lab Division, ESA</li>
   <li>Claudio Iaocopino, Head of Φ-lab Explore Office, ESA</li>
   <li>Francesca Romana Cupellini, Event Project Manager, Olly Services Srl for ESA</li>
+  <li>Riccardo D'Ercole, Research Fellow, Φ-lab Explore Office, ESA</li>
+  <li>Eva Gmelich Meijling, ESA Graduate Trainee, Φ-lab Explore Office, ESA</li>
 </ul>
