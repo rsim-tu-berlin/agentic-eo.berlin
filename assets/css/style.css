@@ -255,6 +255,21 @@ body {
   background-color: #e8e8e8;
 }
 
+/* Registration call-to-action */
+.registration-cta {
+  letter-spacing: 0.5px;
+  border-radius: 50rem;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.registration-cta:hover,
+.registration-cta:focus {
+  background-color: var(--color-primary-dark) !important;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
 /* Hero logos row */
 .hero-logos {
   flex-wrap: wrap;
