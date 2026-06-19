@@ -18,7 +18,7 @@ title: Accommodation
     <div class="card h-100 shadow-sm hotel-card{% if hotel.featured %} border-2{% endif %}"{% if hotel.featured %} style="border-color: var(--color-primary);"{% endif %}>
       <div class="card-body d-flex flex-column">
         {% if hotel.featured %}
-        <span class="badge mb-2" style="background-color: var(--color-primary); color: #fff; align-self: flex-start;">Conference room block</span>
+        <span class="badge mb-2" style="background-color: var(--color-primary); color: #fff; align-self: flex-start;">Conference room reserved</span>
         {% endif %}
         <h5 class="card-title fw-bold mb-1" style="color: var(--color-primary);">{{ hotel.name }}</h5>
         <span class="badge mb-3" style="background-color: var(--color-primary-light); color: #fff; align-self: flex-start;">{{ hotel.star_category }}</span>
