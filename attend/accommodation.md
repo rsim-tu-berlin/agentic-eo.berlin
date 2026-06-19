@@ -10,12 +10,21 @@ title: Accommodation
 </p>
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-2">
-  {% for hotel in site.data.accommodation %}
+  {% assign featured_hotels = site.data.accommodation | where: "featured", true %}
+  {% assign other_hotels = site.data.accommodation | where_exp: "h", "h.featured != true" %}
+  {% assign hotels = featured_hotels | concat: other_hotels %}
+  {% for hotel in hotels %}
   <div class="col">
-    <div class="card h-100 shadow-sm hotel-card">
+    <div class="card h-100 shadow-sm hotel-card{% if hotel.featured %} border-2{% endif %}"{% if hotel.featured %} style="border-color: var(--color-primary);"{% endif %}>
       <div class="card-body d-flex flex-column">
+        {% if hotel.featured %}
+        <span class="badge mb-2" style="background-color: var(--color-primary); color: #fff; align-self: flex-start;">Conference room block</span>
+        {% endif %}
         <h5 class="card-title fw-bold mb-1" style="color: var(--color-primary);">{{ hotel.name }}</h5>
         <span class="badge mb-3" style="background-color: var(--color-primary-light); color: #fff; align-self: flex-start;">{{ hotel.star_category }}</span>
+        {% if hotel.note %}
+        <p class="small fw-semibold mb-3" style="color: var(--color-primary);">{{ hotel.note }}</p>
+        {% endif %}
         <ul class="list-unstyled small text-muted flex-grow-1 mb-3">
           <li class="mb-1">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-geo-alt-fill me-1" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
