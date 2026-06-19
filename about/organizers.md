@@ -19,6 +19,10 @@ title: Organizers
   <li>Katharina Maria Heinke Jung, Head of Communications, BIFOLD</li>
   <li>Elke Witt, Head of Scientific Strategy, BIFOLD</li>
   <li>Laura Wollenweber, Scientific Coordinator Strategy, BIFOLD</li>
+  <li>Mathis Jürgen Adler, Research Associate, BIFOLD</li>
+  <li>Leonard Hackel, Research Associate, BIFOLD</li>
+  <li>Johann-Ludwig Herzog, Research Associate, BIFOLD</li>
+  <li>Jonas Klotz, Research Associate, BIFOLD</li>
   <li>Giuseppe Borghi, Head of Φ-lab Division, ESA</li>
   <li>Claudio Iaocopino, Head of Φ-lab Explore Office, ESA</li>
   <li>Francesca Romana Cupellini, Event Project Manager, Olly Services Srl for ESA</li>
