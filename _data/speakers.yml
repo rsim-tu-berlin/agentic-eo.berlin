@@ -19,6 +19,13 @@
   topic: "Agentic AI for Earth Observation and Climate Resilience"
   image: "/assets/images/keynotes/Salman_Khan_1.png"
 
+- name: "Manling Li"
+  role: "Professor"
+  affiliation: "Northwestern University & Amazon Scholar"
+  link: "https://manlingli.github.io"
+  topic: "Failure Mode in Agentic Reasoning"
+  image: "/assets/images/keynotes/Manling_Li.png"
+
 - name: "James Zou"
   role: "Professor"
   affiliation: "Stanford University"
