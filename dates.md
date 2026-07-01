@@ -17,7 +17,7 @@ hero_image: /assets/images/backgrounds/Agentic_AI_EO_header_2560x160.png
   whole day has elapsed). Update these cutoffs together with the visible dates.
 {%- endcomment -%}
 {%- assign now = site.time | date: "%s" | plus: 0 -%}
-{%- assign cutoff_submission   = "2026-07-02T00:00:00Z" | date: "%s" | plus: 0 -%}
+{%- assign cutoff_submission   = "2026-07-09T00:00:00Z" | date: "%s" | plus: 0 -%}
 {%- assign cutoff_notification = "2026-08-01T00:00:00Z" | date: "%s" | plus: 0 -%}
 {%- assign cutoff_registration = "2026-08-02T00:00:00Z" | date: "%s" | plus: 0 -%}
 {%- assign cutoff_programme    = "2026-09-16T00:00:00Z" | date: "%s" | plus: 0 -%}
@@ -29,10 +29,13 @@ hero_image: /assets/images/backgrounds/Agentic_AI_EO_header_2560x160.png
       <li class="dates-timeline__item{% if now >= cutoff_submission %} dates-timeline__item--past{% endif %}">
         <span class="dates-timeline__marker" aria-hidden="true"></span>
         <span class="dates-timeline__date">
-          1 July 2026 11:59 PM (CEST) {% if now >= cutoff_submission %}<span class="visually-hidden"> (passed)</span>{% endif %}
+          <del class="text-muted" style="opacity: .5;">1 July 2026</del><br>
+          <span class="dates-timeline__date-new fw-bold" style="color: var(--color-primary);">
+            8 July 2026 11:59 PM (CEST)
+          </span>{% if now >= cutoff_submission %}<span class="visually-hidden"> (passed)</span>{% endif %}
         </span>
         <p class="dates-timeline__title mb-0">
-          Submission deadline — abstracts, demos, and hands-on proposals
+          Extended submission deadline — abstracts, demos, and hands-on proposals
         </p>
       </li>
       <li class="dates-timeline__item{% if now >= cutoff_notification %} dates-timeline__item--past{% endif %}">
