@@ -18,7 +18,7 @@ title: Accommodation
     <div class="card h-100 shadow-sm hotel-card{% if hotel.featured %} border-2{% endif %}"{% if hotel.featured %} style="border-color: var(--color-primary);"{% endif %}>
       <div class="card-body d-flex flex-column">
         {% if hotel.featured %}
-        <span class="badge mb-2" style="background-color: var(--color-primary); color: #fff; align-self: flex-start;">Conference room reserved</span>
+        <span class="badge mb-2" style="background-color: var(--color-primary); color: #fff; align-self: flex-start;">{{ hotel.badge | default: "Conference room reserved" }}</span>
         {% endif %}
         <h5 class="card-title fw-bold mb-1" style="color: var(--color-primary);">{{ hotel.name }}</h5>
         <span class="badge mb-3" style="background-color: var(--color-primary-light); color: #fff; align-self: flex-start;">{{ hotel.star_category }}</span>
@@ -41,7 +41,9 @@ title: Accommodation
         </ul>
         <div class="d-flex gap-2 mt-auto">
           <a href="{{ hotel.website }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary flex-fill">Website</a>
-          <!-- <a href="{{ hotel.reservation }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm flex-fill text-white" style="background-color: var(--color-primary);">Book</a> -->
+          {% if hotel.featured and hotel.reservation != hotel.website %}
+          <a href="{{ hotel.reservation }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm flex-fill text-white" style="background-color: var(--color-primary);">Book</a>
+          {% endif %}
         </div>
       </div>
     </div>
