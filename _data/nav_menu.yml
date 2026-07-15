@@ -40,3 +40,5 @@
       url: /attend/venue/
     - name: Accommodation
       url: /attend/accommodation/
+    - name: Child Care
+      url: /attend/child-care/
