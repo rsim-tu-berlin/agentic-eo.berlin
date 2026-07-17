@@ -30,8 +30,9 @@ hero_image: /assets/images/backgrounds/Agentic_AI_EO_header_2560x160.png
         <span class="dates-timeline__marker" aria-hidden="true"></span>
         <span class="dates-timeline__date">
           <del class="text-muted" style="opacity: .5;">1 July 2026</del><br>
+          <del class="text-muted" style="opacity: .5;">13 July 2026</del><br>
           <span class="dates-timeline__date-new fw-bold" style="color: var(--color-primary);">
-            13 July 2026 11:59 PM (CEST)
+            19 July 2026 11:59 PM (CEST)
           </span>{% if now >= cutoff_submission %}<span class="visually-hidden"> (passed)</span>{% endif %}
         </span>
         <p class="dates-timeline__title mb-0">
