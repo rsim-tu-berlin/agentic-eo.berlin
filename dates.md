@@ -17,7 +17,7 @@ hero_image: /assets/images/backgrounds/Agentic_AI_EO_header_2560x160.png
   whole day has elapsed). Update these cutoffs together with the visible dates.
 {%- endcomment -%}
 {%- assign now = site.time | date: "%s" | plus: 0 -%}
-{%- assign cutoff_submission   = "2026-07-09T00:00:00Z" | date: "%s" | plus: 0 -%}
+{%- assign cutoff_submission   = "2026-07-20T00:00:00Z" | date: "%s" | plus: 0 -%}
 {%- assign cutoff_notification = "2026-08-01T00:00:00Z" | date: "%s" | plus: 0 -%}
 {%- assign cutoff_registration = "2026-08-02T00:00:00Z" | date: "%s" | plus: 0 -%}
 {%- assign cutoff_programme    = "2026-09-16T00:00:00Z" | date: "%s" | plus: 0 -%}
