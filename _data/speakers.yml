@@ -12,6 +12,13 @@
   topic: "Agentic AI in Space and Federated Autonomous MEasurement (FAME)"
   image: "/assets/images/keynotes/Steve_Chien_1.jpg"
 
+- name: "Davide Crapis"
+  role: "Head of AI"
+  affiliation: "Ethereum Foundation"
+  link: "https://www.ethereum.org"
+  topic: "Building Robust Economic Capabilities in AI Agents"
+  image: "/assets/images/keynotes/Davide_Crapis.jpg"
+
 - name: "Salman Khan"
   role: "Professor"
   affiliation: "Mohamed bin Zayed University of Artificial Intelligence"
@@ -22,7 +29,7 @@
 - name: "Manling Li"
   role: "Professor"
   affiliation: "Northwestern University & Amazon Scholar"
-  link: "https://manlingli.github.io"
+  link: "https://limanling.github.io"
   topic: "Failure Mode in Agentic Reasoning"
   image: "/assets/images/keynotes/Manling_Li.png"
 
