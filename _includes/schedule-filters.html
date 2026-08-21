@@ -1,0 +1,32 @@
+{% comment %}
+  Filter controls for the schedule (day + room), rendered from _data/schedule.yml.
+  The buttons only set data-* state; all show/hide logic lives in main.js and
+  applies to both the desktop grid and the mobile/print list.
+{% endcomment %}
+<div class="schedule-controls d-print-none" data-schedule-controls>
+  <div class="schedule-filter" role="group" aria-label="Filter by day">
+    <span class="schedule-filter__label">Day</span>
+    <div class="schedule-chips">
+      <button type="button" class="schedule-chip is-active" data-filter="day" data-value="all">All days</button>
+      {% for day in site.data.schedule.days %}
+      <button type="button" class="schedule-chip" data-filter="day" data-value="{{ day.id }}">{{ day.label }}</button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="schedule-filter" role="group" aria-label="Filter by room">
+    <span class="schedule-filter__label">Room</span>
+    <div class="schedule-chips">
+      <button type="button" class="schedule-chip is-active" data-filter="room" data-value="all">All rooms</button>
+      {% for room in site.data.schedule.rooms %}
+      <button type="button" class="schedule-chip" data-filter="room" data-value="{{ room.id }}">{{ room.name }}</button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- <div class="schedule-controls__actions">
+    <button type="button" class="btn btn-outline-primary btn-sm" data-print-schedule>
+      <span aria-hidden="true">⬇</span> Download PDF
+    </button>
+  </div> -->
+</div>

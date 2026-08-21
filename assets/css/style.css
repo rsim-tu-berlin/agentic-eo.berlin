@@ -355,14 +355,333 @@ h3.section-heading {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* Schedule table */
-.schedule-table th {
-  background-color: var(--color-primary);
+/* ==========================================================================
+   Schedule (filters + desktop timetable grid + mobile/print agenda list)
+   ========================================================================== */
+
+/* --- Filter controls (chips) --- */
+.schedule-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem 2rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  background: var(--color-bg-light);
+  border: 1px solid rgba(0, 48, 99, 0.12);
+  border-radius: 0.75rem;
+}
+
+.schedule-controls__actions {
+  margin-left: auto;
+  align-self: center;
+}
+
+.schedule-filter__label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+}
+
+.schedule-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.schedule-chip {
+  border: 1px solid rgba(0, 48, 99, 0.25);
+  background: #fff;
+  color: var(--color-primary);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.schedule-chip:hover {
+  border-color: var(--color-primary);
+  background: rgba(46, 186, 213, 0.12);
+}
+
+.schedule-chip.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
   color: #fff;
 }
 
-.schedule-table tbody tr:nth-child(even) {
-  background-color: var(--color-bg-light);
+/* --- Desktop timetable grid --- */
+.timetable-date {
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--color-primary-light);
+}
+
+.timetable-scroll {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.timetable {
+  --tt-time-w: 62px;
+  --tt-row-h: 10px;
+  --tt-head-h: 52px;
+  display: grid;
+  min-width: 900px;
+  border: 1px solid rgba(0, 48, 99, 0.15);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent calc(var(--tt-row-h) * 12 - 1px),
+      rgba(0, 48, 99, 0.08) calc(var(--tt-row-h) * 12 - 1px),
+      rgba(0, 48, 99, 0.08) calc(var(--tt-row-h) * 12)
+    );
+  background-position: 0 var(--tt-head-h);
+}
+
+.tt-corner {
+  background: var(--color-primary);
+}
+
+.tt-head {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.35rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+
+.tt-head__name {
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 1.15;
+}
+
+.tt-head__meta {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.tt-time {
+  font-size: 0.72rem;
+  color: var(--color-primary);
+  padding: 2px 6px 0 0;
+  text-align: right;
+  border-top: 1px solid rgba(0, 48, 99, 0.1);
+}
+
+.tt-event {
+  margin: 1px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 0.75rem;
+  line-height: 1.15;
+  border-left: 3px solid var(--color-primary);
+  background: #eef3f8;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.tt-event__time {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  opacity: 0.85;
+}
+
+.tt-event__title {
+  font-weight: 400;
+}
+
+.tt-event__speaker {
+  font-size: 0.68rem;
+  color: #5a6b7b;
+}
+
+.tt-event--plenary {
+  background: #f3f4f6;
+  border-left-color: #6c757d;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Event colours by type (left border accent) */
+.tt-event--keynote { border-left-color: #003063; background: #e7eef6; }
+.tt-event--talk { border-left-color: #2ebad5; background: #e6f7fb; }
+.tt-event--workshop,
+.tt-event--hands-on { border-left-color: #198754; background: #e7f5ee; }
+.tt-event--panel { border-left-color: #ffc107; background: #fff8e6; }
+.tt-event--poster { border-left-color: #6c757d; background: #f1f3f5; }
+.tt-event--demo { border-left-color: #212529; background: #eceef0; }
+.tt-event--break { border-left-color: #adb5bd; background: #f6f7f8; }
+
+/* --- Mobile / print agenda list --- */
+.schedule-list__items {
+  border: 1px solid rgba(0, 48, 99, 0.12);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.schedule-list__item {
+  display: flex;
+  gap: 0.9rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid rgba(0, 48, 99, 0.08);
+}
+
+.schedule-list__item:first-child {
+  border-top: none;
+}
+
+.schedule-list__item:nth-child(even) {
+  background: var(--color-bg-light);
+}
+
+.schedule-list__item--break {
+  font-style: italic;
+  color: #5a6b7b;
+}
+
+.schedule-list__time {
+  flex: 0 0 auto;
+  width: 5.5rem;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+}
+
+.schedule-list__time-sep {
+  opacity: 0.5;
+  margin: 0 1px;
+}
+
+.schedule-list__title {
+  font-weight: 400;
+}
+
+.schedule-list__meta {
+  font-size: 0.8rem;
+  color: #5a6b7b;
+  margin-top: 2px;
+}
+
+.schedule-list__room {
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+/* --- Print / "Download PDF": force the clean agenda list, honour filters --- */
+@media print {
+  .navbar,
+  footer,
+  .hero-banner,
+  .hero-banner--compact,
+  .d-print-none {
+    display: none !important;
+  }
+
+  .schedule-print-header.d-none {
+    display: block !important;
+    margin-bottom: 1rem;
+  }
+
+  .schedule-print-header h1 {
+    font-size: 20pt;
+    color: #000;
+    margin-bottom: 0.25rem;
+  }
+
+  .schedule-print-header p {
+    font-size: 10pt;
+    color: #333;
+    margin: 0;
+  }
+
+  body {
+    display: block;
+    background: #fff;
+    color: #000;
+    font-size: 10pt;
+  }
+
+  main,
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* The grid doesn't paginate well; print the agenda list instead. */
+  .schedule-grid {
+    display: none !important;
+  }
+
+  .schedule-list {
+    display: block !important;
+  }
+
+  .schedule-list__day {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .schedule-list__day h3.section-heading {
+    font-size: 13pt;
+    color: #000;
+    margin-top: 0.5rem;
+  }
+
+  .schedule-list__items {
+    border: 1px solid #999 !important;
+  }
+
+  .schedule-list__item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border-top: 1px solid #ccc !important;
+  }
+
+  .schedule-list__item:nth-child(even) {
+    background: #f0f0f0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Render badges as plain bracketed labels so colours aren't required */
+  .schedule-list .badge {
+    background: none !important;
+    color: #000 !important;
+    border: none !important;
+    padding: 0;
+    font-weight: 500;
+  }
+
+  .schedule-list .badge::before { content: "["; }
+  .schedule-list .badge::after { content: "]"; }
+
+  a[href]::after {
+    content: "";
+  }
 }
 
 /* Dates timeline */

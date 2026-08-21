@@ -1,117 +1,159 @@
-- day: "Day 1 — October 19, 2026"
-  sessions:
-    - time: "13:00"
-      title: "..."
-      speaker: "..."
-      type: "talk"
+# ===========================================================================
+# Workshop schedule — single source of truth for /programme/schedule/
+#
+# The page renders TWO views from this file (desktop timetable grid + mobile /
+# print agenda list) and lets visitors filter by DAY and by ROOM. To update the
+# programme, you only ever edit this file.
+#
+# There are three sections:
+#   1. rooms   — every room, defined once (referenced by events via `room:`)
+#   2. days    — every day, defined once (referenced by events via `day:`)
+#   3. events  — the actual schedule; one entry per session
+#
+# ---------------------------------------------------------------------------
+# EVENT FIELDS
+#   day:     (required) id of a day from the `days:` list
+#   room:    (required) id of a room from the `rooms:` list,
+#            OR "plenary" for sessions that occupy the whole venue
+#            (registration, breaks, plenary keynotes, receptions...).
+#            Plenary events span all room columns and stay visible no matter
+#            which room filter is active.
+#   start:   (required) "HH:MM", 24h, zero-padded, aligned to 5 minutes
+#   end:     (required) "HH:MM"
+#   title:   (required)
+#   speaker: (optional)
+#   type:    (optional) colour/badge: keynote | talk | workshop | hands-on |
+#            panel | poster | demo | break
+#
+# Tip: keep times zero-padded ("09:00", not "9:00") so they sort correctly.
+# ===========================================================================
 
-    - time: "14:00"
-      title: "..."
-      speaker: "..."
-      type: "talk"
+rooms:
+  - id: foyer
+    name: "Foyer"
+    floor: "Ground Floor"
+    capacity: 400
+  - id: lecture-hall
+    name: "Lecture Hall"
+    floor: "1st Floor"
+    capacity: 500
+  - id: expertisium
+    name: "Expertisium"
+    floor: "Ground Floor"
+    capacity: 60
+  - id: von-langenbeck
+    name: "B. von Langenbeck"
+    floor: "1st Floor"
+    capacity: 90
+  - id: werner-koerte
+    name: "Werner-Körte"
+    floor: "1st Floor"
+    capacity: 30
+  - id: rudolf-virchow
+    name: "Rudolf-Virchow"
+    floor: "2nd Floor"
+    capacity: 60
 
-    - time: "15:00"
-      title: "Coffee Break"
-      speaker: ""
-      type: "break"
+days:
+  - id: day1
+    label: "Day 1"
+    date: "19 October 2026"
+  - id: day2
+    label: "Day 2"
+    date: "20 October 2026"
+  - id: day3
+    label: "Day 3"
+    date: "21 October 2026"
 
+# ---------------------------------------------------------------------------
+# EVENTS  (sample data — replace with the real programme)
+# ---------------------------------------------------------------------------
+events:
+  # ----- Day 1 (afternoon) -------------------------------------------------
+  - { day: day1, room: foyer,          start: "12:00", end: "13:00", title: "Registration & Welcome Lunch", type: break }
+  - { day: day1, room: lecture-hall,   start: "13:00", end: "13:45", title: "Opening Remarks", speaker: "TBA", type: keynote }
+  - { day: day1, room: lecture-hall,   start: "13:45", end: "14:30", title: "Keynote 1", speaker: "TBA", type: keynote }
 
+  - { day: day1, room: foyer,          start: "14:30", end: "15:00", title: "Coffee Break with 3 Demos", type: break }
+  - { day: day1, room: expertisium,    start: "14:30", end: "15:00", title: "Coffee Break with 3 Demos", type: break }
 
-    - time: "15:30"
-      title: "Panel: ..."
-      speaker: "All Day-1 Speakers"
-      type: "panel"
+  - { day: day1, room: werner-koerte,  start: "14:30", end: "15:00", title: "Featured Demo 1", type: demo }
+  - { day: day1, room: rudolf-virchow, start: "14:30", end: "15:00", title: "Featured Demo 2", type: demo }
 
-    - time: "18:00"
-      title: "Networking Reception"
-      speaker: ""
-      type: "break"
+  - { day: day1, room: lecture-hall,   start: "15:00", end: "16:15", title: "Oral Session 1 - Multi-Modal Large Models, Datasets and Agentic Earth Intelligence", speaker: "", type: panel }
+  - { day: day1, room: lecture-hall,   start: "16:15", end: "16:45", title: "Panel Discussion 1", speaker: "", type: panel }
+  - { day: day1, room: lecture-hall,   start: "17:00", end: "17:30", title: "Thematic Discussion", speaker: "", type: panel }
+  - { day: day1, room: von-langenbeck, start: "17:00", end: "18:30", title: "Poster Session 1", speaker: "", type: poster }
+  
+  - { day: day1, room: werner-koerte,  start: "17:00", end: "17:30", title: "Featured Demo 3", type: demo }
+  - { day: day1, room: rudolf-virchow, start: "17:00", end: "17:30", title: "Featured Demo 4", type: demo }
+  - { day: day1, room: werner-koerte,  start: "17:30", end: "18:00", title: "Featured Demo 5", type: demo }
+  - { day: day1, room: rudolf-virchow, start: "17:30", end: "18:00", title: "Featured Demo 6", type: demo }
+  - { day: day1, room: werner-koerte,  start: "18:00", end: "18:30", title: "Featured Demo 7", type: demo }
+  - { day: day1, room: rudolf-virchow, start: "18:00", end: "18:30", title: "Featured Demo 8", type: demo }
+  
+  - { day: day1, room: foyer,         start: "18:30", end: "20:30", title: "Welcome Reception", type: break }
 
-- day: "Day 2 — October 20, 2026"
-  sessions:
-    - time: "09:00"
-      title: "Morning Coffee"
-      speaker: ""
-      type: "break"
+  # ----- Day 2 -------------------------------------------------------------
+  - { day: day2, room: foyer,          start: "08:00", end: "08:45", title: "Welcome Coffee", type: break }
+  - { day: day2, room: lecture-hall,   start: "08:45", end: "09:30", title: "Keynote 2", speaker: "TBA", type: keynote }
+  - { day: day2, room: lecture-hall,   start: "09:30", end: "10:15", title: "Keynote 3", speaker: "TBA", type: keynote }
 
-    - time: "09:30"
-      title: "..."
-      speaker: "..."
-      type: "talk"
+  - { day: day2, room: foyer,          start: "10:15", end: "10:45", title: "Coffee Break with 3 Demos", type: break }
+  - { day: day2, room: expertisium,    start: "10:15", end: "10:45", title: "Coffee Break with 3 Demos", type: break }
 
-    - time: "10:30"
-      title: "..."
-      speaker: "..."
-      type: "talk"
+  - { day: day2, room: werner-koerte,  start: "10:15", end: "10:45", title: "Featured Demo 9", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "10:15", end: "10:45", title: "Featured Demo 10", type: demo }
 
-    - time: "11:15"
-      title: "Coffee Break"
-      speaker: ""
-      type: "break"
+  - { day: day2, room: lecture-hall,   start: "10:45", end: "12:00", title: "Oral Session 2 - Design, Development and Evaluation of AI Agents", speaker: "", type: panel }
+  - { day: day2, room: lecture-hall,   start: "12:00", end: "12:30", title: "Panel Discussion 2", speaker: "", type: panel }
+  - { day: day2, room: lecture-hall,   start: "12:30", end: "12:45", title: "Group Photo Shoot", speaker: "", type: break }
 
-    - time: "11:45"
-      title: "Workshop: ..."
-      speaker: "..."
-      type: "workshop"
+  - { day: day2, room: foyer,         start: "12:45", end: "14:00", title: "Lunch", type: break }
 
-    - time: "13:00"
-      title: "Lunch"
-      speaker: ""
-      type: "break"
+  - { day: day2, room: lecture-hall,   start: "14:00", end: "14:45", title: "Keynote 4", speaker: "TBA", type: keynote }
+  - { day: day2, room: lecture-hall,   start: "14:45", end: "15:30", title: "Keynote 5", speaker: "TBA", type: keynote }
 
-    - time: "14:30"
-      title: "Keynote: ..."
-      speaker: "..."
-      type: "keynote"
+  - { day: day2, room: foyer,          start: "15:30", end: "16:00", title: "Coffee Break with 3 Demos", type: break }
+  - { day: day2, room: expertisium,    start: "15:30", end: "16:00", title: "Coffee Break with 3 Demos", type: break }
 
-    - time: "15:30"
-      title: "Lightning Talks: ..."
-      speaker: "Various"
-      type: "talk"
+  - { day: day2, room: werner-koerte,  start: "15:30", end: "16:00", title: "Featured Demo 11", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "15:30", end: "16:00", title: "Featured Demo 12", type: demo }
 
-- day: "Day 3 — October 21, 2026"
-  sessions:
-    - time: "09:00"
-      title: "Morning Coffee"
-      speaker: ""
-      type: "break"
+  - { day: day2, room: lecture-hall,   start: "16:00", end: "17:15", title: "Oral Session 3 - Agentic Decision Intelligence and Earth Action", speaker: "", type: panel }
+  - { day: day2, room: lecture-hall,   start: "17:30", end: "18:30", title: "Thematic Discussion", speaker: "", type: panel }
 
-    - time: "09:30"
-      title: "..."
-      speaker: "..."
-      type: "talk"
+  - { day: day2, room: von-langenbeck, start: "17:30", end: "19:00", title: "Poster Session 2", speaker: "", type: poster }
 
-    - time: "10:30"
-      title: "..."
-      speaker: "..."
-      type: "talk"
+  - { day: day2, room: werner-koerte,  start: "17:30", end: "18:00", title: "Featured Demo 13", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "17:30", end: "18:00", title: "Featured Demo 14", type: demo }
+  - { day: day2, room: werner-koerte,  start: "18:00", end: "18:30", title: "Featured Demo 15", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "18:00", end: "18:30", title: "Featured Demo 16", type: demo }
+  - { day: day2, room: werner-koerte,  start: "18:30", end: "19:00", title: "Featured Demo 17", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "18:30", end: "19:00", title: "Featured Demo 18", type: demo }
 
-    - time: "11:15"
-      title: "Coffee Break"
-      speaker: ""
-      type: "break"
+  # ----- Day 3 -------------------------------------------------------------
+  - { day: day3, room: foyer,          start: "08:00", end: "09:00", title: "Welcome Coffee", type: break }
+  - { day: day3, room: lecture-hall,   start: "09:00", end: "09:45", title: "Keynote 6", speaker: "TBA", type: keynote }
+  - { day: day3, room: lecture-hall,   start: "09:45", end: "10:30", title: "Keynote 7", speaker: "TBA", type: keynote }
 
-    - time: "11:45"
-      title: "..."
-      speaker: "..."
-      type: "talk"
+  - { day: day3, room: foyer,          start: "10:30", end: "11:00", title: "Coffee Break with 3 Demos", type: break }
+  - { day: day3, room: expertisium,    start: "10:30", end: "11:00", title: "Coffee Break with 3 Demos", type: break }
 
-    - time: "12:30"
-      title: "Lunch"
-      speaker: ""
-      type: "break"
+  - { day: day3, room: werner-koerte,  start: "10:30", end: "11:00", title: "Featured Demo 1", type: demo }
+  - { day: day3, room: rudolf-virchow, start: "10:30", end: "11:00", title: "Featured Demo 2", type: demo }
 
-    - time: "14:00"
-      title: "..."
-      speaker: "..."
-      type: "talk"
+  - { day: day3, room: lecture-hall,   start: "11:00", end: "12:15", title: "Oral Session 4 - Autonomous EO Systems, Space Operations and Cognitive Computing in Space", speaker: "", type: panel }
+  - { day: day3, room: lecture-hall,   start: "12:15", end: "12:45", title: "Closing Ceremony", speaker: "", type: panel }
 
-    - time: "15:00"
-      title: "Panel: ..."
-      speaker: "All Day-3 Speakers"
-      type: "panel"
-    
-    - time: "16:30"
-      title: "Farewell & Closing"
-      speaker: ""
-      type: "break"    
+  - { day: day3, room: foyer,          start: "12:45", end: "14:00", title: "Lunch", type: break }
+  
+  - { day: day3, room: expertisium,    start: "14:00", end: "15:30", title: "Track 1: Building and Operating EO Agents", speaker: "Building Agentic Earth Observation Workflows with EVE Workbench", type: workshop }
+  - { day: day3, room: von-langenbeck, start: "14:00", end: "15:30", title: "Track 2: Trustworthy and Scientific Agentic AI", speaker: "How Do You Know Your Agent Works? Evaluating Earth Observation Agents with Existing Benchmarks", type: workshop }
+  - { day: day3, room: werner-koerte,  start: "14:00", end: "15:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI", speaker: "From Pixels to Concepts: Hands-on with Clay Embeddings for Agentic Earth Observation", type: workshop }
+  
+  - { day: day3, room: foyer,          start: "15:30", end: "16:00", title: "Coffee Break", type: break }
+
+  - { day: day3, room: expertisium,    start: "16:00", end: "17:30", title: "Track 1: Building and Operating EO Agents", speaker: "Agentic Analysis of Earth Observation for Utility Intelligence", type: workshop }
+  - { day: day3, room: von-langenbeck, start: "16:00", end: "17:30", title: "Track 2: Trustworthy and Scientific Agentic AI", speaker: "From Vibe Coding to Verifiable Scientific Discovery: Agentic Workflows for Earth Observation", type: workshop }
+  - { day: day3, room: werner-koerte,  start: "16:00", end: "17:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI", speaker: "Small Models, Big Maps – Local Geospatial Workflows with Fine-tuned SLMs", type: workshop }

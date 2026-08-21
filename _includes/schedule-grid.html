@@ -1,0 +1,101 @@
+{% comment %}
+  Desktop timetable grid: one CSS-grid per day, with time on the vertical axis
+  (5-minute resolution) and rooms as columns. Plenary events span all room
+  columns. Room filtering collapses columns via per-room CSS variables set from
+  main.js; day filtering hides whole day grids.
+
+  All positions are computed from the "HH:MM" start/end times in the data.
+{% endcomment %}
+{% assign rooms = site.data.schedule.rooms %}
+<div class="schedule-grid d-none d-lg-block" data-schedule-grid>
+  {% for day in site.data.schedule.days %}
+  {% assign day_events = site.data.schedule.events | where: "day", day.id %}
+
+  {% comment %} --- Compute the day's time bounds (in minutes) --- {% endcomment %}
+  {% assign day_start = 6000 %}
+  {% assign day_end = 0 %}
+  {% for event in day_events %}
+    {% assign es = event.start | split: ":" %}
+    {% assign eh = es[0] | plus: 0 %}
+    {% assign em = es[1] | plus: 0 %}
+    {% assign start_min = eh | times: 60 | plus: em %}
+    {% assign ee = event.end | split: ":" %}
+    {% assign eeh = ee[0] | plus: 0 %}
+    {% assign eem = ee[1] | plus: 0 %}
+    {% assign end_min = eeh | times: 60 | plus: eem %}
+    {% if start_min < day_start %}{% assign day_start = start_min %}{% endif %}
+    {% if end_min > day_end %}{% assign day_end = end_min %}{% endif %}
+  {% endfor %}
+
+  {% comment %} Round start down / end up to whole hours for clean labels {% endcomment %}
+  {% assign grid_start = day_start | divided_by: 60 | times: 60 %}
+  {% assign end_rem = day_end | modulo: 60 %}
+  {% if end_rem > 0 %}
+    {% assign grid_end = day_end | divided_by: 60 | plus: 1 | times: 60 %}
+  {% else %}
+    {% assign grid_end = day_end %}
+  {% endif %}
+  {% assign span_min = grid_end | minus: grid_start %}
+  {% assign total_rows = span_min | divided_by: 5 %}
+  {% assign num_hours = span_min | divided_by: 60 %}
+
+  {% capture col_template %}{% for room in rooms %}var(--rw-{{ room.id }}, 1fr) {% endfor %}{% endcapture %}
+
+  <section class="timetable-wrap" data-day="{{ day.id }}">
+    <h3 class="section-heading mt-4">{{ day.label }} <span class="timetable-date">· {{ day.date }}</span></h3>
+
+    <div class="timetable-scroll">
+      <div class="timetable"
+           style="grid-template-columns: var(--tt-time-w) {{ col_template }}; grid-template-rows: var(--tt-head-h) repeat({{ total_rows }}, var(--tt-row-h));">
+
+        {% comment %} Header row {% endcomment %}
+        <div class="tt-corner" style="grid-row: 1; grid-column: 1;"></div>
+        {% for room in rooms %}
+        <div class="tt-head" data-room="{{ room.id }}" style="grid-row: 1; grid-column: {{ forloop.index | plus: 1 }};">
+          <span class="tt-head__name">{{ room.name }}</span>
+          <span class="tt-head__meta">{{ room.floor }}</span>
+        </div>
+        {% endfor %}
+
+        {% comment %} Hour labels on the time axis {% endcomment %}
+        {% for h in (1..num_hours) %}
+        {% assign hour_min = h | minus: 1 | times: 60 | plus: grid_start %}
+        {% assign lh = hour_min | divided_by: 60 %}
+        {% assign lm = hour_min | modulo: 60 %}
+        {% assign lrow = hour_min | minus: grid_start | divided_by: 5 | plus: 2 %}
+        {% assign lrow_end = lrow | plus: 12 %}
+        <div class="tt-time" style="grid-row: {{ lrow }} / {{ lrow_end }}; grid-column: 1;">{{ lh | prepend: '0' | slice: -2, 2 }}:{{ lm | prepend: '0' | slice: -2, 2 }}</div>
+        {% endfor %}
+
+        {% comment %} Events {% endcomment %}
+        {% for event in day_events %}
+        {% assign es = event.start | split: ":" %}
+        {% assign start_min = es[0] | times: 60 | plus: es[1] %}
+        {% assign ee = event.end | split: ":" %}
+        {% assign end_min = ee[0] | times: 60 | plus: ee[1] %}
+        {% assign row_start = start_min | minus: grid_start | divided_by: 5 | plus: 2 %}
+        {% assign row_end = end_min | minus: grid_start | divided_by: 5 | plus: 2 %}
+
+        {% if event.room == "plenary" %}
+        <div class="tt-event tt-event--plenary tt-event--{{ event.type }}" data-room="plenary" data-day="{{ event.day }}"
+             style="grid-row: {{ row_start }} / {{ row_end }}; grid-column: 2 / -1;">
+          <span class="tt-event__time">{{ event.start }}–{{ event.end }}</span>
+          <span class="tt-event__title">{{ event.title }}</span>
+        </div>
+        {% else %}
+        {% assign col = 0 %}
+        {% for room in rooms %}{% if room.id == event.room %}{% assign col = forloop.index | plus: 1 %}{% endif %}{% endfor %}
+        <div class="tt-event tt-event--{{ event.type }}" data-room="{{ event.room }}" data-day="{{ event.day }}"
+             style="grid-row: {{ row_start }} / {{ row_end }}; grid-column: {{ col }};">
+          <span class="tt-event__time">{{ event.start }}–{{ event.end }}</span>
+          <span class="tt-event__title">{{ event.title }}</span>
+          {% if event.speaker and event.speaker != "" %}<span class="tt-event__speaker">{{ event.speaker }}</span>{% endif %}
+        </div>
+        {% endif %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+</div>
