@@ -80,7 +80,7 @@ events:
   - { day: day1, room: werner-koerte,  start: "14:30", end: "15:00", title: "Featured Demo 1", type: demo }
   - { day: day1, room: rudolf-virchow, start: "14:30", end: "15:00", title: "Featured Demo 2", type: demo }
 
-  - { day: day1, room: lecture-hall,   start: "15:00", end: "16:15", title: "Oral Session 1 - Multi-Modal Large Models, Datasets and Agentic Earth Intelligence", speaker: "", type: panel }
+  - { day: day1, room: lecture-hall,   start: "15:00", end: "16:15", title: "Oral Session 1 - Multi-Modal Large Models, Datasets and Agentic Earth Intelligence", speaker: "", type: talk }
   - { day: day1, room: lecture-hall,   start: "16:15", end: "16:45", title: "Panel Discussion 1", speaker: "", type: panel }
   - { day: day1, room: lecture-hall,   start: "17:00", end: "17:30", title: "Thematic Discussion", speaker: "", type: panel }
   - { day: day1, room: von-langenbeck, start: "17:00", end: "18:30", title: "Poster Session 1", speaker: "", type: poster }
@@ -105,7 +105,7 @@ events:
   - { day: day2, room: werner-koerte,  start: "10:15", end: "10:45", title: "Featured Demo 9", type: demo }
   - { day: day2, room: rudolf-virchow, start: "10:15", end: "10:45", title: "Featured Demo 10", type: demo }
 
-  - { day: day2, room: lecture-hall,   start: "10:45", end: "12:00", title: "Oral Session 2 - Design, Development and Evaluation of AI Agents", speaker: "", type: panel }
+  - { day: day2, room: lecture-hall,   start: "10:45", end: "12:00", title: "Oral Session 2 - Design, Development and Evaluation of AI Agents", speaker: "", type: talk }
   - { day: day2, room: lecture-hall,   start: "12:00", end: "12:30", title: "Panel Discussion 2", speaker: "", type: panel }
   - { day: day2, room: lecture-hall,   start: "12:30", end: "12:45", title: "Group Photo Shoot", speaker: "", type: break }
 
@@ -120,7 +120,7 @@ events:
   - { day: day2, room: werner-koerte,  start: "15:30", end: "16:00", title: "Featured Demo 11", type: demo }
   - { day: day2, room: rudolf-virchow, start: "15:30", end: "16:00", title: "Featured Demo 12", type: demo }
 
-  - { day: day2, room: lecture-hall,   start: "16:00", end: "17:15", title: "Oral Session 3 - Agentic Decision Intelligence and Earth Action", speaker: "", type: panel }
+  - { day: day2, room: lecture-hall,   start: "16:00", end: "17:15", title: "Oral Session 3 - Agentic Decision Intelligence and Earth Action", speaker: "", type: talk }
   - { day: day2, room: lecture-hall,   start: "17:30", end: "18:30", title: "Thematic Discussion", speaker: "", type: panel }
 
   - { day: day2, room: von-langenbeck, start: "17:30", end: "19:00", title: "Poster Session 2", speaker: "", type: poster }
@@ -143,7 +143,7 @@ events:
   - { day: day3, room: werner-koerte,  start: "10:30", end: "11:00", title: "Featured Demo 1", type: demo }
   - { day: day3, room: rudolf-virchow, start: "10:30", end: "11:00", title: "Featured Demo 2", type: demo }
 
-  - { day: day3, room: lecture-hall,   start: "11:00", end: "12:15", title: "Oral Session 4 - Autonomous EO Systems, Space Operations and Cognitive Computing in Space", speaker: "", type: panel }
+  - { day: day3, room: lecture-hall,   start: "11:00", end: "12:15", title: "Oral Session 4 - Autonomous EO Systems, Space Operations and Cognitive Computing in Space", speaker: "", type: talk }
   - { day: day3, room: lecture-hall,   start: "12:15", end: "12:45", title: "Closing Ceremony", speaker: "", type: panel }
 
   - { day: day3, room: foyer,          start: "12:45", end: "14:00", title: "Lunch", type: break }
