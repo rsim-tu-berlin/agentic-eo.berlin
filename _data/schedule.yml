@@ -140,8 +140,8 @@ events:
   - { day: day3, room: foyer,          start: "10:30", end: "11:00", title: "Coffee Break with 3 Demos", type: break }
   - { day: day3, room: expertisium,    start: "10:30", end: "11:00", title: "Coffee Break with 3 Demos", type: break }
 
-  - { day: day3, room: werner-koerte,  start: "10:30", end: "11:00", title: "Featured Demo 1", type: demo }
-  - { day: day3, room: rudolf-virchow, start: "10:30", end: "11:00", title: "Featured Demo 2", type: demo }
+  - { day: day3, room: werner-koerte,  start: "10:30", end: "11:00", title: "Featured Demo 19", type: demo }
+  - { day: day3, room: rudolf-virchow, start: "10:30", end: "11:00", title: "Featured Demo 20", type: demo }
 
   - { day: day3, room: lecture-hall,   start: "11:00", end: "12:15", title: "Oral Session 4 - Autonomous EO Systems, Space Operations and Cognitive Computing in Space", speaker: "", type: talk }
   - { day: day3, room: lecture-hall,   start: "12:15", end: "12:45", title: "Closing Ceremony", speaker: "", type: panel }
