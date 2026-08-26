@@ -74,8 +74,8 @@ events:
   - { day: day1, room: lecture-hall,   start: "13:00", end: "13:45", title: "Opening Remarks", speaker: "TBA", type: keynote }
   - { day: day1, room: lecture-hall,   start: "13:45", end: "14:30", title: "Keynote 1", speaker: "TBA", type: keynote }
 
-  - { day: day1, room: foyer,          start: "14:30", end: "15:00", title: "Coffee Break with 3 Demos", type: break }
-  - { day: day1, room: expertisium,    start: "14:30", end: "15:00", title: "Coffee Break with 3 Demos", type: break }
+  - { day: day1, room: foyer,          start: "14:30", end: "15:00", title: "Coffee Break | 3 Demos", type: break }
+  - { day: day1, room: expertisium,    start: "14:30", end: "15:00", title: "Coffee Break | 3 Demos", type: break }
 
   - { day: day1, room: werner-koerte,  start: "14:30", end: "15:00", title: "Featured Demo 1", type: demo }
   - { day: day1, room: rudolf-virchow, start: "14:30", end: "15:00", title: "Featured Demo 2", type: demo }
@@ -85,25 +85,27 @@ events:
   - { day: day1, room: lecture-hall,   start: "17:00", end: "17:30", title: "Thematic Discussion", speaker: "", type: panel }
   - { day: day1, room: von-langenbeck, start: "17:00", end: "18:30", title: "Poster Session 1", speaker: "", type: poster }
   
-  - { day: day1, room: werner-koerte,  start: "17:00", end: "17:30", title: "Featured Demo 3", type: demo }
-  - { day: day1, room: rudolf-virchow, start: "17:00", end: "17:30", title: "Featured Demo 4", type: demo }
-  - { day: day1, room: werner-koerte,  start: "17:30", end: "18:00", title: "Featured Demo 5", type: demo }
-  - { day: day1, room: rudolf-virchow, start: "17:30", end: "18:00", title: "Featured Demo 6", type: demo }
-  - { day: day1, room: werner-koerte,  start: "18:00", end: "18:30", title: "Featured Demo 7", type: demo }
-  - { day: day1, room: rudolf-virchow, start: "18:00", end: "18:30", title: "Featured Demo 8", type: demo }
+  - { day: day1, room: werner-koerte,  start: "17:00", end: "17:25", title: "Featured Demo 3", type: demo }
+  - { day: day1, room: rudolf-virchow, start: "17:00", end: "17:25", title: "Featured Demo 4", type: demo }
+  - { day: day1, room: werner-koerte,  start: "17:25", end: "17:50", title: "Featured Demo 5", type: demo }
+  - { day: day1, room: rudolf-virchow, start: "17:25", end: "17:50", title: "Featured Demo 6", type: demo }
+  - { day: day1, room: werner-koerte,  start: "17:50", end: "18:15", title: "Featured Demo 7", type: demo }
+  - { day: day1, room: rudolf-virchow, start: "17:50", end: "18:15", title: "Featured Demo 8", type: demo }
+  - { day: day1, room: werner-koerte,  start: "18:15", end: "18:40", title: "Featured Demo 9", type: demo }
+  - { day: day1, room: rudolf-virchow, start: "18:15", end: "18:40", title: "Featured Demo 10", type: demo }
   
-  - { day: day1, room: foyer,         start: "18:30", end: "20:30", title: "Welcome Reception", type: break }
+  - { day: day1, room: foyer,         start: "18:45", end: "20:45", title: "Welcome Reception", type: break }
 
   # ----- Day 2 -------------------------------------------------------------
   - { day: day2, room: foyer,          start: "08:00", end: "08:45", title: "Welcome Coffee", type: break }
   - { day: day2, room: lecture-hall,   start: "08:45", end: "09:30", title: "Keynote 2", speaker: "TBA", type: keynote }
   - { day: day2, room: lecture-hall,   start: "09:30", end: "10:15", title: "Keynote 3", speaker: "TBA", type: keynote }
 
-  - { day: day2, room: foyer,          start: "10:15", end: "10:45", title: "Coffee Break with 3 Demos", type: break }
-  - { day: day2, room: expertisium,    start: "10:15", end: "10:45", title: "Coffee Break with 3 Demos", type: break }
+  - { day: day2, room: foyer,          start: "10:15", end: "10:45", title: "Coffee Break | 3 Demos", type: break }
+  - { day: day2, room: expertisium,    start: "10:15", end: "10:45", title: "Coffee Break | 3 Demos", type: break }
 
-  - { day: day2, room: werner-koerte,  start: "10:15", end: "10:45", title: "Featured Demo 9", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "10:15", end: "10:45", title: "Featured Demo 10", type: demo }
+  - { day: day2, room: werner-koerte,  start: "10:15", end: "10:45", title: "Featured Demo 11", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "10:15", end: "10:45", title: "Featured Demo 12", type: demo }
 
   - { day: day2, room: lecture-hall,   start: "10:45", end: "12:00", title: "Oral Session 2 - Design, Development and Evaluation of AI Agents", speaker: "", type: talk }
   - { day: day2, room: lecture-hall,   start: "12:00", end: "12:30", title: "Panel Discussion 2", speaker: "", type: panel }
@@ -114,34 +116,36 @@ events:
   - { day: day2, room: lecture-hall,   start: "14:00", end: "14:45", title: "Keynote 4", speaker: "TBA", type: keynote }
   - { day: day2, room: lecture-hall,   start: "14:45", end: "15:30", title: "Keynote 5", speaker: "TBA", type: keynote }
 
-  - { day: day2, room: foyer,          start: "15:30", end: "16:00", title: "Coffee Break with 3 Demos", type: break }
-  - { day: day2, room: expertisium,    start: "15:30", end: "16:00", title: "Coffee Break with 3 Demos", type: break }
+  - { day: day2, room: foyer,          start: "15:30", end: "16:00", title: "Coffee Break | 3 Demos", type: break }
+  - { day: day2, room: expertisium,    start: "15:30", end: "16:00", title: "Coffee Break | 3 Demos", type: break }
 
-  - { day: day2, room: werner-koerte,  start: "15:30", end: "16:00", title: "Featured Demo 11", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "15:30", end: "16:00", title: "Featured Demo 12", type: demo }
+  - { day: day2, room: werner-koerte,  start: "15:30", end: "16:00", title: "Featured Demo 13", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "15:30", end: "16:00", title: "Featured Demo 14", type: demo }
 
   - { day: day2, room: lecture-hall,   start: "16:00", end: "17:15", title: "Oral Session 3 - Agentic Decision Intelligence and Earth Action", speaker: "", type: talk }
   - { day: day2, room: lecture-hall,   start: "17:30", end: "18:30", title: "Thematic Discussion", speaker: "", type: panel }
 
   - { day: day2, room: von-langenbeck, start: "17:30", end: "19:00", title: "Poster Session 2", speaker: "", type: poster }
 
-  - { day: day2, room: werner-koerte,  start: "17:30", end: "18:00", title: "Featured Demo 13", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "17:30", end: "18:00", title: "Featured Demo 14", type: demo }
-  - { day: day2, room: werner-koerte,  start: "18:00", end: "18:30", title: "Featured Demo 15", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "18:00", end: "18:30", title: "Featured Demo 16", type: demo }
-  - { day: day2, room: werner-koerte,  start: "18:30", end: "19:00", title: "Featured Demo 17", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "18:30", end: "19:00", title: "Featured Demo 18", type: demo }
+  - { day: day2, room: werner-koerte,  start: "17:30", end: "17:55", title: "Featured Demo 15", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "17:30", end: "17:55", title: "Featured Demo 16", type: demo }
+  - { day: day2, room: werner-koerte,  start: "17:55", end: "18:20", title: "Featured Demo 17", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "17:55", end: "18:20", title: "Featured Demo 18", type: demo }
+  - { day: day2, room: werner-koerte,  start: "18:20", end: "18:45", title: "Featured Demo 19", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "18:20", end: "18:45", title: "Featured Demo 20", type: demo }
+  - { day: day2, room: werner-koerte,  start: "18:45", end: "19:10", title: "Featured Demo 21", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "18:45", end: "19:10", title: "Featured Demo 22", type: demo }
 
   # ----- Day 3 -------------------------------------------------------------
   - { day: day3, room: foyer,          start: "08:00", end: "09:00", title: "Welcome Coffee", type: break }
   - { day: day3, room: lecture-hall,   start: "09:00", end: "09:45", title: "Keynote 6", speaker: "TBA", type: keynote }
   - { day: day3, room: lecture-hall,   start: "09:45", end: "10:30", title: "Keynote 7", speaker: "TBA", type: keynote }
 
-  - { day: day3, room: foyer,          start: "10:30", end: "11:00", title: "Coffee Break with 3 Demos", type: break }
-  - { day: day3, room: expertisium,    start: "10:30", end: "11:00", title: "Coffee Break with 3 Demos", type: break }
+  - { day: day3, room: foyer,          start: "10:30", end: "11:00", title: "Coffee Break | 3 Demos", type: break }
+  - { day: day3, room: expertisium,    start: "10:30", end: "11:00", title: "Coffee Break | 3 Demos", type: break }
 
-  - { day: day3, room: werner-koerte,  start: "10:30", end: "11:00", title: "Featured Demo 19", type: demo }
-  - { day: day3, room: rudolf-virchow, start: "10:30", end: "11:00", title: "Featured Demo 20", type: demo }
+  - { day: day3, room: werner-koerte,  start: "10:30", end: "11:00", title: "Featured Demo 23", type: demo }
+  - { day: day3, room: rudolf-virchow, start: "10:30", end: "11:00", title: "Featured Demo 24", type: demo }
 
   - { day: day3, room: lecture-hall,   start: "11:00", end: "12:15", title: "Oral Session 4 - Autonomous EO Systems, Space Operations and Cognitive Computing in Space", speaker: "", type: talk }
   - { day: day3, room: lecture-hall,   start: "12:15", end: "12:45", title: "Closing Ceremony", speaker: "", type: panel }
