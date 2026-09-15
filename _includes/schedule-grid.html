@@ -5,8 +5,11 @@
   main.js; day filtering hides whole day grids.
 
   All positions are computed from the "HH:MM" start/end times in the data.
+
+  A day with `single_track:` runs in one off-site room, so it drops the room
+  columns for a single full-width one and renders every session as plenary.
 {% endcomment %}
-{% assign rooms = site.data.schedule.rooms %}
+{% assign rooms = site.data.schedule.rooms | where_exp: "room", "room.off_site != true" %}
 <div class="schedule-grid d-none d-lg-block" data-schedule-grid>
   {% for day in site.data.schedule.days %}
   {% assign day_events = site.data.schedule.events | where: "day", day.id %}
@@ -39,10 +42,19 @@
   {% assign total_rows = span_min | divided_by: 5 %}
   {% assign num_hours = span_min | divided_by: 60 %}
 
-  {% capture col_template %}{% for room in rooms %}var(--rw-{{ room.id }}, 1fr) {% endfor %}{% endcapture %}
+  {% if day.single_track %}
+    {% assign track_room = site.data.schedule.rooms | where: "id", day.single_track | first %}
+    {% capture col_template %}1fr{% endcapture %}
+  {% else %}
+    {% assign track_room = nil %}
+    {% capture col_template %}{% for room in rooms %}var(--rw-{{ room.id }}, 1fr) {% endfor %}{% endcapture %}
+  {% endif %}
 
   <section class="timetable-wrap" data-day="{{ day.id }}">
-    <h3 class="section-heading mt-4">{{ day.label }} <span class="timetable-date">· {{ day.date }}</span></h3>
+    <h3 class="section-heading mt-4">{{ day.label }}{% if day.subtitle %} · {{ day.subtitle }}{% endif %} <span class="timetable-date">· {{ day.date }}</span></h3>
+    {% if day.link %}
+    <p class="mb-3"><a href="{{ day.link | relative_url }}">{{ day.link_text | default: "Read more" }}</a></p>
+    {% endif %}
 
     <div class="timetable-scroll">
       <div class="timetable"
@@ -50,12 +62,20 @@
 
         {% comment %} Header row {% endcomment %}
         <div class="tt-corner" style="grid-row: 1; grid-column: 1;"></div>
+        {% comment %} No data-room on a single-track header: the room filter must never collapse it {% endcomment %}
+        {% if day.single_track %}
+        <div class="tt-head" style="grid-row: 1; grid-column: 2;">
+          <span class="tt-head__name">{{ track_room.name | default: day.single_track }}</span>
+          {% if track_room.floor %}<span class="tt-head__meta">{{ track_room.floor }}</span>{% endif %}
+        </div>
+        {% else %}
         {% for room in rooms %}
         <div class="tt-head" data-room="{{ room.id }}" style="grid-row: 1; grid-column: {{ forloop.index | plus: 1 }};">
           <span class="tt-head__name">{{ room.name }}</span>
           <span class="tt-head__meta">{{ room.floor }}</span>
         </div>
         {% endfor %}
+        {% endif %}
 
         {% comment %} Hour labels on the time axis {% endcomment %}
         {% for h in (1..num_hours) %}
@@ -76,11 +96,13 @@
         {% assign row_start = start_min | minus: grid_start | divided_by: 5 | plus: 2 %}
         {% assign row_end = end_min | minus: grid_start | divided_by: 5 | plus: 2 %}
 
-        {% if event.room == "plenary" %}
+        {% comment %} A single-track day has one column, so its sessions render like plenary ones {% endcomment %}
+        {% if event.room == "plenary" or day.single_track %}
         <div class="tt-event tt-event--plenary tt-event--{{ event.type }}" data-room="plenary" data-day="{{ event.day }}"
              style="grid-row: {{ row_start }} / {{ row_end }}; grid-column: 2 / -1;">
           <span class="tt-event__time">{{ event.start }}–{{ event.end }}</span>
           <span class="tt-event__title">{{ event.title }}</span>
+          {% if event.speaker and event.speaker != "" %}<span class="tt-event__speaker">{{ event.speaker }}</span>{% endif %}
         </div>
         {% else %}
         {% assign col = 0 %}

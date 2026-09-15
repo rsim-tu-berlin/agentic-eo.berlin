@@ -18,7 +18,8 @@
     <span class="schedule-filter__label">Room</span>
     <div class="schedule-chips">
       <button type="button" class="schedule-chip is-active" data-filter="room" data-value="all">All rooms</button>
-      {% for room in site.data.schedule.rooms %}
+      {% comment %} Off-site rooms host a whole single-track day, so they are not a filter dimension {% endcomment %}
+      {% for room in site.data.schedule.rooms %}{% if room.off_site %}{% continue %}{% endif %}
       <button type="button" class="schedule-chip" data-filter="room" data-value="{{ room.id }}">{{ room.name }}</button>
       {% endfor %}
     </div>
