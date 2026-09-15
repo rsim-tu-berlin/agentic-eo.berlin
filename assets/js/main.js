@@ -169,7 +169,8 @@ function initScheduleFilters() {
     }
   }
 
-  controls.querySelectorAll(".schedule-chip").forEach(function (chip) {
+  // Only the filter chips; chips without data-filter are plain links out.
+  controls.querySelectorAll(".schedule-chip[data-filter]").forEach(function (chip) {
     chip.addEventListener("click", function () {
       const group = chip.dataset.filter;
       const value = chip.dataset.value;

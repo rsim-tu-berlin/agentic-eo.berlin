@@ -4,32 +4,23 @@
   Each row carries data-day / data-room so the same filter state from main.js
   applies here too. A `room` lookup resolves the human-readable room name.
 {% endcomment %}
-{% assign rooms = site.data.schedule.rooms | where_exp: "room", "room.off_site != true" %}
+{% assign rooms = site.data.schedule.rooms %}
 <div class="schedule-list d-lg-none" data-schedule-list>
   {% for day in site.data.schedule.days %}
   {% assign day_events = site.data.schedule.events | where: "day", day.id | sort: "start" %}
   <section class="schedule-list__day" data-day="{{ day.id }}">
-    <h3 class="section-heading mt-4">{{ day.label }}{% if day.subtitle %} · {{ day.subtitle }}{% endif %} <span class="timetable-date">· {{ day.date }}</span></h3>
-    {% if day.link %}
-    <p class="mb-3"><a href="{{ day.link | relative_url }}">{{ day.link_text | default: "Read more" }}</a></p>
-    {% endif %}
+    <h3 class="section-heading mt-4">{{ day.label }} <span class="timetable-date">· {{ day.date }}</span></h3>
 
     <div class="schedule-list__items">
       {% for event in day_events %}
       {% assign room_name = "" %}
-      {% assign item_room = event.room %}
-      {% comment %} A single-track day sits outside the room filter, so its sessions behave like plenary ones {% endcomment %}
-      {% if day.single_track %}
-        {% assign track_room = site.data.schedule.rooms | where: "id", day.single_track | first %}
-        {% assign room_name = track_room.name | default: day.single_track %}
-        {% assign item_room = "plenary" %}
-      {% elsif event.room == "plenary" %}
+      {% if event.room == "plenary" %}
         {% assign room_name = "All rooms" %}
       {% else %}
         {% for room in rooms %}{% if room.id == event.room %}{% assign room_name = room.name %}{% endif %}{% endfor %}
       {% endif %}
       <div class="schedule-list__item{% if event.type == 'break' %} schedule-list__item--break{% endif %}"
-           data-day="{{ event.day }}" data-room="{{ item_room }}">
+           data-day="{{ event.day }}" data-room="{{ event.room }}">
         <div class="schedule-list__time">{{ event.start }}<span class="schedule-list__time-sep">–</span>{{ event.end }}</div>
         <div class="schedule-list__body">
           <div class="schedule-list__title">

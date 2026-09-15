@@ -416,6 +416,22 @@ h3.section-heading {
   color: #fff;
 }
 
+/* Chip that navigates to a satellite event's page instead of filtering. The
+   dashed border sets it apart from the filter chips next to it. */
+a.schedule-chip--link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  border-style: dashed;
+}
+
+a.schedule-chip--link:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  border-style: solid;
+  color: #fff;
+}
+
 /* --- Desktop timetable grid --- */
 .timetable-date {
   font-weight: 300;

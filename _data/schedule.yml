@@ -5,18 +5,13 @@
 # print agenda list) and lets visitors filter by DAY and by ROOM. To update the
 # programme, you only ever edit this file.
 #
-# There are three sections:
-#   1. rooms   — every room, defined once (referenced by events via `room:`)
-#   2. days    — every day, defined once (referenced by events via `day:`)
-#   3. events  — the actual schedule; one entry per session
+# There are four sections:
+#   1. rooms       — every room, defined once (referenced by events via `room:`)
+#   2. days        — every day, defined once (referenced by events via `day:`)
+#   3. linked_days — satellite events that link out instead of having a timetable
+#   4. events      — the actual schedule; one entry per session
 #
 # ---------------------------------------------------------------------------
-# ROOM FIELDS
-#   id, name, floor, capacity — (required)
-#   off_site: (optional) true for a room that is not part of the main venue.
-#             It gets no timetable column and no filter chip; it exists only to
-#             name the venue of a `single_track:` day (see below).
-#
 # EVENT FIELDS
 #   day:     (required) id of a day from the `days:` list
 #   room:    (required) id of a room from the `rooms:` list,
@@ -30,17 +25,6 @@
 #   speaker: (optional)
 #   type:    (optional) colour/badge: keynote | talk | workshop | hands-on |
 #            panel | poster | demo | break
-#
-# DAY FIELDS
-#   id, label, date  — (required)
-#   subtitle:        (optional) appended to the heading, e.g. "Hackathon"
-#   link/link_text:  (optional) renders a link under the day heading
-#   single_track:    (optional) id of the one room this whole day runs in —
-#                    usually an `off_site: true` room. The day then gets a
-#                    single full-width column headed by that room instead of
-#                    the main-venue room columns, and all of its sessions are
-#                    rendered full-width and stay visible under every room
-#                    filter (as plenary sessions do).
 #
 # Tip: keep times zero-padded ("09:00", not "9:00") so they sort correctly.
 # ===========================================================================
@@ -70,11 +54,6 @@ rooms:
     name: "Rudolf-Virchow"
     floor: "2nd Floor"
     capacity: 60
-  - id: hackathon
-    name: "Hackathon venue"
-    floor: "Remote Sensing Image Analysis Group, BIFOLD, Franklinstr. 28/29, 6th floor, 10587 Berlin"
-    capacity: 100
-    off_site: true
 
 days:
   - id: day1
@@ -86,12 +65,13 @@ days:
   - id: day3
     label: "Day 3"
     date: "21 October 2026"
-  - id: day4
-    label: "Hackathon Day"
+
+# Satellite events that have their own page instead of a timetable. They are
+# rendered as link chips alongside the day filters, and nowhere else.
+linked_days:
+  - label: "Hackathon Day"
     date: "22 October 2026"
-    link: /programme/hackathon/
-    link_text: "About the hackathon, awards and how to apply →"
-    single_track: hackathon
+    url: /programme/hackathon/
 
 # ---------------------------------------------------------------------------
 # EVENTS  (sample data — replace with the real programme)
@@ -189,11 +169,3 @@ events:
   - { day: day3, room: expertisium,    start: "16:00", end: "17:30", title: "Track 1: Building and Operating EO Agents", speaker: "Agentic Analysis of Earth Observation for Utility Intelligence", type: workshop }
   - { day: day3, room: von-langenbeck, start: "16:00", end: "17:30", title: "Track 2: Trustworthy and Scientific Agentic AI", speaker: "From Vibe Coding to Verifiable Scientific Discovery: Agentic Workflows for Earth Observation", type: workshop }
   - { day: day3, room: werner-koerte,  start: "16:00", end: "17:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI", speaker: "Small Models, Big Maps – Local Geospatial Workflows with Fine-tuned SLMs", type: workshop }
-
-  # ----- Day 4 — Hackathon -------------------------------------------------
-  # Satellite event at a separate venue: single track, so every event is plenary.
-  - { day: day4, room: hackathon, start: "09:00", end: "09:45", title: "Kickoff & Primer", speaker: "Intro to the environment, the challenge and the technologies; official tool registry; starter template; conformance check", type: talk }
-  - { day: day4, room: hackathon, start: "09:45", end: "10:15", title: "Team Formation & Scoping", speaker: "Teams of 1–4 form and decide on a use case", type: workshop }
-  - { day: day4, room: hackathon, start: "10:15", end: "14:15", title: "Build Sprint", speaker: "Build MCP servers, test with the agent, iterate; mentors circulate", type: hands-on }
-  - { day: day4, room: hackathon, start: "14:15", end: "14:45", title: "Submission", speaker: "Teams deliver their submission", type: workshop }
-  - { day: day4, room: hackathon, start: "14:45", end: "15:45", title: "Demos & Cross-Platform Showcase", speaker: "Live demos of the workflow each team built", type: demo }

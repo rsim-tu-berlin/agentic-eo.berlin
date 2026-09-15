@@ -11,6 +11,10 @@
       {% for day in site.data.schedule.days %}
       <button type="button" class="schedule-chip" data-filter="day" data-value="{{ day.id }}">{{ day.label }}</button>
       {% endfor %}
+      {% comment %} Satellite events aren't filters: they link straight to their own page {% endcomment %}
+      {% for day in site.data.schedule.linked_days %}
+      <a class="schedule-chip schedule-chip--link" href="{{ day.url | relative_url }}" title="{{ day.date }}">{{ day.label }} →</a>
+      {% endfor %}
     </div>
   </div>
 
@@ -18,8 +22,7 @@
     <span class="schedule-filter__label">Room</span>
     <div class="schedule-chips">
       <button type="button" class="schedule-chip is-active" data-filter="room" data-value="all">All rooms</button>
-      {% comment %} Off-site rooms host a whole single-track day, so they are not a filter dimension {% endcomment %}
-      {% for room in site.data.schedule.rooms %}{% if room.off_site %}{% continue %}{% endif %}
+      {% for room in site.data.schedule.rooms %}
       <button type="button" class="schedule-chip" data-filter="room" data-value="{{ room.id }}">{{ room.name }}</button>
       {% endfor %}
     </div>

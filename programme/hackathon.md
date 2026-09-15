@@ -126,7 +126,7 @@ title: Hackathon
 </div>
 
 <p class="d-print-none">
-  The hackathon also appears as Day 4 of the <a href="/programme/schedule/">workshop schedule</a>.
+  See also the <a href="/programme/schedule/">workshop schedule</a> for 19–21 October.
 </p>
 
 <h3 class="section-heading mt-5">Location</h3>
