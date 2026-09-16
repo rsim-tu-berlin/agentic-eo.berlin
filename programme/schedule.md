@@ -8,7 +8,7 @@ title: Schedule
 </div>
 
 <p class="d-print-none">
-  The final programme will be announced on 15 September 2026. Please use the filters below to
+  The final programme will be announced on 21 September 2026. Please use the filters below to
   focus on a single day or room.
 </p>
 

@@ -20,7 +20,7 @@ hero_image: /assets/images/backgrounds/Agentic_AI_EO_header_2560x160.png
 {%- assign cutoff_submission   = "2026-07-20T00:00:00Z" | date: "%s" | plus: 0 -%}
 {%- assign cutoff_notification = "2026-08-01T00:00:00Z" | date: "%s" | plus: 0 -%}
 {%- assign cutoff_registration = "2026-08-02T00:00:00Z" | date: "%s" | plus: 0 -%}
-{%- assign cutoff_programme    = "2026-09-16T00:00:00Z" | date: "%s" | plus: 0 -%}
+{%- assign cutoff_programme    = "2026-09-22T00:00:00Z" | date: "%s" | plus: 0 -%}
 {%- assign cutoff_workshop     = "2026-10-22T00:00:00Z" | date: "%s" | plus: 0 -%}
 
 <div class="row">
@@ -51,7 +51,7 @@ hero_image: /assets/images/backgrounds/Agentic_AI_EO_header_2560x160.png
       <li class="dates-timeline__item{% if now >= cutoff_programme %} dates-timeline__item--past{% endif %}">
         <span class="dates-timeline__marker" aria-hidden="true"></span>
         <span class="dates-timeline__date">
-          15 September 2026{% if now >= cutoff_programme %}<span class="visually-hidden"> (passed)</span>{% endif %}
+        21 September 2026{% if now >= cutoff_programme %}<span class="visually-hidden"> (passed)</span>{% endif %}
         </span>
         <p class="dates-timeline__title mb-0">
           Release of the final programme
