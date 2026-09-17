@@ -132,16 +132,16 @@ events:
   - { day: day2, room: werner-koerte,  start: "15:45", end: "16:15", title: "Featured Demo 13", type: demo }
   - { day: day2, room: rudolf-virchow, start: "15:45", end: "16:15", title: "Featured Demo 14", type: demo }
 
-  - { day: day2, room: lecture-hall,   start: "16:15", end: "18:15", title: "Oral Session 3 - Agentic Decision Intelligence and Earth Action", speaker: "", type: talk }
+  - { day: day2, room: lecture-hall,   start: "16:15", end: "17:30", title: "Oral Session 3 - Agentic Decision Intelligence and Earth Action", speaker: "", type: talk }
 
-  - { day: day2, room: von-langenbeck, start: "17:30", end: "18:45", title: "Poster Session 2", speaker: "", type: poster }
+  - { day: day2, room: von-langenbeck, start: "17:45", end: "19:00", title: "Poster Session 2", speaker: "", type: poster }
 
-  - { day: day2, room: werner-koerte,  start: "17:30", end: "17:55", title: "Featured Demo 15", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "17:30", end: "17:55", title: "Featured Demo 16", type: demo }
-  - { day: day2, room: werner-koerte,  start: "17:55", end: "18:20", title: "Featured Demo 17", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "17:55", end: "18:20", title: "Featured Demo 18", type: demo }
-  - { day: day2, room: werner-koerte,  start: "18:20", end: "18:45", title: "Featured Demo 19", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "18:20", end: "18:45", title: "Featured Demo 20", type: demo }
+  - { day: day2, room: werner-koerte,  start: "17:45", end: "18:10", title: "Featured Demo 15", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "17:45", end: "18:10", title: "Featured Demo 16", type: demo }
+  - { day: day2, room: werner-koerte,  start: "18:10", end: "18:35", title: "Featured Demo 17", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "18:10", end: "18:35", title: "Featured Demo 18", type: demo }
+  - { day: day2, room: werner-koerte,  start: "18:35", end: "19:00", title: "Featured Demo 19", type: demo }
+  - { day: day2, room: rudolf-virchow, start: "18:35", end: "19:00", title: "Featured Demo 20", type: demo }
 
   # ----- Day 3 -------------------------------------------------------------
   - { day: day3, room: foyer,          start: "08:00", end: "09:00", title: "Welcome Coffee", type: break }
