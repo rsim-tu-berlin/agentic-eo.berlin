@@ -106,7 +106,7 @@ events:
 
   # ----- Day 2 -------------------------------------------------------------
   - { day: day2, room: foyer,          start: "08:00", end: "08:45", title: "Welcome Coffee", type: break }
-  - { day: day2, room: lecture-hall,   start: "08:45", end: "09:30", title: "Keynote", speaker: "Mistral AI", type: keynote }
+  - { day: day2, room: lecture-hall,   start: "08:45", end: "09:30", title: "Keynote: The Rise of Agentic AI: Ecosystem, Trends and Implications for Science and Industry", speaker: "To Be Announced", type: keynote }
   - { day: day2, room: lecture-hall,   start: "09:30", end: "10:15", title: "Keynote: FAME - Traditional and Agentic AI in Space", speaker: "Dr. Steve Chien", type: keynote }
 
   - { day: day2, room: foyer,          start: "10:15", end: "10:45", title: "Coffee Break | 4 Demos (2x Foyer & 2x Wandelhalle)", type: break }
@@ -124,7 +124,7 @@ events:
   - { day: day2, room: lecture-hall,   start: "14:00", end: "14:30", title: "Keynote: Failure Mode in Agentic Reasoning", speaker: "Prof. Dr. Manling Li", type: keynote }
   - { day: day2, room: lecture-hall,   start: "14:30", end: "15:00", title: "Keynote: Harnessing the Collective Intelligence of AI Agents for Discoveries", speaker: "Prof. Dr. James Zou", type: keynote }
 
-  - { day: day2, room: lecture-hall,   start: "15:00", end: "15:45", title: "Hands-On Session by Mistral AI", type: hands-on }
+  - { day: day2, room: lecture-hall,   start: "15:00", end: "15:45", title: "Technical deep dives: Building with Mistral Open Agentic AI tools: From Scientific Discovery to Operational Services", type: hands-on }
 
   - { day: day2, room: foyer,          start: "15:45", end: "16:15", title: "Coffee Break | 4 Demos (2x Foyer & 2x Wandelhalle)", type: break }
   - { day: day2, room: expertisium,    start: "15:45", end: "16:15", title: "Coffee Break | 2 Demos", type: break }
