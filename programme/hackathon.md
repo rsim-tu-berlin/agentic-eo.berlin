@@ -153,7 +153,7 @@ title: Hackathon
 
 <p>
   Submissions will be evaluated by a jury composed of representatives from ESA Φ-lab,
-  TU Berlin/BIFOLD and invited experts.
+  BIFOLD and invited experts.
 </p>
 
 <p>
