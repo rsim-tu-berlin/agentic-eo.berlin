@@ -168,7 +168,7 @@ title: Hackathon
 <h3 class="section-heading mt-5">Organizers</h3>
 
 <p>
-  This event is organized by <a href="https://picampus-school.com" target="_blank" rel="noopener">Pi School</a> as part of <a href="https://eve.philab.esa.int" target="_blank" rel="noopener">EVE</a> project, in collaboration with <a href="https://philab.esa.int/" target="_blank" rel="noopener">ESA Φ-lab</a> and <a href="https://bifold.eu/" target="_blank" rel="noopener">BIFOLD</a>.
+  This event is organized by <a href="https://picampus-school.com" target="_blank" rel="noopener">Pi School</a>, <a href="https://philab.esa.int/" target="_blank" rel="noopener">ESA Φ-lab</a> and <a href="https://bifold.eu/" target="_blank" rel="noopener">BIFOLD</a>.
 </p>
 
 <h3 class="section-heading mt-5">How to apply</h3>
