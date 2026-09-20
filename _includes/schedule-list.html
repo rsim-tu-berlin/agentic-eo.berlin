@@ -41,7 +41,7 @@
           </div>
           <div class="schedule-list__meta">
             <span class="schedule-list__room">{{ room_name }}</span>
-            {% if event.speaker and event.speaker != "" %}<span class="schedule-list__speaker">· {{ event.speaker }}</span>{% endif %}
+            {% if event.speaker and event.speaker != "" %}<span class="schedule-list__speaker">· {{ event.speaker | strip | newline_to_br }}</span>{% endif %}
           </div>
           {% if event.details and event.details != "" %}
           <div class="schedule-list__details">{{ event.details | markdownify }}</div>

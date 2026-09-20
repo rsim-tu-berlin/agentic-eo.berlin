@@ -244,7 +244,12 @@ function initScheduleDetails() {
     if (speaker) {
       const speakerLine = document.createElement("p");
       speakerLine.className = "schedule-popover__speaker";
-      speakerLine.textContent = speaker.textContent.trim();
+      // Copy the nodes, not the text, so line breaks in `speaker:` survive.
+      Array.prototype.slice
+        .call(speaker.cloneNode(true).childNodes)
+        .forEach(function (node) {
+          speakerLine.append(node);
+        });
       body.append(speakerLine);
     }
 
@@ -330,7 +335,7 @@ function initScheduleDetails() {
   sync();
 
   // Line breaks shift once the web font swaps in, which changes what clips.
-  if (document.fonts && document.fonts.ready) {
+  if (document.fonts) {
     document.fonts.ready.then(sync);
   }
 }

@@ -16,6 +16,14 @@ hands_on_email: "hands-on@agentic-eo.berlin"
 
 permalink: pretty
 
+# Treat a single newline as a line break, so multi-line text typed in _data
+# (e.g. a session's `details:`) comes out looking the way it was written.
+# Note this means a paragraph must stay on one line: wrapping it across source
+# lines for readability would now show as breaks.
+kramdown:
+  input: GFM
+  hard_wrap: true
+
 defaults:
   - scope:
       path: ""

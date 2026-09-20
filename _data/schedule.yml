@@ -22,13 +22,22 @@
 #   start:   (required) "HH:MM", 24h, zero-padded, aligned to 5 minutes
 #   end:     (required) "HH:MM"
 #   title:   (required)
-#   speaker: (optional)
+#   speaker: (optional) plain text, but line breaks are kept. For more than one
+#            name, switch from a quoted value to a `|` block:
+#
+#              speaker: |
+#                Chiara Cocchiara
+#                Julia Gottfriedsen
+#
+#            (Not Markdown — `- item` stays a dash. Use `details:` for lists.)
 #   type:    (optional) colour/badge: keynote | talk | workshop | hands-on |
 #            panel | poster | demo | break
 #   details: (optional) longer description. Short sessions get a small tile in
 #            the timetable, so this text is not shown there directly: it appears
 #            in a pop-up on hover/focus, and inline in the mobile/print agenda.
-#            Markdown (links, emphasis, lists) and HTML are supported.
+#            Markdown (links, emphasis, lists) and HTML are supported, and every
+#            line break you type is kept — so keep a paragraph on ONE line, or
+#            it will be broken up exactly where you wrapped it.
 #
 # Tip: keep times zero-padded ("09:00", not "9:00") so they sort correctly.
 #
@@ -48,8 +57,7 @@
 #     speaker: "Building Agentic Earth Observation Workflows with EVE Workbench"
 #     type: workshop
 #     details: |
-#       We start from a bare STAC catalogue and end with an agent that plans
-#       its own queries. See the [hands-on call](/calls/hands-on/).
+#       We start from a bare STAC catalogue and end with an agent that plans its own queries. See the [hands-on call](/calls/hands-on/).
 #
 #       Bring a laptop with:
 #
@@ -122,7 +130,15 @@ events:
       - **Dr. Claudio Iacopino** Head of Φ-lab Explore Office, European Space Agency <br> 
       - **Prof. Dr. Begüm Demir** Deputy Director of BIFOLD <br>
       - **Dr. Nicolas Longépé** EO Data Scientist at Φ-lab Explore Office, European Space Agency
-  - { day: day1, room: lecture-hall,   start: "13:45", end: "14:30", title: "Keynote: Agentic AI for Earth Observation and Climate Resilience", speaker: "Prof. Dr. Salman Khan", type: keynote }
+  - day: day1
+    room: lecture-hall
+    start: "13:45"
+    end: "14:30"
+    title: "Keynote: Agentic AI for Earth Observation and Climate Resilience"
+    type: keynote
+    speaker: |
+      Prof. Dr. Salman Khan
+      Mohamed bin Zayed University of Artificial Intelligence
 
   - { day: day1, room: foyer,          start: "14:30", end: "15:00", title: "Coffee Break | 4 Demos (2x Foyer & 2x Wandelhalle)", type: break }
   - { day: day1, room: expertisium,    start: "14:30", end: "15:00", title: "Coffee Break | 2 Demos", type: break }
@@ -135,7 +151,7 @@ events:
     room: lecture-hall
     start: "16:05"
     end: "16:45"
-    title: "Earth Observation in the age of Agentic AI: From Insight to Business"
+    title: "Panel:Earth Observation in the age of Agentic AI: From Insight to Business"
     speaker: ""
     type: panel
     details: |
@@ -159,12 +175,20 @@ events:
   - { day: day1, room: werner-koerte,  start: "18:15", end: "18:40", title: "Featured Demo 9", type: demo }
   - { day: day1, room: rudolf-virchow, start: "18:15", end: "18:40", title: "Featured Demo 10", type: demo }
   
-  - { day: day1, room: foyer,         start: "18:30", end: "20:30", title: "Welcome Reception", type: break }
+  - { day: day1, room: foyer,         start: "18:30", end: "20:45", title: "Welcome Reception", type: break }
 
   # ----- Day 2 -------------------------------------------------------------
   - { day: day2, room: foyer,          start: "08:00", end: "08:45", title: "Welcome Coffee", type: break }
-  - { day: day2, room: lecture-hall,   start: "08:45", end: "09:30", title: "Keynote: The Rise of Agentic AI: Ecosystem, Trends and Implications for Science and Industry", speaker: "To Be Announced", type: keynote }
-  - { day: day2, room: lecture-hall,   start: "09:30", end: "10:15", title: "Keynote: FAME - Traditional and Agentic AI in Space", speaker: "Dr. Steve Chien", type: keynote }
+  - { day: day2, room: lecture-hall,   start: "08:45", end: "09:30", title: "Keynote: The Rise of Agentic AI: Ecosystem, Trends and Implications for Science and Industry", speaker: "Mistral AI", type: keynote }
+  - day: day2
+    room: lecture-hall
+    start: "09:30"
+    end: "10:15"
+    title: "Keynote: FAME - Traditional and Agentic AI in Space"
+    type: keynote
+    speaker: |
+      Dr. Steve Chien
+      Jet Propulsion Laboratory (JPL), NASA
 
   - { day: day2, room: foyer,          start: "10:15", end: "10:45", title: "Coffee Break | 4 Demos (2x Foyer & 2x Wandelhalle)", type: break }
   - { day: day2, room: expertisium,    start: "10:15", end: "10:45", title: "Coffee Break | 2 Demos", type: break }
@@ -178,8 +202,24 @@ events:
 
   - { day: day2, room: foyer,         start: "12:45", end: "14:00", title: "Hosted Lunch", type: break }
 
-  - { day: day2, room: lecture-hall,   start: "14:00", end: "14:30", title: "Keynote: Failure Mode in Agentic Reasoning", speaker: "Prof. Dr. Manling Li", type: keynote }
-  - { day: day2, room: lecture-hall,   start: "14:30", end: "15:00", title: "Keynote: Harnessing the Collective Intelligence of AI Agents for Discoveries", speaker: "Prof. Dr. James Zou", type: keynote }
+  - day: day2
+    room: lecture-hall
+    start: "14:00"
+    end: "14:30"
+    title: "Keynote: Failure Mode in Agentic Reasoning"
+    type: keynote
+    speaker: |
+      Prof. Dr. Manling Li
+      Northwestern University & Amazon Scholar
+  - day: day2
+    room: lecture-hall
+    start: "14:30"
+    end: "15:00"
+    title: "Keynote: Harnessing the Collective Intelligence of AI Agents for Discoveries"
+    type: keynote
+    speaker: |
+      Prof. Dr. James Zou
+      Stanford University
 
   - { day: day2, room: lecture-hall,   start: "15:00", end: "15:45", title: "Technical deep dives: Building with Mistral Open Agentic AI tools: From Scientific Discovery to Operational Services", type: hands-on }
 
@@ -202,8 +242,24 @@ events:
 
   # ----- Day 3 -------------------------------------------------------------
   - { day: day3, room: foyer,          start: "08:00", end: "09:00", title: "Welcome Coffee", type: break }
-  - { day: day3, room: lecture-hall,   start: "09:00", end: "09:45", title: "Keynote: Building Robust Economic Capabilities in AI Agents", speaker: "Davide Crapis", type: keynote }
-  - { day: day3, room: lecture-hall,   start: "09:45", end: "10:30", title: "Keynote: Why Mature Agents Require a Paradigm Shift in Tooling", speaker: "Dr. Christopher Forrest Brown", type: keynote }
+  - day: day3
+    room: lecture-hall
+    start: "09:00"
+    end: "09:45"
+    title: "Keynote: Building Robust Economic Capabilities in AI Agents"
+    type: keynote
+    speaker: |
+      Davide Crapis
+      Ethereum Foundation
+  - day: day3
+    room: lecture-hall
+    start: "09:45"
+    end: "10:30"
+    title: "Keynote: Why Mature Agents Require a Paradigm Shift in Tooling"
+    type: keynote
+    speaker: |
+      Dr. Christopher Forrest Brown
+      Google DeepMind
 
   - { day: day3, room: foyer,          start: "10:30", end: "11:00", title: "Coffee Break | 4 Demos (2x Foyer & 2x Wandelhalle)", type: break }
   - { day: day3, room: expertisium,    start: "10:30", end: "11:00", title: "Coffee Break | 2 Demos", type: break }

@@ -506,7 +506,8 @@ a.schedule-chip--link:hover {
   --tt-bg: #eef3f8;
   position: relative;
   margin: 1px;
-  padding: 3px 6px;
+  /* Tight enough that a 15-minute slot (a 28px box) still fits time + title */
+  padding: 2px 6px;
   border-radius: 4px;
   overflow: hidden;
   font-size: 0.75rem;
@@ -516,12 +517,12 @@ a.schedule-chip--link:hover {
   color: var(--color-text);
   display: flex;
   flex-direction: column;
-  gap: 1px;
 }
 
 .tt-event__time {
   font-size: 0.65rem;
   font-weight: 500;
+  line-height: 1;
   color: var(--color-primary);
   opacity: 0.85;
 }
@@ -582,12 +583,13 @@ a.schedule-chip--link:hover {
   outline-offset: -1px;
 }
 
-/* Fade the clipped last line so the cut-off reads as intentional */
+/* Fade the clipped last line so the cut-off reads as intentional. Capped as a
+   share of the tile so it can't wash out most of a short session. */
 .tt-event--truncated::after {
   content: "";
   position: absolute;
   inset: auto 0 0 0;
-  height: 12px;
+  height: min(12px, 30%);
   background: linear-gradient(to bottom, transparent, var(--tt-bg));
   pointer-events: none;
 }

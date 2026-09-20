@@ -94,7 +94,7 @@
              style="grid-row: {{ row_start }} / {{ row_end }}; grid-column: {{ col }};">
           <span class="tt-event__time">{{ event.start }}–{{ event.end }}</span>
           <span class="tt-event__title">{{ event.title }}</span>
-          {% if event.speaker and event.speaker != "" %}<span class="tt-event__speaker">{{ event.speaker }}</span>{% endif %}
+          {% if event.speaker and event.speaker != "" %}<span class="tt-event__speaker">{{ event.speaker | strip | newline_to_br }}</span>{% endif %}
           {% if event.details and event.details != "" %}<div class="tt-event__details d-none" data-event-details>{{ event.details | markdownify }}</div>{% endif %}
         </div>
         {% endif %}

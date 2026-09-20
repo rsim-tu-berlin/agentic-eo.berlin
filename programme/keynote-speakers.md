@@ -16,8 +16,10 @@ title: Keynote Speakers (More to Be Announced)
       >
       <div class="card-body">
         <h5 class="card-title fw-bold"><a href="{{ speaker.link }}" target="_blank" rel="noopener noreferrer">{{ speaker.name }}</a></h5>
-        <p class="text-body-secondary mb-2">{{ speaker.role }} <br /> {{ speaker.affiliation }}</p>
-        <p class="card-text"><strong>Title of the talk:</strong> {{ speaker.topic }}</p>
+        {% assign role = speaker.role | strip %}
+        {% assign affiliation = speaker.affiliation | strip %}
+        <p class="text-body-secondary mb-2">{{ role | newline_to_br }}{% if role != "" and affiliation != "" %}<br />{% endif %}{{ affiliation | newline_to_br }}</p>
+        <p class="card-text"><strong>Title of the talk:</strong> {{ speaker.topic | strip | newline_to_br }}</p>
       </div>
     </div>
   </div>

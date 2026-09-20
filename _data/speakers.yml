@@ -1,3 +1,20 @@
+# ===========================================================================
+# Keynote speakers — rendered as cards on /programme/keynote-speakers/
+#
+# FIELDS
+#   name, role, affiliation, topic, link, image
+#
+# `role`, `affiliation` and `topic` keep the line breaks you type. For more
+# than one line, switch from a quoted value to a `|` block:
+#
+#   affiliation: |
+#     Northwestern University
+#     & Amazon Scholar
+#
+# (This is plain text, not Markdown — so `- item` stays a dash, and HTML tags
+# are passed through as-is.)
+# ===========================================================================
+
 - name: "Christopher Forrest Brown"
   role: "Staff Research Scientist"
   affiliation: "Google DeepMind"
