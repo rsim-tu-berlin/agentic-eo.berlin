@@ -3,6 +3,9 @@
   cleanly regardless of screen size). Grouped by day, sorted by start time.
   Each row carries data-day / data-room so the same filter state from main.js
   applies here too. A `room` lookup resolves the human-readable room name.
+
+  Rows grow with their content, so the optional `details:` text is rendered
+  inline here instead of in the pop-up the timetable uses.
 {% endcomment %}
 {% assign rooms = site.data.schedule.rooms %}
 <div class="schedule-list d-lg-none" data-schedule-list>
@@ -40,6 +43,9 @@
             <span class="schedule-list__room">{{ room_name }}</span>
             {% if event.speaker and event.speaker != "" %}<span class="schedule-list__speaker">· {{ event.speaker }}</span>{% endif %}
           </div>
+          {% if event.details and event.details != "" %}
+          <div class="schedule-list__details">{{ event.details | markdownify }}</div>
+          {% endif %}
         </div>
       </div>
       {% endfor %}

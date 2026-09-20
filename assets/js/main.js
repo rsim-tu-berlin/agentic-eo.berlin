@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   initScheduleFilters();
+  initScheduleDetails();
 });
 
 // Schedule day/room filtering. Drives both the desktop timetable grid and the
@@ -167,6 +168,9 @@ function initScheduleFilters() {
     if (emptyMessage) {
       emptyMessage.classList.toggle("d-none", visibleCount !== 0);
     }
+
+    // Room columns change width here, so tiles that fit before may clip now.
+    document.dispatchEvent(new CustomEvent("schedule:filtered"));
   }
 
   // Only the filter chips; chips without data-filter are plain links out.
@@ -187,4 +191,146 @@ function initScheduleFilters() {
   });
 
   applyFilters();
+}
+
+// Session pop-ups for the desktop timetable. Tile height is dictated by the
+// session duration, so a 15-minute slot cannot show much text and anything an
+// event carries in `details:` has nowhere to go at all. Every tile that either
+// clips its text or has details becomes a popover trigger showing the lot.
+function initScheduleDetails() {
+  const grid = document.querySelector("[data-schedule-grid]");
+  if (!grid || typeof bootstrap === "undefined") {
+    return;
+  }
+
+  const tiles = Array.prototype.slice.call(grid.querySelectorAll(".tt-event"));
+
+  function roomLabel(tile) {
+    if (tile.dataset.room === "plenary") {
+      return "All rooms";
+    }
+    const timetable = tile.closest(".timetable");
+    if (!timetable) {
+      return "";
+    }
+    let label = "";
+    timetable.querySelectorAll(".tt-head[data-room]").forEach(function (head) {
+      if (head.dataset.room !== tile.dataset.room) {
+        return;
+      }
+      const name = head.querySelector(".tt-head__name");
+      label = name ? name.textContent.trim() : "";
+    });
+    return label;
+  }
+
+  function buildContent(tile) {
+    const body = document.createElement("div");
+
+    const time = tile.querySelector(".tt-event__time");
+    const meta = [time ? time.textContent.trim() : "", roomLabel(tile)].filter(
+      function (part) {
+        return part !== "";
+      }
+    );
+    if (meta.length > 0) {
+      const metaLine = document.createElement("p");
+      metaLine.className = "schedule-popover__meta";
+      metaLine.textContent = meta.join(" · ");
+      body.append(metaLine);
+    }
+
+    const speaker = tile.querySelector(".tt-event__speaker");
+    if (speaker) {
+      const speakerLine = document.createElement("p");
+      speakerLine.className = "schedule-popover__speaker";
+      speakerLine.textContent = speaker.textContent.trim();
+      body.append(speakerLine);
+    }
+
+    const details = tile.querySelector("[data-event-details]");
+    if (details) {
+      const detailsBlock = document.createElement("div");
+      detailsBlock.className = "schedule-popover__details";
+      // Markdown from _data/schedule.yml, rendered by Jekyll at build time; no
+      // visitor input reaches it, and Bootstrap sanitises it again on show.
+      detailsBlock.innerHTML = details.innerHTML;
+      body.append(detailsBlock);
+    }
+
+    return body;
+  }
+
+  function createPopover(tile) {
+    const title = tile.querySelector(".tt-event__title");
+    return new bootstrap.Popover(tile, {
+      container: "body",
+      customClass: "schedule-popover",
+      placement: "auto",
+      html: true,
+      title: title ? title.textContent.trim() : "",
+      content: function () {
+        return buildContent(tile);
+      },
+      trigger: "hover focus",
+    });
+  }
+
+  // Re-run whenever the tiles are re-laid out: filtering collapses room
+  // columns and resizing changes how many lines fit.
+  function sync() {
+    tiles.forEach(function (tile) {
+      // Not rendered right now (small screen, or filtered out): measuring
+      // would report every tile as fitting, so leave the state alone — but
+      // close a pop-up the tile may have had open when it disappeared.
+      if (tile.offsetParent === null) {
+        const hidden = bootstrap.Popover.getInstance(tile);
+        if (hidden) {
+          hidden.hide();
+        }
+        return;
+      }
+
+      const truncated = tile.scrollHeight - tile.clientHeight > 1;
+      const hasMore = truncated || tile.querySelector("[data-event-details]") !== null;
+      tile.classList.toggle("tt-event--truncated", truncated);
+      tile.classList.toggle("tt-event--has-more", hasMore);
+
+      const popover = bootstrap.Popover.getInstance(tile);
+      if (hasMore && !popover) {
+        tile.setAttribute("tabindex", "0");
+        createPopover(tile);
+      } else if (!hasMore && popover) {
+        popover.dispose();
+        tile.removeAttribute("tabindex");
+      }
+    });
+  }
+
+  document.addEventListener("schedule:filtered", sync);
+
+  let resizeTimer = null;
+  window.addEventListener("resize", function () {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(sync, 150);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key !== "Escape") {
+      return;
+    }
+    tiles.forEach(function (tile) {
+      const popover = bootstrap.Popover.getInstance(tile);
+      if (popover) {
+        popover.hide();
+      }
+    });
+  });
+
+  sync();
+
+  // Line breaks shift once the web font swaps in, which changes what clips.
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(sync);
+  }
 }

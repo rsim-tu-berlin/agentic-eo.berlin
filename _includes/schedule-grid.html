@@ -5,6 +5,10 @@
   main.js; day filtering hides whole day grids.
 
   All positions are computed from the "HH:MM" start/end times in the data.
+
+  Tile height follows session duration, so short sessions clip their text.
+  main.js measures each tile and turns the clipped ones — plus any tile with a
+  `details:` entry, rendered hidden below — into a popover trigger.
 {% endcomment %}
 {% assign rooms = site.data.schedule.rooms %}
 <div class="schedule-grid d-none d-lg-block" data-schedule-grid>
@@ -81,6 +85,7 @@
              style="grid-row: {{ row_start }} / {{ row_end }}; grid-column: 2 / -1;">
           <span class="tt-event__time">{{ event.start }}–{{ event.end }}</span>
           <span class="tt-event__title">{{ event.title }}</span>
+          {% if event.details and event.details != "" %}<div class="tt-event__details d-none" data-event-details>{{ event.details | markdownify }}</div>{% endif %}
         </div>
         {% else %}
         {% assign col = 0 %}
@@ -90,6 +95,7 @@
           <span class="tt-event__time">{{ event.start }}–{{ event.end }}</span>
           <span class="tt-event__title">{{ event.title }}</span>
           {% if event.speaker and event.speaker != "" %}<span class="tt-event__speaker">{{ event.speaker }}</span>{% endif %}
+          {% if event.details and event.details != "" %}<div class="tt-event__details d-none" data-event-details>{{ event.details | markdownify }}</div>{% endif %}
         </div>
         {% endif %}
         {% endfor %}

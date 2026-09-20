@@ -25,8 +25,36 @@
 #   speaker: (optional)
 #   type:    (optional) colour/badge: keynote | talk | workshop | hands-on |
 #            panel | poster | demo | break
+#   details: (optional) longer description. Short sessions get a small tile in
+#            the timetable, so this text is not shown there directly: it appears
+#            in a pop-up on hover/focus, and inline in the mobile/print agenda.
+#            Markdown (links, emphasis, lists) and HTML are supported.
 #
 # Tip: keep times zero-padded ("09:00", not "9:00") so they sort correctly.
+#
+# Events are written as one-line flow mappings below. An event with `details`
+# needs the block form instead, because the text is too long for one line.
+#
+# Always write `details: |` — the pipe keeps your line breaks. Do NOT use `>-`:
+# it folds every line into one long line, and Markdown then refuses to start a
+# list, so `- item` and `<ul>`/`<li>` come out as visible text. (Inline tags
+# like <br> and <strong> survive folding, which is why those appear to work.)
+#
+#   - day: day3
+#     room: expertisium
+#     start: "14:00"
+#     end: "15:30"
+#     title: "Track 1: Building and Operating EO Agents"
+#     speaker: "Building Agentic Earth Observation Workflows with EVE Workbench"
+#     type: workshop
+#     details: |
+#       We start from a bare STAC catalogue and end with an agent that plans
+#       its own queries. See the [hands-on call](/calls/hands-on/).
+#
+#       Bring a laptop with:
+#
+#       - Python 3.11
+#       - Docker
 # ===========================================================================
 
 rooms:
@@ -88,9 +116,24 @@ events:
   - { day: day1, room: werner-koerte,  start: "14:30", end: "15:00", title: "Featured Demo 1", type: demo }
   - { day: day1, room: rudolf-virchow, start: "14:30", end: "15:00", title: "Featured Demo 2", type: demo }
 
-  - { day: day1, room: lecture-hall,   start: "15:00", end: "16:00", title: "Oral Session 1 - Multi-Modal Large Models, Datasets and Agentic Earth Intelligence", speaker: "", type: talk }
-  - { day: day1, room: lecture-hall,   start: "16:15", end: "16:45", title: "Panel Discussion 1", speaker: "", type: panel }
-  - { day: day1, room: lecture-hall,   start: "17:00", end: "17:30", title: "Thematic Discussion", speaker: "", type: panel }
+  - { day: day1, room: lecture-hall,   start: "15:00", end: "16:00", title: "Oral Session 1: Agentic Decision Intelligence and Earth Action", speaker: "", type: talk }
+  - day: day1 
+    room: lecture-hall
+    start: "16:15"
+    end: "16:45"
+    title: "Earth Observation in the age of Agentic AI: From Insight to Business"
+    speaker: ""
+    type: panel
+    details: |
+      **Moderated by** Chiara Cocchiara, ESA Φ-lab
+
+      **Panelists:**
+
+      - Julia Gottfriedsen, Chief Technical Officer at ConstelIR
+      - Marcin Detyniecki, Group Chief Data Scientist & Head of Research & Advanced AI at AXA
+      - Andres Camero, Co-Head of Department EO Data Science at German Aerospace Center (DLR)
+      - Linda Sheard, VP, Analytics and Agentic Products at Xoople
+  - { day: day1, room: lecture-hall,   start: "17:00", end: "17:30", title: "Thematic Discussion: Subway Takes: Agentic AI Edition", speaker: "", type: panel, details: "**Moderated by** Eva Gmelich Meijling and Riccardo D'Ercole, ESA Φ-lab" }
   - { day: day1, room: von-langenbeck, start: "17:00", end: "18:30", title: "Poster Session 1", speaker: "", type: poster }
   
   - { day: day1, room: werner-koerte,  start: "17:00", end: "17:25", title: "Featured Demo 3", type: demo }
@@ -115,7 +158,7 @@ events:
   - { day: day2, room: werner-koerte,  start: "10:15", end: "10:45", title: "Featured Demo 11", type: demo }
   - { day: day2, room: rudolf-virchow, start: "10:15", end: "10:45", title: "Featured Demo 12", type: demo }
 
-  - { day: day2, room: lecture-hall,   start: "10:45", end: "11:45", title: "Oral Session 2 - Design, Development and Evaluation of AI Agents", speaker: "", type: talk }
+  - { day: day2, room: lecture-hall,   start: "10:45", end: "11:45", title: "Oral Session 2: Autonomous EO Systems, Space Operations and Cognitive Computing in Space", speaker: "", type: talk }
   - { day: day2, room: lecture-hall,   start: "12:00", end: "12:30", title: "Panel Discussion 2", speaker: "", type: panel }
   - { day: day2, room: lecture-hall,   start: "12:30", end: "12:45", title: "Group Photo Shoot", speaker: "", type: break }
 
@@ -132,7 +175,7 @@ events:
   - { day: day2, room: werner-koerte,  start: "15:45", end: "16:15", title: "Featured Demo 13", type: demo }
   - { day: day2, room: rudolf-virchow, start: "15:45", end: "16:15", title: "Featured Demo 14", type: demo }
 
-  - { day: day2, room: lecture-hall,   start: "16:15", end: "17:30", title: "Oral Session 3 - Agentic Decision Intelligence and Earth Action", speaker: "", type: talk }
+  - { day: day2, room: lecture-hall,   start: "16:15", end: "17:30", title: "Oral Session 3: Design, Development and Evaluation of AI Agents", speaker: "", type: talk }
 
   - { day: day2, room: von-langenbeck, start: "17:45", end: "19:00", title: "Poster Session 2", speaker: "", type: poster }
 
@@ -152,9 +195,14 @@ events:
   - { day: day3, room: expertisium,    start: "10:30", end: "11:00", title: "Coffee Break | 2 Demos", type: break }
 
   - { day: day3, room: werner-koerte,  start: "10:30", end: "11:00", title: "Featured Demo 21", type: demo }
-  - { day: day3, room: rudolf-virchow, start: "10:30", end: "11:00", title: "Featured Demo 22", type: demo }
+  - day: day3 
+    room: rudolf-virchow
+    start: "10:30"
+    end: "11:00"
+    title: "Featured Demo 22"
+    type: demo
 
-  - { day: day3, room: lecture-hall,   start: "11:00", end: "12:00", title: "Oral Session 4 - Autonomous EO Systems, Space Operations and Cognitive Computing in Space", speaker: "", type: talk }
+  - { day: day3, room: lecture-hall,   start: "11:00", end: "12:00", title: "Oral Session 4: Multi-Modal Large Models, Datasets and Agentic Earth Intelligence", speaker: "", type: talk }
   - { day: day3, room: lecture-hall,   start: "12:15", end: "12:45", title: "Closing Ceremony", speaker: "", type: panel }
 
   - { day: day3, room: foyer,          start: "12:45", end: "14:00", title: "Hosted Lunch", type: break }
