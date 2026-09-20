@@ -107,7 +107,21 @@ linked_days:
 events:
   # ----- Day 1 (afternoon) -------------------------------------------------
   - { day: day1, room: foyer,          start: "12:00", end: "13:00", title: "Registration & Welcome Lunch", type: break }
-  - { day: day1, room: lecture-hall,   start: "13:00", end: "13:45", title: "Opening Remarks", speaker: "TBA", type: keynote }
+  - day: day1
+    room: lecture-hall
+    start: "13:00"
+    end: "13:45"
+    title: "Opening Remarks"
+    speaker: ""
+    type: keynote
+    details: |
+      **Speakers:**
+
+      - **Prof. Dr. Fatma Deniz** President of TU Berlin <br>
+      - **Prof. Dr. Volker Markl** Director of BIFOLD <br>
+      - **Dr. Claudio Iacopino** Head of Φ-lab Explore Office, European Space Agency <br> 
+      - **Prof. Dr. Begüm Demir** Deputy Director of BIFOLD <br>
+      - **Dr. Nicolas Longépé** EO Data Scientist at Φ-lab Explore Office, European Space Agency
   - { day: day1, room: lecture-hall,   start: "13:45", end: "14:30", title: "Keynote: Agentic AI for Earth Observation and Climate Resilience", speaker: "Prof. Dr. Salman Khan", type: keynote }
 
   - { day: day1, room: foyer,          start: "14:30", end: "15:00", title: "Coffee Break | 4 Demos (2x Foyer & 2x Wandelhalle)", type: break }
@@ -119,7 +133,7 @@ events:
   - { day: day1, room: lecture-hall,   start: "15:00", end: "16:00", title: "Oral Session 1: Agentic Decision Intelligence and Earth Action", speaker: "", type: talk }
   - day: day1 
     room: lecture-hall
-    start: "16:15"
+    start: "16:05"
     end: "16:45"
     title: "Earth Observation in the age of Agentic AI: From Insight to Business"
     speaker: ""
@@ -129,10 +143,10 @@ events:
 
       **Panelists:**
 
-      - Julia Gottfriedsen, Chief Technical Officer at ConstelIR
-      - Marcin Detyniecki, Group Chief Data Scientist & Head of Research & Advanced AI at AXA
-      - Andres Camero, Co-Head of Department EO Data Science at German Aerospace Center (DLR)
-      - Linda Sheard, VP, Analytics and Agentic Products at Xoople
+      - **Julia Gottfriedsen** Chief Technical Officer at ConstelIR
+      - **Marcin Detyniecki** Group Chief Data Scientist & Head of Research & Advanced AI at AXA
+      - **Andres Camero** Co-Head of Department EO Data Science at German Aerospace Center (DLR)
+      - **Linda Sheard** VP, Analytics and Agentic Products at Xoople
   - { day: day1, room: lecture-hall,   start: "17:00", end: "17:30", title: "Thematic Discussion: Subway Takes: Agentic AI Edition", speaker: "", type: panel, details: "**Moderated by** Eva Gmelich Meijling and Riccardo D'Ercole, ESA Φ-lab" }
   - { day: day1, room: von-langenbeck, start: "17:00", end: "18:30", title: "Poster Session 1", speaker: "", type: poster }
   
@@ -145,7 +159,7 @@ events:
   - { day: day1, room: werner-koerte,  start: "18:15", end: "18:40", title: "Featured Demo 9", type: demo }
   - { day: day1, room: rudolf-virchow, start: "18:15", end: "18:40", title: "Featured Demo 10", type: demo }
   
-  - { day: day1, room: foyer,         start: "18:45", end: "20:45", title: "Welcome Reception", type: break }
+  - { day: day1, room: foyer,         start: "18:30", end: "20:30", title: "Welcome Reception", type: break }
 
   # ----- Day 2 -------------------------------------------------------------
   - { day: day2, room: foyer,          start: "08:00", end: "08:45", title: "Welcome Coffee", type: break }
