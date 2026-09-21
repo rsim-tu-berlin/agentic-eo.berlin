@@ -157,7 +157,7 @@ events:
 
       - **Prof. Dr. Fatma Deniz** President of TU Berlin <br>
       - **Prof. Dr. Volker Markl** Director of BIFOLD <br>
-      - **Dr. Claudio Iacopino** Head of Φ-lab Explore Office, European Space Agency <br> 
+      - **Dr. Claudio Iacopino** Head of Φ-lab Explore Office, European Space Agency <br>
       - **Prof. Dr. Begüm Demir** Deputy Director of BIFOLD <br>
       - **Dr. Nicolas Longépé** EO Data Scientist at Φ-lab Explore Office, European Space Agency
   - day: day1
@@ -174,26 +174,56 @@ events:
     room: foyer
     start: "14:30"
     end: "15:00"
-    title: | 
-      Coffee Break | 4 Demos 
-      Foyer: Demo 13 & 14 
-      Wandelhalle: Demo 11 & 15
+    title: |
+      Coffee Break | 4 Demos
+      Foyer: Demos 13 & 14
+      Wandelhalle: Demos 11 & 15
     details: |
       **Foyer:**
       Demo 13: From Chat to Copernicus: Agent-Based Composition of Reproducible openEO Workflows on CDSE – VITO
-      Presented by Hans Vanrompay, Victor Verhaert, Mathias Michielsen
+      **Presented by** Hans Vanrompay, Victor Verhaert, Mathias Michielsen
       Demo 14: SAI4EO: From Conversational Remote-Sensing Tool Use to Agentic, Artifact-Grounded Geospatial Intelligence – Planetek Italia
-      Presented by Nicolò Taggio
+      **Presented by** Nicolò Taggi
       **Wandelhalle:**
       Demo 11: EVE Workbench Live: A Multi-Agent Debate on Berlin’s Climate Stress – Frank Reply
-      Presented by Daniel Fitzpatrick, Maria Müller
+      **Presented by** Daniel Fitzpatrick, Maria Müller
       Demo 15: Portable Agentic openEO: From Natural Language to Executable Earth Observation Workflows – EURAC Research Italy
-      Presented by Suriyah Dhinakaran
+      **Presented by** Suriyah Dhinakaran
     type: break
-  - { day: day1, room: expertisium,    start: "14:30", end: "15:00", title: "Coffee Break | 2 Demos", type: break }
 
-  - { day: day1, room: werner-koerte,  start: "14:30", end: "15:00", title: "Featured Demo 1", type: demo }
-  - { day: day1, room: rudolf-virchow, start: "14:30", end: "15:00", title: "Featured Demo 2", type: demo }
+  - day: day1
+    room: expertisium
+    start: "14:30"
+    end: "15:00"
+    title: |
+      Coffee Break | 2 Demos
+      Demos 12 & 17
+    type: break
+    details: |
+      Demo 12: DEA Next: Making Earth Intelligence Conversational through Agentic AI – Alia Space Systems
+      **Presented by** Arturo Montieri
+      Demo 17: terraAI: Conversational Earth Observation Analysis – Vilnius University
+      **Presented by** Evgenij Shapovalov, Artiom Hovhannisyan, Valentas Gružauskas
+
+  - day: day1
+    room: werner-koerte
+    start: "14:30"
+    end: "15:00"
+    title: "Featured Demo 1"
+    type: demo
+    details: |
+      Earthward: A Human-in-the-Loop Architecture for Traceable, Explainable Agentic EO Workflows – Earthward
+      **Presented by** Sudhakaran Chithamanan, Aravindh S. Subramanian
+
+  - day: day1
+    room: rudolf-virchow
+    start: "14:30"
+    end: "15:00"
+    title: "Featured Demo 2"
+    type: demo
+    details: |
+      Saferplaces Agentic AI - An Agentic Geospatial Copilot for Flood Risk Intelligence and Map-Based Decision Support – GECOsistema SRL
+      **Presented by** Tommaso Redaelli
 
   - day: day1
     room: lecture-hall
@@ -231,19 +261,18 @@ events:
         presenters: "Yan Shu"
         affiliation: "University of Trento"
 
-  - day: day1 
+  - day: day1
     room: lecture-hall
     start: "16:05"
     end: "16:45"
-    title: "Panel:Earth Observation in the age of Agentic AI: From Insight to Business"
+    title: "Panel: Earth Observation in the age of Agentic AI: From Insight to Business"
     speaker: ""
     type: panel
     details: |
-      _From data to insight, and from insight to action: The panel will explore how Agentic AI could fundamentally reshape the EO value chain, from sensing and data generation to analysis, decision-making and 
-      business impact. Bringing together perspectives from research, EO technology and enterprise, the discussion will examine how AI agents could be a key element of the full data chain, combine EO with diverse
-      sources of knowledge, and transform increasingly rich Earth observations into decision-ready intelligence. With applications ranging from insurance and risk management to emerging EO services and markets,
-      the panel will address the key question: How do we move from technological potential to real-world impact and sustainable business value?_
+      _From data to insight, and from insight to action: The panel will explore how Agentic AI could fundamentally reshape the EO value chain, from sensing and data generation to analysis, decision-making and business impact. Bringing together perspectives from research, EO technology and enterprise, the discussion will examine how AI agents could be a key element of the full data chain, combine EO with diverse sources of knowledge, and transform increasingly rich Earth observations into decision-ready intelligence. With applications ranging from insurance and risk management to emerging EO services and markets, the panel will address the key question: How do we move from technological potential to real-world impact and sustainable business value?_
+
       ---
+
       **Moderated by** Chiara Cocchiara, ESA Φ-lab
 
       **Panelists:**
@@ -260,11 +289,12 @@ events:
     speaker: ""
     type: panel
     details: |
-      _Join this guided, engaging discussion where participants share and debate strong opinions, concerns, and unpopular takes on Agentic AI for Earth Observation. Come with a take of your own, or respond 
-      to one raised by someone else. The goal is not consensus, but a better collective understanding of where agentic approaches genuinely add value in EO._
+      _Join this guided, engaging discussion where participants share and debate strong opinions, concerns, and unpopular takes on Agentic AI for Earth Observation. Come with a take of your own, or respond to one raised by someone else. The goal is not consensus, but a better collective understanding of where agentic approaches genuinely add value in EO._
+
       ---
+
       **Moderated by** Eva Gmelich Meijling and Riccardo D'Ercole, ESA Φ-lab
-  
+
   - day: day1
     room: von-langenbeck
     start: "17:00"
@@ -347,15 +377,86 @@ events:
         affiliation: "Development Seed"
 
 
-  - { day: day1, room: werner-koerte,  start: "17:00", end: "17:25", title: "Featured Demo 3", type: demo }
-  - { day: day1, room: rudolf-virchow, start: "17:00", end: "17:25", title: "Featured Demo 4", type: demo }
-  - { day: day1, room: werner-koerte,  start: "17:25", end: "17:50", title: "Featured Demo 5", type: demo }
-  - { day: day1, room: rudolf-virchow, start: "17:25", end: "17:50", title: "Featured Demo 6", type: demo }
-  - { day: day1, room: werner-koerte,  start: "17:50", end: "18:15", title: "Featured Demo 7", type: demo }
-  - { day: day1, room: rudolf-virchow, start: "17:50", end: "18:15", title: "Featured Demo 8", type: demo }
-  - { day: day1, room: werner-koerte,  start: "18:15", end: "18:40", title: "Featured Demo 9", type: demo }
-  - { day: day1, room: rudolf-virchow, start: "18:15", end: "18:40", title: "Featured Demo 10", type: demo }
-  
+  - day: day1
+    room: werner-koerte
+    start: "17:00"
+    end: "17:25"
+    title: "Featured Demo 3"
+    type: demo
+    details: |
+      Virtual Support for Earth Observation (VISEO): Agentic AI for Earth Observation Discovery – Thales Services Toulouse
+      **Presented by** Dorian Voydie, Killian Perriot, Romain Sixt
+
+  - day: day1
+    room: rudolf-virchow
+    start: "17:00"
+    end: "17:25"
+    title: "Featured Demo 4"
+    type: demo
+    details: |
+      An Agentic Digital Twin Framework for Flood Risk Assessment: Integrating Complex Workflows with Generative AI: From Satellite Acquisition to Risk Management – CS Group
+      **Presented by** Pauline Delporte, Yoann Steux
+
+  - day: day1
+    room: werner-koerte
+    start: "17:25"
+    end: "17:50"
+    title: "Featured Demo 5"
+    type: demo
+    details: |
+      WRI’s Global Nature Watch: Geospatial AI in Plain Language – Development Seed Lisbon
+      **Presented by** Daniel Wiesmann, Soumya Ranjan, Leo Thomas
+
+  - day: day1
+    room: rudolf-virchow
+    start: "17:25"
+    end: "17:50"
+    title: "Featured Demo 6"
+    type: demo
+    details: |
+      Max-ICS V2.0: Toward an Agentic EO Orchestration Platform – EarthLab Luxembourg S.A.
+      **Presented by** Mohamed Boukhebouze
+
+  - day: day1
+    room: werner-koerte
+    start: "17:50"
+    end: "18:15"
+    title: "Featured Demo 7"
+    type: demo
+    details: |
+      From Pixels to Risk: Agentic Earth Observation for Explainable Climate Intelligence – Independent
+      **Presented by** Claudio Giorgio Giancaterino
+
+  - day: day1
+    room: rudolf-virchow
+    start: "17:50"
+    end: "18:15"
+    title: "Featured Demo 8"
+    type: demo
+    details: |
+      GEONOVA: An Agentic EO Copilot for Geospatial Embeddings and Downstream Model Adaptation – Geonova P.C.
+      **Presented by** George Arvanitakis, Georgios Tsimiklis, Elisavet Parselia, Eleftheria Tetoula Tsonga, Dionysos Kampouris, Christos Tsekes
+
+  - day: day1
+    room: werner-koerte
+    start: "18:15"
+    end: "18:40"
+    title: "Featured Demo 9"
+    type: demo
+    details: |
+      Axis Spatial Migration Engine: From Fragmented EO/GIS Projects to Verified Pipelines – Axis Spatial
+      **Presented by** Najah Pokkiri
+
+  - day: day1
+    room: rudolf-virchow
+    start: "18:15"
+    end: "18:40"
+    title: "Featured Demo 10"
+    type: demo
+    details: |
+      BlazerOps: Reinforcement Learning Environment for Accelerated Spatial ML Development – hyades.space
+      **Presented by** Ashin Alex, Harshil Magan
+
   - { day: day1, room: foyer,         start: "18:30", end: "20:45", title: "Welcome Reception", type: break }
 
   # -----------------------------------------------------------------------------------------------
@@ -377,55 +478,56 @@ events:
     room: foyer
     start: "10:15"
     end: "10:45"
-    title: | 
-      Coffee Break | 4 Demos 
-      Foyer: Demo 3 & 4
+    title: |
+      Coffee Break | 4 Demos
+      Foyer: Demos 3 & 5
       Wandelhalle: Demos 20 & 21
     type: break
     details: |
       **Foyer:**
       Demo 3: Virtual Support for Earth Observation (VISEO): Agentic AI for Earth Observation Discovery - Thales Services Toulouse
-      Presented by Dorian Voydie, Killian Perriot, Romain Sixt
+      **Presented by** Dorian Voydie, Killian Perriot, Romain Sixt
       Demo 5: WRI's Global Nature Watch: Geospatial AI in Plain Language - Development Seed Lisbon
-      Presented by Daniel Wiesmann, Soumya Ranjan, Leo Thomas
+      **Presented by** Daniel Wiesmann, Soumya Ranjan, Leo Thomas
       **Wandelhalle:**
       Demo 20: FLAP-0: An Interactive Platform for Agentic Earth Observation - Barcelona Supercomputing Center and Universitat Politècnica de Catalunya
-      Presented by Leonidas Kosmidis, Iker Fernandez Andonegui, Marc Solé i Bonet
+      **Presented by** Leonidas Kosmidis, Iker Fernandez Andonegui, Marc Solé i Bonet
       Demo 21: A Live Tour of EVE: An Agentic EO Platform Built on an Open MCP Tool Registry - Pi School
-      Presented by Àlex R. Atrio, Antonio Lopez, Jino Rohit, Emanuele Micieli
+      **Presented by** Àlex R. Atrio, Antonio Lopez, Jino Rohit, Emanuele Micieli
 
   - day: day2
     room: expertisium
     start: "10:15"
     end: "10:45"
-    title: | 
-      Coffee Break | 2 Demos 
-      Expertisium: Demo 8 & 22
+    title: |
+      Coffee Break | 2 Demos
+      Demos 8 & 22
     type: break
     details: |
       Demo 8: GEONOVA: An Agentic EO Copilot for Geospatial Embeddings and Downstream Model Adaptation - Geonova P.C.
-      Presented by George Arvanitakis, Georgios Tsimiklis, Elisavet Parselia, Eleftheria Tetoula Tsonga, Dionysos Kampouris, Christos Tsekes
+      **Presented by** George Arvanitakis, Georgios Tsimiklis, Elisavet Parselia, Eleftheria Tetoula Tsonga, Dionysos Kampouris, Christos Tsekes
       Demo 22: Agentic AI-Enabled Climate Downscaling with NASA's Prithvi WxC Foundation Model - JPL/NASA, University of Utah
-      Presented by Hugo Lee, Aashish Panta
+      **Presented by** Hugo Lee, Aashish Panta
 
   - day: day2
     room: werner-koerte
     start: "10:15"
     end: "10:45"
-    title: |
-      Featured Demo 11
+    title: "Featured Demo 11"
+    type: demo
     details: |
-      EVE Workbench Live: A Multi-Agent Debate on Berlin's Climate Stress - Frank Reply
-      Presented by Daniel Fitzpatrick, Maria Mülle
+      EVE Workbench Live: A Multi-Agent Debate on Berlin’s Climate Stress – Frank Reply
+      **Presented by** Daniel Fitzpatrick, Maria Müller
+
   - day: day2
     room: rudolf-virchow
     start: "10:15"
     end: "10:45"
-    title: |
-      Featured Demo 12
+    title: "Featured Demo 12"
+    type: demo
     details: |
-      DEA Next: Making Earth Intelligence Conversational through Agentic AI - Alia Space Systems
-      Presented by Arturo Montieri
+      DEA Next: Making Earth Intelligence Conversational through Agentic AI – Alia Space Systems
+      **Presented by** Arturo Montieri
 
   - day: day2
     room: lecture-hall
@@ -521,11 +623,60 @@ events:
         presenters: "Àlex R. Atrio, Antonio Lopez, Jino Rohit, Emanuele Micieli"
         affiliation: "Pi School"
 
-  - { day: day2, room: foyer,          start: "15:45", end: "16:15", title: "Coffee Break | 4 Demos (2x Foyer & 2x Wandelhalle)", type: break }
-  - { day: day2, room: expertisium,    start: "15:45", end: "16:15", title: "Coffee Break | 2 Demos", type: break }
+  - day: day2
+    room: foyer
+    start: "15:45"
+    end: "16:15"
+    title: |
+      Coffee Break | 4 Demos
+      Foyer: Demos 1 & 7
+      Wandelhalle: Demos 2 & 4
+    type: break
+    details: |
+      **Foyer:**
+      Demo 1: Earthward: A Human-in-the-Loop Architecture for Traceable, Explainable Agentic EO Workflows – Earthward
+      **Presented by** Sudhakaran Chithamanan, Aravindh S. Subramanian
+      Demo 7: From Pixels to Risk: Agentic Earth Observation for Explainable Climate Intelligence – Independent
+      **Presented by** Claudio Giorgio Giancaterino
+      **Wandelhalle:**
+      Demo 2: Saferplaces Agentic AI - An Agentic Geospatial Copilot for Flood Risk Intelligence and Map-Based Decision Support – GECOsistema SRL
+      **Presented by** Tommaso Redaelli
+      Demo 4: An Agentic Digital Twin Framework for Flood Risk Assessment: Integrating Complex Workflows with Generative AI: From Satellite Acquisition to Risk Management – CS Group
+      **Presented by** Pauline Delporte, Yoann Steux
 
-  - { day: day2, room: werner-koerte,  start: "15:45", end: "16:15", title: "Featured Demo 13", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "15:45", end: "16:15", title: "Featured Demo 14", type: demo }
+  - day: day2
+    room: expertisium
+    start: "15:45"
+    end: "16:15"
+    title: |
+      Coffee Break | 2 Demos
+      Demos 6 & 9
+    type: break
+    details: |
+      Demo 6: Max-ICS V2.0: Toward an Agentic EO Orchestration Platform – EarthLab Luxembourg S.A.
+      **Presented by** Mohamed Boukhebouze
+      Demo 9: Axis Spatial Migration Engine: From Fragmented EO/GIS Projects to Verified Pipelines – Axis Spatial
+      **Presented by** Najah Pokkiri
+
+  - day: day2
+    room: werner-koerte
+    start: "15:45"
+    end: "16:15"
+    title: "Featured Demo 13"
+    type: demo
+    details: |
+      From Chat to Copernicus: Agent-Based Composition of Reproducible openEO Workflows on CDSE – VITO
+      **Presented by** Hans Vanrompay, Victor Verhaert, Mathias Michielsen
+
+  - day: day2
+    room: rudolf-virchow
+    start: "15:45"
+    end: "16:15"
+    title: "Featured Demo 14"
+    type: demo
+    details: |
+      SAI4EO: From Conversational Remote-Sensing Tool Use to Agentic, Artifact-Grounded Geospatial Intelligence – Planetek Italia
+      **Presented by** Nicolò Taggio
 
   - { day: day2, room: lecture-hall,   start: "16:15", end: "17:15", title: "Technical deep dives: Building with Mistral Open Agentic AI tools: From Scientific Discovery to Operational Services", type: hands-on }
 
@@ -611,12 +762,65 @@ events:
         presenters: "Rohit Sisir Sahoo"
         affiliation: "The University of Alabama in Huntsville"
 
-  - { day: day2, room: werner-koerte,  start: "17:45", end: "18:10", title: "Featured Demo 15", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "17:45", end: "18:10", title: "Featured Demo 16", type: demo }
-  - { day: day2, room: werner-koerte,  start: "18:10", end: "18:35", title: "Featured Demo 17", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "18:10", end: "18:35", title: "Featured Demo 18", type: demo }
-  - { day: day2, room: werner-koerte,  start: "18:35", end: "19:00", title: "Featured Demo 19", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "18:35", end: "19:00", title: "Featured Demo 20", type: demo }
+  - day: day2
+    room: werner-koerte
+    start: "17:45"
+    end: "18:10"
+    title: "Featured Demo 15"
+    type: demo
+    details: |
+      Portable Agentic openEO: From Natural Language to Executable Earth Observation Workflows – EURAC Research Italy
+      **Presented by** Suriyah Dhinakaran
+
+  - day: day2
+    room: rudolf-virchow
+    start: "17:45"
+    end: "18:10"
+    title: "Featured Demo 16"
+    type: demo
+    details: |
+      AKD Labs: An End-to-End Agent Co-Design Studio – The University of Alabama in Huntsville, NASA Marshall Space Flight Center
+      **Presented by** Rohit Sisir Sahoo
+
+  - day: day2
+    room: werner-koerte
+    start: "18:10"
+    end: "18:35"
+    title: "Featured Demo 17"
+    type: demo
+    details: |
+      terraAI: Conversational Earth Observation Analysis – Vilnius University
+      **Presented by** Evgenij Shapovalov, Artiom Hovhannisyan, Valentas Gružauskas
+
+  - day: day2
+    room: rudolf-virchow
+    start: "18:10"
+    end: "18:35"
+    title: "Featured Demo 18"
+    type: demo
+    details: |
+      Generative Geospatial User Interfaces: Dynamic Dashboard and Storytelling Generation via Agent-to-UI Streaming – EOX IT Services GmbH
+      **Presented by** Silvester Pari, Lubomír Doležal
+
+  - day: day2
+    room: werner-koerte
+    start: "18:35"
+    end: "19:00"
+    title: "Featured Demo 19"
+    type: demo
+    details: |
+      Operating an EO Constellation with AI Agents – Aistralys
+      **Presented by** Alexandru Moloceniuc
+
+  - day: day2
+    room: rudolf-virchow
+    start: "18:35"
+    end: "19:00"
+    title: "Featured Demo 20"
+    type: demo
+    details: |
+      FLAP-0: An Interactive Platform for Agentic Earth Observation – Barcelona Supercomputing Center and Universitat Politècnica de Catalunya
+      **Presented by** Leonidas Kosmidis, Iker Fernandez Andonegui, Marc Solé i Bonet
 
   # ----- Day 3 -------------------------------------------------------------
   - { day: day3, room: foyer,          start: "08:00", end: "09:00", title: "Welcome Coffee", type: break }
@@ -643,14 +847,14 @@ events:
     room: foyer
     start: "10:30"
     end: "11:00"
-    title: | 
+    title: |
       Coffee Break | 2 Demos
       Foyer: Demos 18 & 19
     details: |
       Demo 18: Generative Geospatial User Interfaces: Dynamic Dashboard and Storytelling Generation via Agent-to-UI Streaming - EOX IT Services GmbH
-      Presented by Silvester Pari, Lubomír Doležal
+      **Presented by** Silvester Pari, Lubomír Doležal
       Demo 19: Operating an EO Constellation with AI Agents - Aistralys
-      Presented by Alexandru Moloceniuc
+      **Presented by** Alexandru Moloceniuc
     type: break
 
   - day: day3
@@ -662,30 +866,30 @@ events:
       Expertisium: Demos 10 & 16
     details: |
       Demo 10: BlazerOps: Reinforcement Learning Environment for Accelerated Spatial ML Development - hyades.space
-      Presented by Ashin Alex, Harshil Magan
+      **Presented by** Ashin Alex, Harshil Magan
       Demo 16: AKD Labs: An End-to-End Agent Co-Design Studio - The University of Alabama in Huntsville, NASA Marshall Space Flight Center
-      Presented by Nishan Pantha, Ajinkya Kulkarni, Muthukumaran Ramasubramanian, Nidhi Jha, Rahul Ramachandran
+      **Presented by** Nishan Pantha, Ajinkya Kulkarni, Muthukumaran Ramasubramanian, Nidhi Jha, Rahul Ramachandran
     type: break
 
   - day: day3
     room: werner-koerte
     start: "10:30"
     end: "11:00"
-    title: |
-      Featured Demo 21
+    title: "Featured Demo 21"
+    type: demo
     details: |
-      A Live Tour of EVE: An Agentic EO Platform Built on an Open MCP Tool Registry - Pi School
+      A Live Tour of EVE: An Agentic EO Platform Built on an Open MCP Tool Registry – Pi School
       **Presented by** Àlex R. Atrio, Antonio Lopez, Jino Rohit, Emanuele Micieli
-  - day: day3 
+
+  - day: day3
     room: rudolf-virchow
     start: "10:30"
     end: "11:00"
-    title: |
-      Featured Demo 22
-    details: |
-      Agentic AI-Enabled Climate Downscaling with NASA's Prithvi WxC Foundation Model - JPL/NASA, University of Utah
-      **Presented by** Hugo Lee, Aashish Panta
+    title: "Featured Demo 22"
     type: demo
+    details: |
+      Agentic AI-Enabled Climate Downscaling with NASA’s Prithvi WxC Foundation Model – JPL/NASA, University of Utah
+      **Presented by** Hugo Lee, Aashish Panta
 
   - day: day3
     room: lecture-hall
@@ -727,7 +931,7 @@ events:
   - { day: day3, room: lecture-hall,   start: "12:15", end: "12:30", title: "Closing Ceremony", speaker: "", type: panel }
 
   - { day: day3, room: foyer,          start: "12:30", end: "14:00", title: "Hosted Lunch", type: break }
-  
+
   - { day: day3, room: expertisium,    start: "14:00", end: "15:30", title: "Track 1: Building and Operating EO Agents", speaker: "Building Agentic Earth Observation Workflows with EVE Workbench", type: workshop }
   - { day: day3, room: von-langenbeck, start: "14:00", end: "15:30", title: "Track 2: Trustworthy and Scientific Agentic AI", speaker: "How Do You Know Your Agent Works? Evaluating Earth Observation Agents with Existing Benchmarks", type: workshop }
   # - { day: day3, room: rudolf-virchow,  start: "14:00", end: "15:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI", speaker: "From Pixels to Concepts: Hands-on with Clay Embeddings for Agentic Earth Observation", type: workshop }
