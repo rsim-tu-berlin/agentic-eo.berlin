@@ -1,71 +1,39 @@
 {% comment %}
-  Agenda list: shown on small screens and used for the PDF export (prints
-  cleanly regardless of screen size). Grouped by day, sorted by start time.
-  Each row carries data-day / data-room so the same filter state from main.js
-  applies here too. A `room` lookup resolves the human-readable room name.
+  Agenda list: shown on small screens and used for the detailed part of the PDF
+  export (prints cleanly regardless of screen size). Grouped by day, then by
+  start time. Sessions that start together — the parallel demos and breaks —
+  follow the room order of the `rooms:` list, with whole-venue sessions first,
+  because Liquid's `sort` gives no order at all to equal keys.
 
-  Rows grow with their content, so the optional `details:` text is rendered
-  inline here instead of in the pop-up the timetable uses.
+  Each row carries data-day / data-room so the same filter state from main.js
+  applies here too. The row itself is in schedule-list-item.html.
 {% endcomment %}
 {% assign rooms = site.data.schedule.rooms %}
 <div class="schedule-list d-lg-none" data-schedule-list>
   {% for day in site.data.schedule.days %}
-  {% assign day_events = site.data.schedule.events | where: "day", day.id | sort: "start" %}
+  {% assign day_events = site.data.schedule.events | where: "day", day.id %}
+  {% assign start_times = day_events | map: "start" | uniq | sort %}
   <section class="schedule-list__day" data-day="{{ day.id }}">
     <h3 class="section-heading mt-4">{{ day.label }} <span class="timetable-date">· {{ day.date }}</span></h3>
 
     <div class="schedule-list__items">
-      {% for event in day_events %}
-      {% assign room_name = "" %}
+      {% for start_time in start_times %}
+      {% assign slot_events = day_events | where: "start", start_time %}
+
+      {% for event in slot_events %}
       {% if event.room == "plenary" %}
-        {% assign room_name = "All rooms" %}
-      {% else %}
-        {% for room in rooms %}{% if room.id == event.room %}{% assign room_name = room.name %}{% endif %}{% endfor %}
+      {% include schedule-list-item.html event=event rooms=rooms %}
       {% endif %}
-      <div class="schedule-list__item{% if event.type == 'break' %} schedule-list__item--break{% endif %}{% if event.type == 'poster' %} schedule-list__item--long{% endif %}"
-           data-day="{{ event.day }}" data-room="{{ event.room }}">
-        <div class="schedule-list__time">{{ event.start }}<span class="schedule-list__time-sep">–</span>{{ event.end }}</div>
-        <div class="schedule-list__body">
-          <div class="schedule-list__title">
-            {{ event.title }}
-            <!-- {% case event.type %}
-              {% when "keynote" %}<span class="badge bg-primary ms-2">Keynote</span>
-              {% when "talk" %}<span class="badge bg-info text-dark ms-2">Talk</span>
-              {% when "workshop" %}<span class="badge bg-success ms-2">Workshop</span>
-              {% when "hands-on" %}<span class="badge bg-success ms-2">Hands-on</span>
-              {% when "panel" %}<span class="badge bg-warning text-dark ms-2">Panel</span>
-              {% when "poster" %}<span class="badge bg-secondary ms-2">Poster</span>
-              {% when "demo" %}<span class="badge bg-dark ms-2">Demo</span>
-              {% when "break" %}<span class="badge bg-light text-dark border ms-2">Break</span>
-            {% endcase %} -->
-          </div>
-          <div class="schedule-list__meta">
-            <span class="schedule-list__room">{{ room_name }}</span>
-            {% if event.speaker and event.speaker != "" %}<span class="schedule-list__speaker">· {{ event.speaker | strip | newline_to_br }}</span>{% endif %}
-          </div>
-          {% if event.items and event.items.size > 0 %}
-          <div class="schedule-list__details">
-            {{ event.summary | markdownify }}
-            {% if event.type == "poster" %}
-            {% comment %}
-              Poster sessions would bury the rest of the agenda if listed inline,
-              so they collapse behind a disclosure. main.js opens it for printing
-              so the PDF export stays complete.
-            {% endcomment %}
-            <details class="contrib-disclosure" data-print-open>
-              <summary>Show all {{ event.items.size }} posters</summary>
-              {% include schedule-contributions.html items=event.items compact=true %}
-            </details>
-            <p class="d-print-none mb-0"><a href="/programme/posters/#{{ event.slug }}">Open the poster page</a></p>
-            {% else %}
-            {% include schedule-contributions.html items=event.items compact=true %}
-            {% endif %}
-          </div>
-          {% elsif event.details and event.details != "" %}
-          <div class="schedule-list__details">{{ event.details | markdownify }}</div>
-          {% endif %}
-        </div>
-      </div>
+      {% endfor %}
+
+      {% for room in rooms %}
+      {% for event in slot_events %}
+      {% if event.room == room.id %}
+      {% include schedule-list-item.html event=event rooms=rooms %}
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
+
       {% endfor %}
     </div>
   </section>

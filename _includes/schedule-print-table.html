@@ -1,0 +1,151 @@
+{% comment %}
+  Print-only timetable: one table per day, one page per day, rooms as columns.
+  Hidden on screen — the interactive grid covers that — and shown only by the
+  @media print rules, which also hide the grid because it doesn't paginate.
+
+  Rows are the intervals between every start and end time of the day, so a row
+  boundary exists wherever anything begins or ends. Intervals in which nothing
+  runs are skipped, which keeps the 16:00–16:05 kind of gap from printing as a
+  sliver. An event therefore always covers whole rows, and its `rowspan` is
+  simply the number of rows between its start and its end.
+
+  Cells carry data-day / data-room so the filter state from main.js applies
+  here as it does to the grid and the agenda list.
+{% endcomment %}
+{% comment %}
+  Page setup lives here rather than in style.css because @page cannot be
+  limited to one page of the site: putting it in the shared stylesheet would
+  turn every printed page landscape. It belongs to whichever page includes the
+  timetable, which needs the width for six room columns.
+
+  The margin is 8mm on purpose. Chrome draws its own date, page title, URL and
+  page number inside the page margin, and only when that margin is wide enough
+  to hold them: at 9mm they appear, at 8mm they do not. Widening this brings
+  them back.
+{% endcomment %}
+<style>
+  @page {
+    size: A4 landscape;
+    margin: 8mm;
+  }
+</style>
+{% assign rooms = site.data.schedule.rooms %}
+<div class="schedule-print-tables d-none" data-schedule-print-tables>
+  {% for day in site.data.schedule.days %}
+  {% assign day_events = site.data.schedule.events | where: "day", day.id %}
+  {% if day_events.size > 0 %}
+
+  {% comment %} Every start and end, deduplicated. Times are zero-padded, so a
+    lexical sort is chronological. {% endcomment %}
+  {% assign starts = day_events | map: "start" %}
+  {% assign ends = day_events | map: "end" %}
+  {% assign bounds = starts | concat: ends | uniq | sort %}
+
+  <section class="spt-day" data-day="{{ day.id }}">
+    <h3 class="spt-day__heading">{{ day.label }} <span class="spt-day__date">· {{ day.date }}</span></h3>
+
+    <table class="spt">
+      <thead>
+        <tr>
+          <th class="spt__time-head" scope="col">Time</th>
+          {% for room in rooms %}
+          <th class="spt__room-head" scope="col" data-room="{{ room.id }}">
+            <span class="spt__room-name">{{ room.name }}</span>
+            <span class="spt__room-floor">{{ room.floor }}</span>
+          </th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for bound in bounds %}
+        {% unless forloop.last %}
+        {% assign row_start = bound %}
+        {% assign row_end = bounds[forloop.index] %}
+        {% assign rs = row_start | split: ":" %}
+        {% assign row_start_min = rs[0] | times: 60 | plus: rs[1] %}
+        {% assign re = row_end | split: ":" %}
+        {% assign row_end_min = re[0] | times: 60 | plus: re[1] %}
+
+        {% comment %} Skip intervals with nothing running. Because the bounds
+          come from the events themselves, an event either covers a whole
+          interval or misses it entirely. {% endcomment %}
+        {% assign row_active = false %}
+        {% for event in day_events %}
+          {% assign es = event.start | split: ":" %}
+          {% assign e_start = es[0] | times: 60 | plus: es[1] %}
+          {% assign ee = event.end | split: ":" %}
+          {% assign e_end = ee[0] | times: 60 | plus: ee[1] %}
+          {% if e_start <= row_start_min and e_end >= row_end_min %}
+            {% assign row_active = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% if row_active %}
+        {% comment %} A plenary event takes the whole venue, so it takes the
+          whole row and the room columns are skipped for as long as it runs. {% endcomment %}
+        {% assign plenary_event = false %}
+        {% assign plenary_covers = false %}
+        {% for event in day_events %}
+          {% if event.room == "plenary" %}
+            {% assign es = event.start | split: ":" %}
+            {% assign e_start = es[0] | times: 60 | plus: es[1] %}
+            {% assign ee = event.end | split: ":" %}
+            {% assign e_end = ee[0] | times: 60 | plus: ee[1] %}
+            {% if e_start == row_start_min %}
+              {% assign plenary_event = event %}
+              {% break %}
+            {% elsif e_start < row_start_min and e_end > row_start_min %}
+              {% assign plenary_covers = true %}
+              {% break %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        <tr data-day="{{ day.id }}">
+          <th class="spt__time" scope="row">{{ row_start }}<span class="spt__time-sep">–</span>{{ row_end }}</th>
+
+          {% if plenary_event %}
+          {% include schedule-print-cell.html event=plenary_event bounds=bounds rooms=rooms plenary=true %}
+          {% elsif plenary_covers %}
+          {% comment %} Covered by the rowspan of the plenary cell above. {% endcomment %}
+          {% else %}
+          {% for room in rooms %}
+          {% assign cell_event = false %}
+          {% assign cell_covered = false %}
+          {% for event in day_events %}
+            {% if event.room == room.id %}
+              {% assign es = event.start | split: ":" %}
+              {% assign e_start = es[0] | times: 60 | plus: es[1] %}
+              {% assign ee = event.end | split: ":" %}
+              {% assign e_end = ee[0] | times: 60 | plus: ee[1] %}
+              {% if e_start == row_start_min %}
+                {% assign cell_event = event %}
+                {% break %}
+              {% elsif e_start < row_start_min and e_end > row_start_min %}
+                {% assign cell_covered = true %}
+                {% break %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+          {% if cell_event %}
+          {% include schedule-print-cell.html event=cell_event bounds=bounds rooms=rooms plenary=false %}
+          {% elsif cell_covered %}
+          {% comment %} Covered by the rowspan of the cell above. {% endcomment %}
+          {% else %}
+          <td class="spt__cell spt__cell--empty" data-room="{{ room.id }}"></td>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+        </tr>
+        {% endif %}
+
+        {% endunless %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+  {% endif %}
+  {% endfor %}
+</div>

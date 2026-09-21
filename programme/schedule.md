@@ -23,4 +23,8 @@ title: Schedule
 </p>
 
 {% include schedule-grid.html %}
+{% include schedule-print-table.html %}
+
+<h2 class="schedule-detail-heading d-none">Detailed Programme</h2>
+
 {% include schedule-list.html %}

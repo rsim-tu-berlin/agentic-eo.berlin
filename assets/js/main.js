@@ -72,9 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
   initPosterSearch();
 });
 
-// Schedule day/room filtering. Drives both the desktop timetable grid and the
-// mobile/print agenda list from a single state, using only data-* attributes
-// rendered by Jekyll (no user input reaches any sensitive API).
+// Schedule day/room filtering. Drives the desktop timetable grid, the
+// mobile/print agenda list and the print-only day tables from a single state,
+// using only data-* attributes rendered by Jekyll (no user input reaches any
+// sensitive API).
 function initScheduleFilters() {
   const controls = document.querySelector("[data-schedule-controls]");
   if (!controls) {
@@ -83,6 +84,7 @@ function initScheduleFilters() {
 
   const grid = document.querySelector("[data-schedule-grid]");
   const list = document.querySelector("[data-schedule-list]");
+  const printTables = document.querySelector("[data-schedule-print-tables]");
   const emptyMessage = document.querySelector("[data-schedule-empty]");
 
   // Room ids come straight from the rendered room chips.
@@ -165,6 +167,23 @@ function initScheduleFilters() {
             cell.classList.toggle("d-none", !show);
           });
       });
+    }
+
+    // ----- Print-only day tables -----
+    // Hiding every cell of a column removes the column, and a hidden cell
+    // takes its rowspan with it, so the table stays well formed.
+    if (printTables) {
+      printTables.querySelectorAll(".spt-day").forEach(function (dayTable) {
+        dayTable.classList.toggle("d-none", !matchesDay(dayTable.dataset.day));
+      });
+
+      printTables
+        .querySelectorAll(".spt th[data-room], .spt td[data-room]")
+        .forEach(function (cell) {
+          const cellRoom = cell.dataset.room;
+          const show = cellRoom === "plenary" || matchesRoom(cellRoom);
+          cell.classList.toggle("d-none", !show);
+        });
     }
 
     if (emptyMessage) {

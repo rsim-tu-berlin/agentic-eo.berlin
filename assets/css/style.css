@@ -883,28 +883,184 @@ a.schedule-chip--link:hover {
     padding: 0 !important;
   }
 
-  /* The grid doesn't paginate well; print the agenda list instead. */
+  /* The grid doesn't paginate well; the day tables and the agenda list do. */
   .schedule-grid {
     display: none !important;
   }
 
+  /* --- Day tables: one page each, at the front of the PDF --- */
+  .schedule-print-tables.d-none {
+    display: block !important;
+  }
+
+  .spt-day {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .spt-day__heading {
+    font-size: 12pt;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 0.25rem;
+  }
+
+  .spt-day__date {
+    font-weight: 400;
+  }
+
+  /* Automatic column widths: the rooms carry very different amounts of text,
+     and letting the busiest column take the width it needs is what keeps a day
+     inside one page. Widths therefore differ from day to day. */
+  .spt {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    font-size: 7pt;
+    line-height: 1.15;
+  }
+
+  /* Repeat the room headings if a day ever outgrows its page. */
+  .spt thead {
+    display: table-header-group;
+  }
+
+  .spt th,
+  .spt td {
+    border: 0.5pt solid #9aa3ad;
+    padding: 1.5pt 2.5pt;
+    vertical-align: top;
+    text-align: left;
+    overflow-wrap: break-word;
+  }
+
+  .spt__time-head,
+  .spt__room-head {
+    background: #003063 !important;
+    color: #fff !important;
+    text-align: center;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .spt__time-head {
+    width: 1%;
+  }
+
+  .spt__room-name {
+    display: block;
+    font-weight: 500;
+  }
+
+  .spt__room-floor {
+    display: block;
+    font-size: 6.5pt;
+    font-weight: 400;
+    opacity: 0.85;
+  }
+
+  .spt__time {
+    font-weight: 500;
+    white-space: nowrap;
+    text-align: center;
+    background: #f2f4f6 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .spt__time-sep {
+    padding: 0 0.1em;
+  }
+
+  .spt__cell-time {
+    display: block;
+    font-size: 6.5pt;
+    color: #445;
+  }
+
+  .spt__cell-title {
+    display: block;
+  }
+
+  .spt__cell-speaker,
+  .spt__cell-count {
+    display: block;
+    font-size: 6.5pt;
+    color: #445;
+  }
+
+  .spt__cell--plenary {
+    text-align: center;
+  }
+
+  /* Same palette as the on-screen timetable tiles. */
+  .spt__cell--keynote { background: #e7eef6 !important; }
+  .spt__cell--talk { background: #e6f7fb !important; }
+  .spt__cell--workshop,
+  .spt__cell--hands-on { background: #e7f5ee !important; }
+  .spt__cell--panel { background: #fff8e6 !important; }
+  .spt__cell--poster { background: #f1f3f5 !important; }
+  .spt__cell--demo { background: #eceef0 !important; }
+  .spt__cell--break { background: #f6f7f8 !important; }
+
+  .spt__cell {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* --- Agenda list: the detailed part, starting after the day tables --- */
   .schedule-list {
     display: block !important;
   }
 
+  /* Opens the detailed part, so it carries the page break and stays with the
+     first day it introduces. */
+  .schedule-detail-heading.d-none {
+    display: block !important;
+    break-before: page;
+    page-break-before: always;
+    break-after: avoid;
+    page-break-after: avoid;
+    font-size: 14pt;
+    color: #000;
+    margin: 0;
+  }
+
+  /* A day runs to several pages, so asking to keep it whole only wastes the
+     remainder of the page it starts on. Keep the heading with its first rows
+     instead. */
   .schedule-list__day {
-    break-inside: avoid;
-    page-break-inside: avoid;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  /* Every day opens its own page, otherwise a day heading lands wherever the
+     previous day ended and sits alone above a gap. Matching only days that
+     follow another visible day keeps the first one — whichever the day filter
+     leaves — from starting with a blank page. */
+  .schedule-list__day:not(.d-none) ~ .schedule-list__day:not(.d-none) {
+    break-before: page;
+    page-break-before: always;
   }
 
   .schedule-list__day h3.section-heading {
     font-size: 13pt;
     color: #000;
     margin-top: 0.5rem;
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
+  /* Two columns: a landscape page is wide enough that a single column would
+     leave half of every line empty and stretch the agenda over more pages.
+     No bottom border: when a day ends flush with the page, the border alone
+     would spill onto a page of its own. */
   .schedule-list__items {
     border: 1px solid #999 !important;
+    border-bottom: 0 !important;
+    columns: 2;
+    column-gap: 8mm;
+    column-fill: auto;
   }
 
   .schedule-list__item {
@@ -922,6 +1078,14 @@ a.schedule-chip--link:hover {
   .schedule-list__details {
     font-size: 9pt;
     color: #333;
+  }
+
+  /* Sessions that carry a description or a list of talks run to hundreds of
+     points. Keeping one whole pushes it to the next page and leaves the rest
+     of the current page blank, so only short entries stay atomic. */
+  .schedule-list__item:has(.schedule-list__details) {
+    break-inside: auto;
+    page-break-inside: auto;
   }
 
   /* A poster session is taller than a page, so it has to be allowed to split.

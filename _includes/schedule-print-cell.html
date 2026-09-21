@@ -1,0 +1,33 @@
+{% comment %}
+  One cell of the print timetable (see schedule-print-table.html).
+
+  Parameters: event, bounds (the day's sorted time boundaries), rooms, plenary.
+
+  The row span is the number of boundaries that fall inside the event, i.e. the
+  number of rows it covers. The last boundary is only ever an end time, so it
+  never opens a row. The cell repeats the event's own start and end because the
+  row label spans the whole interval, which may be wider than the event.
+{% endcomment %}
+{% assign es = include.event.start | split: ":" %}
+{% assign e_start = es[0] | times: 60 | plus: es[1] %}
+{% assign ee = include.event.end | split: ":" %}
+{% assign e_end = ee[0] | times: 60 | plus: ee[1] %}
+{% assign span = 0 %}
+{% for bound in include.bounds %}
+  {% unless forloop.last %}
+    {% assign bs = bound | split: ":" %}
+    {% assign b_min = bs[0] | times: 60 | plus: bs[1] %}
+    {% if b_min >= e_start and b_min < e_end %}{% assign span = span | plus: 1 %}{% endif %}
+  {% endunless %}
+{% endfor %}
+<td class="spt__cell{% if include.event.type %} spt__cell--{{ include.event.type }}{% endif %}{% if include.plenary %} spt__cell--plenary{% endif %}"
+    data-room="{{ include.event.room }}"{% if span > 1 %} rowspan="{{ span }}"{% endif %}{% if include.plenary %} colspan="{{ include.rooms.size }}"{% endif %}>
+  <span class="spt__cell-time">{{ include.event.start }}–{{ include.event.end }}</span>
+  <span class="spt__cell-title">{{ include.event.title | strip | newline_to_br }}</span>
+  {%- if include.event.speaker and include.event.speaker != "" %}
+  <span class="spt__cell-speaker">{{ include.event.speaker | strip | newline_to_br }}</span>
+  {%- endif %}
+  {%- if include.event.items and include.event.items.size > 0 %}
+  <span class="spt__cell-count">{{ include.event.items.size }} {% if include.event.type == "poster" %}posters{% else %}talks{% endif %}</span>
+  {%- endif %}
+</td>
