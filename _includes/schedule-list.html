@@ -22,7 +22,7 @@
       {% else %}
         {% for room in rooms %}{% if room.id == event.room %}{% assign room_name = room.name %}{% endif %}{% endfor %}
       {% endif %}
-      <div class="schedule-list__item{% if event.type == 'break' %} schedule-list__item--break{% endif %}"
+      <div class="schedule-list__item{% if event.type == 'break' %} schedule-list__item--break{% endif %}{% if event.type == 'poster' %} schedule-list__item--long{% endif %}"
            data-day="{{ event.day }}" data-room="{{ event.room }}">
         <div class="schedule-list__time">{{ event.start }}<span class="schedule-list__time-sep">–</span>{{ event.end }}</div>
         <div class="schedule-list__body">
@@ -43,7 +43,25 @@
             <span class="schedule-list__room">{{ room_name }}</span>
             {% if event.speaker and event.speaker != "" %}<span class="schedule-list__speaker">· {{ event.speaker | strip | newline_to_br }}</span>{% endif %}
           </div>
-          {% if event.details and event.details != "" %}
+          {% if event.items and event.items.size > 0 %}
+          <div class="schedule-list__details">
+            {{ event.summary | markdownify }}
+            {% if event.type == "poster" %}
+            {% comment %}
+              Poster sessions would bury the rest of the agenda if listed inline,
+              so they collapse behind a disclosure. main.js opens it for printing
+              so the PDF export stays complete.
+            {% endcomment %}
+            <details class="contrib-disclosure" data-print-open>
+              <summary>Show all {{ event.items.size }} posters</summary>
+              {% include schedule-contributions.html items=event.items compact=true %}
+            </details>
+            <p class="d-print-none mb-0"><a href="/programme/posters/#{{ event.slug }}">Open the poster page</a></p>
+            {% else %}
+            {% include schedule-contributions.html items=event.items compact=true %}
+            {% endif %}
+          </div>
+          {% elsif event.details and event.details != "" %}
           <div class="schedule-list__details">{{ event.details | markdownify }}</div>
           {% endif %}
         </div>

@@ -95,7 +95,23 @@
           <span class="tt-event__time">{{ event.start }}–{{ event.end }}</span>
           <span class="tt-event__title">{{ event.title }}</span>
           {% if event.speaker and event.speaker != "" %}<span class="tt-event__speaker">{{ event.speaker | strip | newline_to_br }}</span>{% endif %}
-          {% if event.details and event.details != "" %}<div class="tt-event__details d-none" data-event-details>{{ event.details | markdownify }}</div>{% endif %}
+          {% if event.items and event.items.size > 0 %}
+          {% if event.type == "poster" %}
+          {% comment %} Dozens of posters: far too many for a tile or a pop-up, so link out. {% endcomment %}
+          {% assign poster_url = "/programme/posters/#" | append: event.slug %}
+          <a class="tt-event__more-link" href="{{ poster_url }}">All {{ event.items.size }} posters</a>
+          <div class="tt-event__details d-none" data-event-details>
+            {{ event.summary | markdownify }}
+            <p><a href="{{ poster_url }}">See all {{ event.items.size }} posters</a></p>
+          </div>
+          {% else %}
+          {% comment %} A handful of talks: the pop-up can hold the running order. {% endcomment %}
+          <div class="tt-event__details d-none" data-event-details>
+            {{ event.summary | markdownify }}
+            {% include schedule-contributions.html items=event.items compact=true %}
+          </div>
+          {% endif %}
+          {% elsif event.details and event.details != "" %}<div class="tt-event__details d-none" data-event-details>{{ event.details | markdownify }}</div>{% endif %}
         </div>
         {% endif %}
         {% endfor %}

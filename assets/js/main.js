@@ -68,6 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   initScheduleFilters();
   initScheduleDetails();
+  initPrintDisclosures();
+  initPosterSearch();
 });
 
 // Schedule day/room filtering. Drives both the desktop timetable grid and the
@@ -338,4 +340,84 @@ function initScheduleDetails() {
   if (document.fonts) {
     document.fonts.ready.then(sync);
   }
+}
+
+// Collapsed poster lists in the mobile agenda: a closed <details> prints as a
+// single summary line, which would drop 40-odd posters from the PDF export.
+function initPrintDisclosures() {
+  const disclosures = document.querySelectorAll("details[data-print-open]");
+  if (disclosures.length === 0) {
+    return;
+  }
+
+  function setOpen(open) {
+    disclosures.forEach(function (disclosure) {
+      // Remember the reader's own choice so restoring doesn't collapse a
+      // section they had deliberately expanded.
+      if (open) {
+        disclosure.dataset.wasOpen = disclosure.open ? "1" : "0";
+        disclosure.open = true;
+      } else if (disclosure.dataset.wasOpen === "0") {
+        disclosure.open = false;
+      }
+    });
+  }
+
+  window.addEventListener("beforeprint", function () {
+    setOpen(true);
+  });
+  window.addEventListener("afterprint", function () {
+    setOpen(false);
+  });
+}
+
+// Free-text filter on /programme/posters/. Each card carries a pre-lowercased
+// `data-search` string built by Jekyll, so matching never touches the DOM text
+// or interprets the query as anything but a literal substring.
+function initPosterSearch() {
+  const toolbar = document.querySelector("[data-poster-toolbar]");
+  if (!toolbar) {
+    return;
+  }
+
+  const input = toolbar.querySelector("[data-poster-search]");
+  const counter = toolbar.querySelector("[data-poster-count]");
+  const empty = document.querySelector("[data-poster-empty]");
+  const sections = Array.prototype.slice.call(
+    document.querySelectorAll("[data-poster-session]")
+  );
+  const cards = Array.prototype.slice.call(
+    document.querySelectorAll("[data-poster]")
+  );
+
+  function apply() {
+    const query = input.value.trim().toLowerCase();
+    let visible = 0;
+
+    cards.forEach(function (card) {
+      const match = query === "" || card.dataset.search.indexOf(query) !== -1;
+      card.classList.toggle("d-none", !match);
+      if (match) {
+        visible += 1;
+      }
+    });
+
+    // Hide a session heading once none of its posters survive the filter.
+    sections.forEach(function (section) {
+      const shown = section.querySelector("[data-poster]:not(.d-none)");
+      section.classList.toggle("d-none", shown === null);
+    });
+
+    if (empty) {
+      empty.classList.toggle("d-none", visible > 0);
+    }
+    counter.textContent =
+      query === ""
+        ? ""
+        : visible + (visible === 1 ? " poster matches" : " posters match");
+  }
+
+  input.addEventListener("input", apply);
+  input.addEventListener("search", apply);
+  apply();
 }

@@ -538,6 +538,22 @@ a.schedule-chip--link:hover {
   color: var(--color-text-muted);
 }
 
+/* Sessions whose contents live on their own page (poster sessions). The pop-up
+   is hover-triggered and 310px wide, so the list itself is linked, not shown. */
+.tt-event__more-link {
+  align-self: flex-start;
+  margin-top: auto;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--tt-accent);
+  text-decoration: underline;
+}
+
+.tt-event__more-link::after {
+  content: " →";
+  text-decoration: none;
+}
+
 .tt-event--plenary {
   --tt-bg: #f3f4f6;
   --tt-accent: #6c757d;
@@ -627,6 +643,10 @@ a.schedule-chip--link:hover {
   border-top: 1px solid rgba(0, 48, 99, 0.12);
   margin-top: 0.5rem;
   padding-top: 0.5rem;
+  /* An oral session's running order can outgrow a short viewport; Bootstrap
+     keeps the pop-up open while the pointer is inside it, so it can scroll. */
+  max-height: 60vh;
+  overflow-y: auto;
 }
 
 .schedule-popover p:last-child,
@@ -719,6 +739,107 @@ a.schedule-chip--link:hover {
   margin-bottom: 0;
 }
 
+/* --- Contribution lists: the talks of an oral session and the posters of a
+   poster session, on /programme/posters/, in the agenda and in the pop-up --- */
+.poster-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.poster-toolbar .form-control {
+  max-width: 26rem;
+}
+
+.poster-toolbar__count {
+  font-size: 0.85rem;
+}
+
+.poster-session__meta {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.poster-session__summary {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.contrib-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.contrib-card {
+  position: relative;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgba(0, 48, 99, 0.12);
+  border-left: 3px solid #6c757d;
+  border-radius: 0.375rem;
+  background: #f8f9fa;
+}
+
+/* Slot time for a talk, board number for a poster */
+.contrib-card__time {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-primary);
+  margin-bottom: 0.2rem;
+}
+
+.contrib-card__title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 0.35rem;
+}
+
+.contrib-card__people {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.contrib-card__affiliation {
+  display: block;
+  font-style: italic;
+}
+
+/* Narrow contexts — the agenda row and the 310px pop-up — go single column. */
+.contrib-disclosure > summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.contrib-list--compact {
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contrib-list--compact .contrib-card {
+  padding: 0.4rem 0.55rem;
+}
+
+.contrib-list--compact .contrib-card__title {
+  font-size: 0.88rem;
+}
+
+.contrib-list--compact .contrib-card__people {
+  font-size: 0.8rem;
+}
+
 /* --- Print / "Download PDF": force the clean agenda list, honour filters --- */
 @media print {
   .navbar,
@@ -801,6 +922,55 @@ a.schedule-chip--link:hover {
   .schedule-list__details {
     font-size: 9pt;
     color: #333;
+  }
+
+  /* A poster session is taller than a page, so it has to be allowed to split.
+     main.js opens the disclosure on beforeprint so the list is actually there. */
+  .schedule-list__item--long {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .contrib-disclosure > summary {
+    display: none;
+  }
+
+  .contrib-list {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .contrib-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: none !important;
+    background: none !important;
+    padding: 0.15rem 0;
+  }
+
+  .contrib-card__time {
+    font-size: 8.5pt;
+    color: #000;
+    margin-bottom: 0;
+  }
+
+  .contrib-card__title {
+    font-size: 9.5pt;
+    color: #000;
+    margin-bottom: 0.1rem;
+  }
+
+  .contrib-card__people {
+    font-size: 8.5pt;
+    color: #333;
+  }
+
+  .contrib-card__affiliation {
+    display: inline;
+  }
+
+  .contrib-card__affiliation::before {
+    content: " · ";
   }
 
   /* Render badges as plain bracketed labels so colours aren't required */
