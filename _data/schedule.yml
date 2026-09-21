@@ -146,7 +146,27 @@ events:
   - { day: day1, room: werner-koerte,  start: "14:30", end: "15:00", title: "Featured Demo 1", type: demo }
   - { day: day1, room: rudolf-virchow, start: "14:30", end: "15:00", title: "Featured Demo 2", type: demo }
 
-  - { day: day1, room: lecture-hall,   start: "15:00", end: "16:00", title: "Oral Session 1: Agentic Decision Intelligence and Earth Action", speaker: "", type: talk }
+  - day: day1
+    room: lecture-hall
+    start: "15:00"
+    end: "16:00"
+    title: "Oral Session 1: Agentic Decision Intelligence and Earth Action"
+    speaker: ""
+    type: talk
+    details: |
+      This session focuses on agents that transform EO observations into actionable decisions. This session illustrates the evolution: from Observation, analysis, prioritization, decision support and Earth Action.
+      ---
+      15:00 – 15:12 A Decision-Driven Hazard-Agnostic Agentic AI Framework for Earth Observation: Demonstration through a Flood Response Use Case
+      Presented by Firoozeh Foroozan and Carlos Pino Padilla, Indra Space
+      15:12 – 15:24 Multi-Agent Early Extreme Event Detection From IoT to Earth Observation Tasking
+      Presented by Arnaud Le Carvennec and Axel Gruyez, CS Group
+      15:24 – 15:36 Wildfire Lifecycle Monitoring from Earth Observation
+      Presented by Rishi Madhok and Fuxun Yu, TerraByte
+      15:36 – 15:48 Agentic Orchestration of Earth Observation Foundation Models via the Model Context Protocol
+      Presented by Pauline Delporte and Marie Leconte and Arnaud Le Carvennec, CS Group, and Nicolas Longépé, ESA Φ-Lab
+      15:48 – 16:00 TerraScope: Pixel-Grounded Visual Reasoning for Earth Observation
+      Presented by Yan Shu, University of Trento
+
   - day: day1 
     room: lecture-hall
     start: "16:05"
@@ -155,6 +175,11 @@ events:
     speaker: ""
     type: panel
     details: |
+      _From data to insight, and from insight to action: The panel will explore how Agentic AI could fundamentally reshape the EO value chain, from sensing and data generation to analysis, decision-making and 
+      business impact. Bringing together perspectives from research, EO technology and enterprise, the discussion will examine how AI agents could be a key element of the full data chain, combine EO with diverse
+      sources of knowledge, and transform increasingly rich Earth observations into decision-ready intelligence. With applications ranging from insurance and risk management to emerging EO services and markets,
+      the panel will address the key question: How do we move from technological potential to real-world impact and sustainable business value?_
+      ---
       **Moderated by** Chiara Cocchiara, ESA Φ-lab
 
       **Panelists:**
@@ -163,8 +188,73 @@ events:
       - **Marcin Detyniecki** Group Chief Data Scientist & Head of Research & Advanced AI at AXA
       - **Andres Camero** Co-Head of Department EO Data Science at German Aerospace Center (DLR)
       - **Linda Sheard** VP, Analytics and Agentic Products at Xoople
-  - { day: day1, room: lecture-hall,   start: "17:00", end: "17:30", title: "Thematic Discussion: Subway Takes: Agentic AI Edition", speaker: "", type: panel, details: "**Moderated by** Eva Gmelich Meijling and Riccardo D'Ercole, ESA Φ-lab" }
-  - { day: day1, room: von-langenbeck, start: "17:00", end: "18:30", title: "Poster Session 1", speaker: "", type: poster }
+  - day: day1
+    room: lecture-hall
+    start: "17:00"
+    end: "17:30"
+    title: "Thematic Discussion: Subway Takes: Agentic AI Edition"
+    speaker: ""
+    type: panel
+    details: |
+      _Join this guided, engaging discussion where participants share and debate strong opinions, concerns, and unpopular takes on Agentic AI for Earth Observation. Come with a take of your own, or respond 
+      to one raised by someone else. The goal is not consensus, but a better collective understanding of where agentic approaches genuinely add value in EO._
+      ---
+      **Moderated by** Eva Gmelich Meijling and Riccardo D'Ercole, ESA Φ-lab
+  
+  - day: day1
+    room: von-langenbeck
+    start: "17:00"
+    end: "18:30"
+    title: "Poster Session 1"
+    speaker: ""
+    type: poster
+    details: |
+      Fitness for Purpose as an Agentic Task: Domain Encoded Reasoning for EO Data Selection in Regulated Environmental Work
+      Presented by Nahid Alemi Kermani, Aniterra Pty Ltd
+      SENSOR2RAG: Multimodal Sensor-to-RAG Architecture for Site-Specific Decision Support in Natural Capital Risk Management
+      Presented by Jacopo Soldateschi, The Landbanking Group GmbH
+      Beyond Task Success: Domain-Grounded Evaluation of Earth Observation Agents in Environmental Risk Workflows
+      Presented by Alexandros Oikonomidis, Centre for Research and Technology Hellas (CERTH) and National and Technical University of Athens (NTUA)
+      EMEM: A Content-Addressed, Verifiable Earth-Memory Protocol for AI Agents over Foundation-Model Embeddings
+      Presented by Jaya Kumari, Vortx AI
+      CLUES: A Comprehensive Workflow for Integrating Geospatial Data in Biomedical Research
+      Presented by Marcel Jentsch, Center of Digital Health BIH@Charite
+      Virtual Support for Earth Observation (VISEO)
+      Presented by Romain Sixt and Killian Perriot and Dorian Voydie, THALES
+      GEODES Assistant
+      Presented by Killian Perriot, THALES
+      From Isolated Models to Agentic Orchestration: A Ground Segment Multi-Agent Framework for Coastal and In-Land Water Resilience
+      Presented by Roger Escolà and Mariona Badenas-Agusti, isardSAT
+      Thematic Datacubes On-Demand (THEDE): An Agentic AI Framework for On-Demand EO Data Dissemination Using Large Language Models
+      Presented by Edoardo Kimani Bellotto, Sistema GmbH
+      EIS: An Open-Source Geo-Agent Framework Democratizing Environmental Knowledge and Collaboration
+      Presented by Matteo Mattiuzzi, European Environment Agency
+      AI Agentic Development of xAI for Earth Observation: Building SegExplainer
+      Presented by Yulia Grushetskaya and Mike Sips, GFZ Helmholtz Centre for Geosciences
+      Ask, Detect, Explain: An End-to-End Agentic System for Satellite Change Detection
+      Presented by Bartłomiej Ostrowski and Marcin Kluczek and Bartosz Augustyn and J ˛edrzej S. Bojanowski, CloudFerro S.A.
+      Agentic Interaction between Raster Flood Observations and GIS Features for Crisis Situational Awareness
+      Presented by Jente Bosmans, VITO
+      LATINSIGHT: A React-Based Multi-Agent System for Urban EO Analytics
+      Presented by Edoardo Schettino and Paolo De Piano, Latitudo 40 S.r.l.
+      ECHOSAT: Physically Consistent Spatio-Temporal Canopy Height Mapping as an Enabling Layer for Agentic Earth Observation
+      Presented by Berkant Turan, Zuse Institute Berlin
+      Engineering a Trustworthy NASA Earth Science Discovery Agent Using the CARE Methodology
+      Presented by Lillianne Thomas, Development SEED
+      A Simulation Study of LLM-Based Onboard Orchestration for Coordinated Earth-Observation Constellations
+      Presented by Christopher Castro Traba
+      Agentic Ground Segment: How Generative AI Redesigns Data Discovery and Processing, Ordering, and Operations
+      Presented by Filippo Bianchini, Telespazio S.p.A.
+      Hierarchical System with Agentic Refinement for Large-Scale Earth Observation Archives
+      Presented by Omjyoti Dutta and Joao Vitorino, GMV S.L.
+      AI-Driven ASAP Country Assessments
+      Presented by Filip Sabo, European Commission, Joint Research Centre (JRC)
+      From Earth Observation Data to Decision: An Agentic Architecture for Disaster Resilience
+      Presented by Bartosz Augustyn and Marcin Kluczek, CloudFerro S.A.
+      Advancing Disaster Resilience through Agentic AI Integration in the EO-PIN Suite
+      Presented by Guy Schumann, RSS-Hydro
+      EO Agents in Actions - Lessons Learned from Building Products Around Analysis Agents
+      Presented by Lillianne Thomas and Drishtie Patel, Development SEED
   
   - { day: day1, room: werner-koerte,  start: "17:00", end: "17:25", title: "Featured Demo 3", type: demo }
   - { day: day1, room: rudolf-virchow, start: "17:00", end: "17:25", title: "Featured Demo 4", type: demo }
@@ -177,7 +267,9 @@ events:
   
   - { day: day1, room: foyer,         start: "18:30", end: "20:45", title: "Welcome Reception", type: break }
 
-  # ----- Day 2 -------------------------------------------------------------
+  # -----------------------------------------------------------------------------------------------
+  # ----- Day 2 -----------------------------------------------------------------------------------
+  # -----------------------------------------------------------------------------------------------
   - { day: day2, room: foyer,          start: "08:00", end: "08:45", title: "Welcome Coffee", type: break }
   - { day: day2, room: lecture-hall,   start: "08:45", end: "09:30", title: "Keynote: The Rise of Agentic AI: Ecosystem, Trends and Implications for Science and Industry", speaker: "Mistral AI", type: keynote }
   - day: day2
@@ -190,13 +282,84 @@ events:
       Dr. Steve Chien
       Jet Propulsion Laboratory (JPL), NASA
 
-  - { day: day2, room: foyer,          start: "10:15", end: "10:45", title: "Coffee Break | 4 Demos (2x Foyer & 2x Wandelhalle)", type: break }
-  - { day: day2, room: expertisium,    start: "10:15", end: "10:45", title: "Coffee Break | 2 Demos", type: break }
+  - day: day2
+    room: foyer
+    start: "10:15"
+    end: "10:45"
+    title: | 
+      Coffee Break | 4 Demos 
+      Foyer: Demo 3 & 4
+      Wandelhalle: Demos 20 & 21
+    type: break
+    details: |
+      **Foyer:**
+      Demo 3: Virtual Support for Earth Observation (VISEO): Agentic AI for Earth Observation Discovery - Thales Services Toulouse
+      Presented by Dorian Voydie, Killian Perriot, Romain Sixt
+      Demo 5: WRI's Global Nature Watch: Geospatial AI in Plain Language - Development Seed Lisbon
+      Presented by Daniel Wiesmann, Soumya Ranjan, Leo Thomas
+      **Wandelhalle:**
+      Demo 20: FLAP-0: An Interactive Platform for Agentic Earth Observation - Barcelona Supercomputing Center and Universitat Politècnica de Catalunya
+      Presented by Leonidas Kosmidis, Iker Fernandez Andonegui, Marc Solé i Bonet
+      Demo 21: A Live Tour of EVE: An Agentic EO Platform Built on an Open MCP Tool Registry - Pi School
+      Presented by Àlex R. Atrio, Antonio Lopez, Jino Rohit, Emanuele Micieli
 
-  - { day: day2, room: werner-koerte,  start: "10:15", end: "10:45", title: "Featured Demo 11", type: demo }
-  - { day: day2, room: rudolf-virchow, start: "10:15", end: "10:45", title: "Featured Demo 12", type: demo }
+  - day: day2
+    room: expertisium
+    start: "10:15"
+    end: "10:45"
+    title: | 
+      Coffee Break | 2 Demos 
+      Expertisium: Demo 8 & 22
+    type: break
+    details: |
+      Demo 8: GEONOVA: An Agentic EO Copilot for Geospatial Embeddings and Downstream Model Adaptation - Geonova P.C.
+      Presented by George Arvanitakis, Georgios Tsimiklis, Elisavet Parselia, Eleftheria Tetoula Tsonga, Dionysos Kampouris, Christos Tsekes
+      Demo 22: Agentic AI-Enabled Climate Downscaling with NASA's Prithvi WxC Foundation Model - JPL/NASA, University of Utah
+      Presented by Hugo Lee, Aashish Panta
 
-  - { day: day2, room: lecture-hall,   start: "10:45", end: "11:45", title: "Oral Session 2: Autonomous EO Systems, Space Operations and Cognitive Computing in Space", speaker: "", type: talk }
+  - day: day2
+    room: werner-koerte
+    start: "10:15"
+    end: "10:45"
+    title: |
+      Featured Demo 11
+    details: |
+      EVE Workbench Live: A Multi-Agent Debate on Berlin's Climate Stress - Frank Reply
+      Presented by Daniel Fitzpatrick, Maria Mülle
+  - day: day2
+    room: rudolf-virchow
+    start: "10:15"
+    end: "10:45"
+    title: |
+      Featured Demo 12
+    details: |
+      DEA Next: Making Earth Intelligence Conversational through Agentic AI - Alia Space Systems
+      Presented by Arturo Montieri
+
+  - day: day2
+    room: lecture-hall
+    start: "10:45"
+    end: "11:45"
+    title: "Oral Session 2: Autonomous EO Systems, Space Operations and Cognitive Computing in Space"
+    speaker: ""
+    type: talk
+    details: |
+      This session represents the most visionary part of the programme, around Cognitive Cloud Computing in Space (3CS), EO Virtual Constellations and autonomous missions.
+      "How do we move agentic EO from the cloud to autonomous constellations operating in orbit?"
+      ---
+      10:45 - 10:57 Agentic Orchestration of Satellite Tasking and Data Retrieval in Earth Observation Virtual Constellations
+      Presented by Marie Leconte and Arnaud Le Carvennec and Pauline Delporte, CS Group
+      10:57 - 11:09 Autonomous Agentic Command and Control for Satellite Constellations: An AI-Accelerated Engineering Demonstration
+      Presented by Alessio Auddino and Francesco Corallo, Thales Alenia Space Italia
+      11:09 - 11:21 Towards Cognitive Cloud Computing in Space: AI-eXpress as an Orbital Testbed for Agentic Earth Observation
+      Presented by Vito Fortunato, Planetek Italia
+      11:21 - 11:33 Agentic Mission Computing for Autonomous Earth Observation
+      Presented by Dave Ojika and Nitesh Bakhati and Srinidhi Magesh, Flapmax, and Leonidas Kosmidis and Iker Fernandez Andonegui and Marc Solè i Bonet and Eric Rufart Blasco, Barcelona Supercom-
+      puting Center and Universitat Politècnica de Catalunya, and Projjal Gupta and Herman Lam, University of Florida, and Aidin Osucht, University of California, and Eric Lim and Isabella Pier and Ben Cragin,
+      University of Southern California
+      11:33 - 11:45 Closing the Reasoning Latency Gap: FPGA-Accelerated LLM Agents for Onboard Supervision of Earth Observation Acquisition
+      Presented by Winfred Ooh-Azlin, Technische Universität Berlin, and Pao Ying Heng, Royal Astronomical Society
+
   - { day: day2, room: lecture-hall,   start: "12:00", end: "12:30", title: "Panel Discussion 2", speaker: "", type: panel }
   - { day: day2, room: lecture-hall,   start: "12:30", end: "12:45", title: "Group Photo Shoot", speaker: "", type: break }
 
@@ -211,17 +374,30 @@ events:
     speaker: |
       Prof. Dr. Manling Li
       Northwestern University & Amazon Scholar
+
   - day: day2
     room: lecture-hall
     start: "14:30"
-    end: "15:00"
-    title: "Keynote: Harnessing the Collective Intelligence of AI Agents for Discoveries"
-    type: keynote
-    speaker: |
-      Prof. Dr. James Zou
-      Stanford University
-
-  - { day: day2, room: lecture-hall,   start: "15:00", end: "15:45", title: "Technical deep dives: Building with Mistral Open Agentic AI tools: From Scientific Discovery to Operational Services", type: hands-on }
+    end: "15:45"
+    title: "Oral Session 3: Design, Development and Evaluation of AI Agents"
+    speaker: ""
+    type: talk
+    details: |
+      This session addresses perhaps the most critical scientific question emerging from the workshop: “How should EO agents be built, evaluated, validated and trusted?”.
+      This session is likely to generate discussion about evaluation, reproducibility, hallucinations, validation, governance, or trust.
+      ---
+      16:15 – 16:27 Collaborative Agent Reasoning Engineering (CARE): A Structured, Context-Engineering Methodology for Systematically Designing Traceable and Maintainable AI Agents for Science
+      Presented by Rohit Sisir Sahoo, The University of Alabama in Huntsville
+      16:27 – 16:39 Evaluating EVE, an EO-Specialized LLM, in Agentic Earth Observation Systems
+      Presented by Riccardo D’Ercole and Eva Gmelich Meijling, ESA ϕ-lab
+      16:39 – 16:51 EO Agent Arena: From Fragmented Benchmarks to Reproducible Evaluation of Agentic Earth Observation Systems
+      Presented by Najah Pokkiri, Axis Spatial
+      16:51 – 17:03 Behavioural Self-Monitoring for Autonomous Earth Observation Agents: The Attribute Reliability Monitor (ARM)
+      Presented by Alejandro Mousist, Thales Alenia Space
+      17:03 – 17:15 Balancing Accessibility and Scientific Validity in the Era of AI Agents and Climate Change
+      Presented by Elena Di Medio and Laia Romero and Guillermo Grau, Lobelia Earth
+      17:15 – 17:27 From Tools to Ecosystem: EVE’s Community-driven MCP Registry for an Agentic Platform for Earth Intelligence
+      Presented by Àlex R. Atrio and Antonio Lopez and Jino Rohit and Emanuele Micieli, Pi School
 
   - { day: day2, room: foyer,          start: "15:45", end: "16:15", title: "Coffee Break | 4 Demos (2x Foyer & 2x Wandelhalle)", type: break }
   - { day: day2, room: expertisium,    start: "15:45", end: "16:15", title: "Coffee Break | 2 Demos", type: break }
@@ -229,9 +405,66 @@ events:
   - { day: day2, room: werner-koerte,  start: "15:45", end: "16:15", title: "Featured Demo 13", type: demo }
   - { day: day2, room: rudolf-virchow, start: "15:45", end: "16:15", title: "Featured Demo 14", type: demo }
 
-  - { day: day2, room: lecture-hall,   start: "16:15", end: "17:30", title: "Oral Session 3: Design, Development and Evaluation of AI Agents", speaker: "", type: talk }
+  - { day: day2, room: lecture-hall,   start: "16:15", end: "17:15", title: "Technical deep dives: Building with Mistral Open Agentic AI tools: From Scientific Discovery to Operational Services", type: hands-on }
 
-  - { day: day2, room: von-langenbeck, start: "17:45", end: "19:00", title: "Poster Session 2", speaker: "", type: poster }
+  - day: day2
+    room: lecture-hall
+    start: "17:15"
+    end: "17:45"
+    title: "Keynote: Harnessing the Collective Intelligence of AI Agents for Discoveries"
+    type: keynote
+    speaker: |
+      Prof. Dr. James Zou
+      Stanford University
+
+  - day: day2
+    room: von-langenbeck
+    start: "17:45"
+    end: "19:00"
+    title: "Poster Session 2"
+    speaker: ""
+    type: poster
+    details: |
+      Autonomous Geospatial Intelligence: An Agentic Workflow for End-to-End Feature Interpretation And Large-Scale Scene Monitoring
+      Presented by Marie-Charlotte Teulières, Airbus Defense and Space Geo
+      EOMAS – A Multi Agent System-Backed Assistant for Earth Observation
+      Presented by Hans Meine, Fraunhofer Institute for Digital Medicine MEVIS and OHB Digital Services
+      An Interactive Multi-Agent System for User-Driven And Context-Aware Hyperspectral Image Compression
+      Presented by Tristan Reimann and Maxim Smirnov and Viktor Tevosyan, Technische Universität Berlin and BIFOLD
+      Towards Earth Observation-Based Siting of Sponge-City Infrastructure in East African Cities: An Open-Data Framework
+      Presented by Karl A. W. Amolo, Urban Canopy Kenya and East African Sponge Cities Initiative (EASCI)
+      AI-Driven End-To-End (E2E) Monitoring in the Context Of The ESA Earth Observation Operations Framework Copernicus Space Component (EOF-CSC)
+      Presented by Caroline Ball, Capgemini (France)
+      From Perception to Priorities: An Agentic Pipeline for Multi-Hazard Triage and Explainable Resource Allocation in Earth Observation
+      Presented by Alessandro Princi, RINA Consulting S.p.A
+      Learned Satellite Embeddings as Covariates for Global Digital Soil Mapping: A Multi-Model, Multi-Resolution Evaluation Developed with AI Coding Agents
+      Presented by Laura Poggio, ISRIC - World Soil Information
+      Specialized Geospatial Foundation Models for Agentic Earth Observation: Lessons from Spheer FM
+      Presented by Mark Boer and Jordy de Lange, Spheer
+      Multi-Satellite Task Orchestration for Wildfire Monitoring with On-Board Visual-Language Models
+      Presented by Riccardo D’Ercole, ESA Φ-lab and Ana-Maria Pelin, Φ-lab and TU Delft
+      Provenance-First Geospatial Composition: A Scaffold-Based Builder as a Trust-Bearing Counterpoint to Agentic Autonomy in Earth Observation
+      Presented by Sudhakaran Chithamanan, Earthward, 33 Blueprints Collective and Aravindh S. Subramanian, Technical University of Munich, Earthward
+      Beyond the State of the Art in Geospatial Foundation Models: A Diagnostic Comparison of TerraMind and THOR
+      Presented by Frederick Schindlegger, Bertelsmann Foundation
+      Agentic AI as an Auditable Co-Scientist for Earth-Observation-Based Irrigation Mapping and Groundwater Accounting
+      Presented by Peter ReVelle, Desert Research Institute (DRI)
+      SeismicAgent: Benchmarking Evidence-Conflict Reasoning for Post-Earthquake Building-Damage Assessment
+      Presented by Fatma Elik, Istanbul Metropolitan Municipality, Earthquake and Ground Investigation Directorate
+      Towards Agentic AI Workflows for Earth Observation-Based Air Quality Studies
+      Presented by Alberto Vavassori and Yasil Yordanov, Politecnico di Milano
+      Enabling Adaptive Agentic Earth Observation across the Space–Ground–Cloud Continuum
+      Presented by Cecilia Calavaro, Department of Civil Engineering and Computer Science Engineering, University of Rome Tor Vergata
+      Manteo AI: Agentic Geospatial Intelligence for Earth Observation
+      Presented by Ioannis Prapas, manteo.ai
+      Airbus Geo Explore: Leveraging Semantic Search APIs for LLM Agentic Workflows
+      Presented by Fahd Benatia, Airbus DS
+      Aperture: Semantic Change Understanding and Grounded GeoAI Reasoning via SAR-Optical-Language Alignment
+      Presented by Magdalena Kaiser and Paul Weinmann, LiveEO
+      FlyPix AI: Agentic Vision-Language System
+      Presented by Ivan Tankoyeu, Flypix AI
+      GeoGuard: An Agentic Guardrails and Validation Framework for Geospatial AI
+      Presented by Rohit Sisir Sahoo, The University of Alabama in Huntsville
 
   - { day: day2, room: werner-koerte,  start: "17:45", end: "18:10", title: "Featured Demo 15", type: demo }
   - { day: day2, room: rudolf-virchow, start: "17:45", end: "18:10", title: "Featured Demo 16", type: demo }
@@ -261,29 +494,87 @@ events:
       Dr. Christopher Forrest Brown
       Google DeepMind
 
-  - { day: day3, room: foyer,          start: "10:30", end: "11:00", title: "Coffee Break | 4 Demos (2x Foyer & 2x Wandelhalle)", type: break }
-  - { day: day3, room: expertisium,    start: "10:30", end: "11:00", title: "Coffee Break | 2 Demos", type: break }
+  - day: day3
+    room: foyer
+    start: "10:30"
+    end: "11:00"
+    title: | 
+      Coffee Break | 2 Demos
+      Foyer: Demos 18 & 19
+    details: |
+      Demo 18: Generative Geospatial User Interfaces: Dynamic Dashboard and Storytelling Generation via Agent-to-UI Streaming - EOX IT Services GmbH
+      Presented by Silvester Pari, Lubomír Doležal
+      Demo 19: Operating an EO Constellation with AI Agents - Aistralys
+      Presented by Alexandru Moloceniuc
+    type: break
 
-  - { day: day3, room: werner-koerte,  start: "10:30", end: "11:00", title: "Featured Demo 21", type: demo }
+  - day: day3
+    room: expertisium
+    start: "10:30"
+    end: "11:00"
+    title: |
+      Coffee Break | 2 Demos
+      Expertisium: Demos 10 & 16
+    details: |
+      Demo 10: BlazerOps: Reinforcement Learning Environment for Accelerated Spatial ML Development - hyades.space
+      Presented by Ashin Alex, Harshil Magan
+      Demo 16: AKD Labs: An End-to-End Agent Co-Design Studio - The University of Alabama in Huntsville, NASA Marshall Space Flight Center
+      Presented by Nishan Pantha, Ajinkya Kulkarni, Muthukumaran Ramasubramanian, Nidhi Jha, Rahul Ramachandran
+    type: break
+
+  - day: day3
+    room: werner-koerte
+    start: "10:30"
+    end: "11:00"
+    title: |
+      Featured Demo 21
+    details: |
+      A Live Tour of EVE: An Agentic EO Platform Built on an Open MCP Tool Registry - Pi School
+      **Presented by** Àlex R. Atrio, Antonio Lopez, Jino Rohit, Emanuele Micieli
   - day: day3 
     room: rudolf-virchow
     start: "10:30"
     end: "11:00"
-    title: "Featured Demo 22"
+    title: |
+      Featured Demo 22
+    details: |
+      Agentic AI-Enabled Climate Downscaling with NASA's Prithvi WxC Foundation Model - JPL/NASA, University of Utah
+      **Presented by** Hugo Lee, Aashish Panta
     type: demo
 
-  - { day: day3, room: lecture-hall,   start: "11:00", end: "12:00", title: "Oral Session 4: Multi-Modal Large Models, Datasets and Agentic Earth Intelligence", speaker: "", type: talk }
-  - { day: day3, room: lecture-hall,   start: "12:15", end: "12:45", title: "Closing Ceremony", speaker: "", type: panel }
+  - day: day3
+    room: lecture-hall
+    start: "11:00"
+    end: "12:00"
+    title: "Oral Session 4: Multi-Modal Large Models, Datasets and Agentic Earth Intelligence"
+    speaker: ""
+    details: |
+      This session focuses on the scientific foundations that enable agentic EO systems: Vision-language models, geospatial foundation models, embeddings, semantic reasoning, multimodal grounding, and automated scientific discovery.
+      This session addresses: “How can foundation models become reasoning engines for Earth Intelligence?”
+      ---
+      11:00 - 11:12 APERTURE: Semantic Change Understanding and Grounded GeoAI Reasoning via SAR-Optical-Language Alignment
+      Presented by Magdalena Kaiser and Paul Weinmann, LiveEO
+      11:12 - 11:24 BIGEARTHNET.TXT: A Large-Scale Multi-Sensor Image-Text Dataset and Benchmark for Earth Observation
+      Presented by Johann-Ludwig Herzog and Mathis Jürgen Adler, BIFOLD and Technische Universität Berlin
+      11:24 - 11:36 Toward Agentic and Unified Agricultural Field Boundary Delineation from Satellite Imagery using Geospatial Foundation Models, Pre-Trained Segmentation, and Embeddings
+      Presented by Sayantan Majumdar, Division of Hydrologic Sciences, Desert Research Institute
+      11:36 - 11:48 Evaluation of Agentic Autoresearch in an Earth Observation Benchmark
+      Presented by Alex López-Cifuentes, Xoople
+      11:48 - 12:00 GEOFMOPS: An Agentic Framework for the Geospatial Foundation Model Lifecycle in Earth Observation
+      Presented by Fabio Calefato, University of Bari and Nicolo' Taggio, Planetek Italia and Filippo Lanubile, University of Bari and Fabrizio Rosmarino, University of Bari
+    type: talk
 
-  - { day: day3, room: foyer,          start: "12:45", end: "14:00", title: "Hosted Lunch", type: break }
+  - { day: day3, room: lecture-hall,   start: "12:15", end: "12:30", title: "Closing Ceremony", speaker: "", type: panel }
+
+  - { day: day3, room: foyer,          start: "12:30", end: "14:00", title: "Hosted Lunch", type: break }
   
   - { day: day3, room: expertisium,    start: "14:00", end: "15:30", title: "Track 1: Building and Operating EO Agents", speaker: "Building Agentic Earth Observation Workflows with EVE Workbench", type: workshop }
   - { day: day3, room: von-langenbeck, start: "14:00", end: "15:30", title: "Track 2: Trustworthy and Scientific Agentic AI", speaker: "How Do You Know Your Agent Works? Evaluating Earth Observation Agents with Existing Benchmarks", type: workshop }
   # - { day: day3, room: rudolf-virchow,  start: "14:00", end: "15:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI", speaker: "From Pixels to Concepts: Hands-on with Clay Embeddings for Agentic Earth Observation", type: workshop }
-  - { day: day3, room: rudolf-virchow,  start: "14:00", end: "15:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI (Part 1)", speaker: "Small Models, Big Maps – Local Geospatial Workflows with Fine-tuned SLMs", type: workshop }
+  - { day: day3, room: rudolf-virchow,  start: "14:00", end: "15:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI (Part 1)", speaker: "Small Models, Big Maps - Local Geospatial Workflows with Fine-tuned SLMs", type: workshop }
 
   - { day: day3, room: foyer,          start: "15:30", end: "16:00", title: "Coffee Break", type: break }
 
   - { day: day3, room: expertisium,    start: "16:00", end: "17:30", title: "Track 1: Building and Operating EO Agents", speaker: "Agentic Analysis of Earth Observation for Utility Intelligence", type: workshop }
   - { day: day3, room: von-langenbeck, start: "16:00", end: "17:30", title: "Track 2: Trustworthy and Scientific Agentic AI", speaker: "From Vibe Coding to Verifiable Scientific Discovery: Agentic Workflows for Earth Observation", type: workshop }
-  - { day: day3, room: rudolf-virchow,  start: "16:00", end: "17:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI (Part 2)", speaker: "Small Models, Big Maps – Local Geospatial Workflows with Fine-tuned SLMs", type: workshop }
+  - { day: day3, room: rudolf-virchow,  start: "16:00", end: "17:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI (Part 2)", speaker: "Small Models, Big Maps - Local Geospatial Workflows with Fine-tuned SLMs", type: workshop }
