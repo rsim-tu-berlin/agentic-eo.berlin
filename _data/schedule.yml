@@ -249,7 +249,7 @@ events:
         end: "15:36"
         title: "Wildfire Lifecycle Monitoring from Earth Observation"
         presenters: "Rishi Madhok, Fuxun Yu"
-        affiliation: "TerraByte"
+        affiliation: "TerraByte AI"
       - start: "15:36"
         end: "15:48"
         title: "Agentic Orchestration of Earth Observation Foundation Models via the Model Context Protocol"
@@ -321,9 +321,6 @@ events:
       - title: "CLUES: A Comprehensive Workflow for Integrating Geospatial Data in Biomedical Research"
         presenters: "Marcel Jentsch"
         affiliation: "Center of Digital Health BIH@Charité"
-      - title: "Virtual Support for Earth Observation (VISEO)"
-        presenters: "Romain Sixt, Killian Perriot, Dorian Voydie"
-        affiliation: "THALES"
       - title: "GEODES Assistant"
         presenters: "Killian Perriot"
         affiliation: "THALES"
@@ -375,7 +372,9 @@ events:
       - title: "EO Agents in Actions - Lessons Learned from Building Products Around Analysis Agents"
         presenters: "Lillianne Thomas, Drishtie Patel"
         affiliation: "Development Seed"
-
+      - title: "GeoGuard: An Agentic Guardrails and Validation Framework for Geospatial AI"
+        presenters: "Rohit Sisir Sahoo"
+        affiliation: "The University of Alabama in Huntsville"
 
   - day: day1
     room: werner-koerte
@@ -558,7 +557,7 @@ events:
       - start: "11:21"
         end: "11:33"
         title: "Agentic Mission Computing for Autonomous Earth Observation"
-        presenters: "Dave Ojika, Nitesh Bakhati, Srinidhi Magesh (Flapmax), Leonidas Kosmidis, Iker Fernandez Andonegui, Marc Solè i Bonet, Eric Rufart Blasco (Barcelona Supercomputing Center and Universitat Politècnica de Catalunya), Projjal Gupta, Herman Lam (University of Florida), Aidin Osucht (University of California), Eric Lim, Isabella Pier, Ben Cragin (University of Southern California)"
+        presenters: "Dave Ojika, Srinidhi Magesh (Flapmax), Leonidas Kosmidis, Iker Fernandez Andonegui, Marc Solé i Bonet, Eric Rufart Blasco (Barcelona Supercomputing Center and Universitat Politècnica de Catalunya), Projjal Gupta, Herman Lam (University of Florida), Aidan Osuch (University of California, Los Angeles), Eric Lim, Isabella Pier, Ben Cragin (University of Southern California)"
         affiliation: ""
       - start: "11:33"
         end: "11:45"
@@ -758,9 +757,9 @@ events:
       - title: "FlyPix AI: Agentic Vision-Language System"
         presenters: "Ivan Tankoyeu"
         affiliation: "Flypix AI"
-      - title: "GeoGuard: An Agentic Guardrails and Validation Framework for Geospatial AI"
-        presenters: "Rohit Sisir Sahoo"
-        affiliation: "The University of Alabama in Huntsville"
+      - title: "Virtual Support for Earth Observation (VISEO)"
+        presenters: "Romain Sixt, Killian Perriot, Dorian Voydie"
+        affiliation: "THALES"
 
   - day: day2
     room: werner-koerte
@@ -779,7 +778,7 @@ events:
     title: "Featured Demo 16"
     type: demo
     details: |
-      AKD Labs: An End-to-End Agent Co-Design Studio – The University of Alabama in Huntsville, NASA Marshall Space Flight Center
+      AKD Labs: An End-to-End Agent Co-Design Studio - The University of Alabama in Huntsville, NASA Marshall Space Flight Center
       **Presented by** Rohit Sisir Sahoo
 
   - day: day2
@@ -789,7 +788,7 @@ events:
     title: "Featured Demo 17"
     type: demo
     details: |
-      terraAI: Conversational Earth Observation Analysis – Vilnius University
+      terraAI: Conversational Earth Observation Analysis - Vilnius University
       **Presented by** Evgenij Shapovalov, Artiom Hovhannisyan, Valentas Gružauskas
 
   - day: day2
@@ -932,13 +931,12 @@ events:
 
   - { day: day3, room: foyer,          start: "12:30", end: "14:00", title: "Hosted Lunch", type: break }
 
-  - { day: day3, room: expertisium,    start: "14:00", end: "15:30", title: "Track 1: Building and Operating EO Agents", speaker: "Building Agentic Earth Observation Workflows with EVE Workbench", type: workshop }
-  - { day: day3, room: von-langenbeck, start: "14:00", end: "15:30", title: "Track 2: Trustworthy and Scientific Agentic AI", speaker: "How Do You Know Your Agent Works? Evaluating Earth Observation Agents with Existing Benchmarks", type: workshop }
-  # - { day: day3, room: rudolf-virchow,  start: "14:00", end: "15:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI", speaker: "From Pixels to Concepts: Hands-on with Clay Embeddings for Agentic Earth Observation", type: workshop }
-  - { day: day3, room: rudolf-virchow,  start: "14:00", end: "15:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI (Part 1)", speaker: "Small Models, Big Maps - Local Geospatial Workflows with Fine-tuned SLMs", type: workshop }
+  - { day: day3, room: expertisium,    start: "14:00", end: "15:30", title: "Track 1: Building and Operating EO Agents - Building Agentic Earth Observation Workflows with EVE Workbench", speaker: "Andreas Haida, Bara Safrankova - Frank Reply", type: workshop }
+  - { day: day3, room: von-langenbeck, start: "14:00", end: "15:30", title: "Track 2: Trustworthy and Scientific Agentic AI - How Do You Know Your Agent Works? Evaluating Earth Observation Agents with Existing Benchmarks", speaker: "Àlex R. Atrio, Antonio Lopez, Jino Rohit - Pi School, Nicolas Longépé - ESA labs", type: workshop }
+  - { day: day3, room: rudolf-virchow,  start: "14:00", end: "15:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI (Part 1) - Small Models, Big Maps - Local Geospatial Workflows with Fine-tuned SLMs", speaker: "Soumya Ranjan, Daniel Wiesmann - Development Seed", type: workshop }
 
   - { day: day3, room: foyer,          start: "15:30", end: "16:00", title: "Coffee Break", type: break }
 
-  - { day: day3, room: expertisium,    start: "16:00", end: "17:30", title: "Track 1: Building and Operating EO Agents", speaker: "Agentic Analysis of Earth Observation for Utility Intelligence", type: workshop }
-  - { day: day3, room: von-langenbeck, start: "16:00", end: "17:30", title: "Track 2: Trustworthy and Scientific Agentic AI", speaker: "From Vibe Coding to Verifiable Scientific Discovery: Agentic Workflows for Earth Observation", type: workshop }
-  - { day: day3, room: rudolf-virchow,  start: "16:00", end: "17:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI (Part 2)", speaker: "Small Models, Big Maps - Local Geospatial Workflows with Fine-tuned SLMs", type: workshop }
+  - { day: day3, room: expertisium,    start: "16:00", end: "17:30", title: "Track 1: Building and Operating EO Agents - Agentic Analysis of Earth Observation for Utility Intelligence", speaker: "Fuxun Yu, Rishi Madhok - TerraByte AI", type: workshop }
+  - { day: day3, room: von-langenbeck, start: "16:00", end: "17:30", title: "Track 2: Trustworthy and Scientific Agentic AI - From Vibe Coding to Verifiable Scientific Discovery: Agentic Workflows for Earth Observation", speaker: "Rocco Sedona, Pinaki Banerjee, Alexandre Strube - Forschungszentrum Jülich, Rohit Sahoo - The University of Alabama in Huntsville, NASA Marshall Space Flight Center, Àlex R. Atrio - Pi School", type: workshop }
+  - { day: day3, room: rudolf-virchow,  start: "16:00", end: "17:30", title: "Track 3: Foundation Models, Embeddings and Lightweight AI (Part 2) - Small Models, Big Maps - Local Geospatial Workflows with Fine-tuned SLMs", speaker: "Soumya Ranjan, Daniel Wiesmann - Development Seed", type: workshop }
