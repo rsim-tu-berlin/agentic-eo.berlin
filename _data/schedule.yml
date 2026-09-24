@@ -565,9 +565,23 @@ events:
         presenters: "Winfred Ooh-Azlin (Technische Universität Berlin), Pao Ying Heng (Royal Astronomical Society)"
         affiliation: ""
 
-  - { day: day2, room: lecture-hall,   start: "12:00", end: "12:30", title: "Panel Discussion 2", speaker: "", type: panel }
-  - { day: day2, room: lecture-hall,   start: "12:30", end: "12:45", title: "Group Photo Shoot", speaker: "", type: break }
+  - day: day2
+    room: lecture-hall
+    start: "12:00"
+    end: "12:30"
+    title: "Panel: From Earth Observation to Earth Intelligence: Opportunities, Challenges and Future Directions"
+    speaker: ""
+    type: panel
+    details: |
+      **Moderated by** Prof. Dr. Begüm Demir
 
+      **Panelists:**
+
+      - **Prof. Dr. Ioannis Papoutsis** National Technical University of Athens
+      - **Dr. Bertrand Le Saux** DG Connect at the European Commission
+      - **Mikhail Klassen** Planet Labs
+  
+  - { day: day2, room: lecture-hall,  start: "12:30", end: "12:45", title: "Group Photo Shoot", speaker: "", type: break }
   - { day: day2, room: foyer,         start: "12:45", end: "14:00", title: "Hosted Lunch", type: break }
 
   - day: day2
