@@ -17,7 +17,7 @@
   <div class="schedule-list__time">{{ include.event.start }}<span class="schedule-list__time-sep">–</span>{{ include.event.end }}</div>
   <div class="schedule-list__body">
     <div class="schedule-list__title">
-      {{ include.event.title }}
+      {{ include.event.title | strip | newline_to_br }}
     </div>
     <div class="schedule-list__meta">
       <span class="schedule-list__room">{{ room_name }}</span>

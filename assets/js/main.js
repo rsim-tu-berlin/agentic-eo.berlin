@@ -294,7 +294,8 @@ function initScheduleDetails() {
       customClass: "schedule-popover",
       placement: "auto",
       html: true,
-      title: title ? title.textContent.trim() : "",
+      // innerHTML keeps the <br>s of multi-line titles from schedule.yml.
+      title: title ? title.innerHTML.trim() : "",
       content: function () {
         return buildContent(tile);
       },

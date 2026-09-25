@@ -21,7 +21,12 @@
 #            which room filter is active.
 #   start:   (required) "HH:MM", 24h, zero-padded, aligned to 5 minutes
 #   end:     (required) "HH:MM"
-#   title:   (required)
+#   title:   (required) plain text; line breaks are kept, like `speaker:`.
+#            For a multi-line title use a `|` block:
+#
+#              title: |
+#                Coffee Break | 2 Demos
+#                Demos 12 & 17
 #   speaker: (optional) plain text, but line breaks are kept. For more than one
 #            name, switch from a quoted value to a `|` block:
 #
@@ -176,8 +181,8 @@ events:
     end: "15:00"
     title: |
       Coffee Break | 4 Demos
-      Foyer: Demos 13 & 14
-      Wandelhalle: Demos 11 & 15
+      Foyer: Demo 13 & Demo 14
+      Wandelhalle: Demo 11 & Demo 15
     details: |
       **Foyer:**
       Demo 13: From Chat to Copernicus: Agent-Based Composition of Reproducible openEO Workflows on CDSE – VITO
@@ -197,7 +202,7 @@ events:
     end: "15:00"
     title: |
       Coffee Break | 2 Demos
-      Demos 12 & 17
+      Demo 12 & Demo 17
     type: break
     details: |
       Demo 12: DEA Next: Making Earth Intelligence Conversational through Agentic AI – Alia Space Systems
@@ -479,8 +484,8 @@ events:
     end: "10:45"
     title: |
       Coffee Break | 4 Demos
-      Foyer: Demos 3 & 5
-      Wandelhalle: Demos 20 & 21
+      Foyer: Demo 3 & Demo 5
+      Wandelhalle: Demo 20 & Demo 21
     type: break
     details: |
       **Foyer:**
@@ -500,7 +505,7 @@ events:
     end: "10:45"
     title: |
       Coffee Break | 2 Demos
-      Demos 8 & 22
+      Demo 8 & Demo 22
     type: break
     details: |
       Demo 8: GEONOVA: An Agentic EO Copilot for Geospatial Embeddings and Downstream Model Adaptation - Geonova P.C.
@@ -642,8 +647,8 @@ events:
     end: "16:15"
     title: |
       Coffee Break | 4 Demos
-      Foyer: Demos 1 & 7
-      Wandelhalle: Demos 2 & 4
+      Foyer: Demo 1 & Demo 7
+      Wandelhalle: Demo 2 & Demo 4
     type: break
     details: |
       **Foyer:**
@@ -663,7 +668,7 @@ events:
     end: "16:15"
     title: |
       Coffee Break | 2 Demos
-      Demos 6 & 9
+      Demo 6 & Demo 9
     type: break
     details: |
       Demo 6: Max-ICS V2.0: Toward an Agentic EO Orchestration Platform – EarthLab Luxembourg S.A.
@@ -862,7 +867,7 @@ events:
     end: "11:00"
     title: |
       Coffee Break | 2 Demos
-      Foyer: Demos 18 & 19
+      Foyer: Demo 18 & Demo 19
     details: |
       Demo 18: Generative Geospatial User Interfaces: Dynamic Dashboard and Storytelling Generation via Agent-to-UI Streaming - EOX IT Services GmbH
       **Presented by** Silvester Pari, Lubomír Doležal
@@ -876,7 +881,7 @@ events:
     end: "11:00"
     title: |
       Coffee Break | 2 Demos
-      Expertisium: Demos 10 & 16
+      Demo 10 & Demo 16
     details: |
       Demo 10: BlazerOps: Reinforcement Learning Environment for Accelerated Spatial ML Development - hyades.space
       **Presented by** Ashin Alex, Harshil Magan

@@ -84,7 +84,7 @@
         <div class="tt-event tt-event--plenary tt-event--{{ event.type }}" data-room="plenary" data-day="{{ event.day }}"
              style="grid-row: {{ row_start }} / {{ row_end }}; grid-column: 2 / -1;">
           <span class="tt-event__time">{{ event.start }}–{{ event.end }}</span>
-          <span class="tt-event__title">{{ event.title }}</span>
+          <span class="tt-event__title">{{ event.title | strip | newline_to_br }}</span>
           {% if event.details and event.details != "" %}<div class="tt-event__details d-none" data-event-details>{{ event.details | markdownify }}</div>{% endif %}
         </div>
         {% else %}
@@ -93,7 +93,7 @@
         <div class="tt-event tt-event--{{ event.type }}" data-room="{{ event.room }}" data-day="{{ event.day }}"
              style="grid-row: {{ row_start }} / {{ row_end }}; grid-column: {{ col }};">
           <span class="tt-event__time">{{ event.start }}–{{ event.end }}</span>
-          <span class="tt-event__title">{{ event.title }}</span>
+          <span class="tt-event__title">{{ event.title | strip | newline_to_br }}</span>
           {% if event.speaker and event.speaker != "" %}<span class="tt-event__speaker">{{ event.speaker | strip | newline_to_br }}</span>{% endif %}
           {% if event.items and event.items.size > 0 %}
           {% if event.type == "poster" %}
