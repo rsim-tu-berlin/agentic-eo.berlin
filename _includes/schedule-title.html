@@ -1,0 +1,16 @@
+{% comment %}
+  An event title from _data/schedule.yml. The first line is the title proper;
+  any further lines (e.g. which demos run where during a coffee break) are
+  set in the smaller, muted style of the `details:` text.
+
+  Parameters: title.
+{% endcomment %}
+{%- assign title_lines = include.title | strip | newline_to_br | split: "<br />" -%}
+{{- title_lines.first | strip -}}
+{%- if title_lines.size > 1 -%}
+<span class="schedule-title__more">
+{%- for line in title_lines offset: 1 -%}
+{{- line | strip -}}{%- unless forloop.last -%}<br>{%- endunless -%}
+{%- endfor -%}
+</span>
+{%- endif -%}

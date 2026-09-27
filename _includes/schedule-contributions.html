@@ -1,6 +1,6 @@
 {% comment %}
-  One card per entry in an event's `items:` list — the talks of an oral session
-  or the posters of a poster session. The timetable pop-up, the mobile/print
+  One card per entry in an event's `items:` list — the talks of an oral session,
+  the posters of a poster session or the demos of a coffee break. The timetable pop-up, the mobile/print
   agenda and /programme/posters/ all include this, so a title and its presenters
   are formatted the same way wherever they appear.
 
@@ -18,6 +18,8 @@
     <p class="contrib-card__time">{{ item.start }}–{{ item.end }}</p>
     {% elsif item.board and item.board != "" %}
     <p class="contrib-card__time">{{ item.board }}</p>
+    {% elsif item.label and item.label != "" %}
+    <p class="contrib-card__time">{{ item.label }}</p>
     {% endif %}
     <h4 class="contrib-card__title">{{ item.title }}</h4>
     <p class="contrib-card__people">

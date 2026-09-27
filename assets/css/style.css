@@ -531,6 +531,28 @@ a.schedule-chip--link:hover {
   font-weight: 400;
 }
 
+/* Second and later lines of a multi-line title (see schedule-title.html),
+   set like the `details:` text rather than the title */
+.schedule-title__more {
+  display: block;
+  font-weight: 300;
+  font-size: 0.85em;
+  line-height: 1.3;
+  color: var(--color-text-muted);
+  margin-top: 0.15rem;
+}
+
+.tt-event__title .schedule-title__more {
+  font-size: 0.7rem;
+  line-height: 1.25;
+}
+
+.schedule-popover .popover-header .schedule-title__more {
+  color: inherit;
+  font-weight: 300;
+  opacity: 0.85;
+}
+
 .tt-event__speaker {
   font-size: 0.7rem;
   font-weight: 400;
@@ -654,11 +676,12 @@ a.schedule-chip--link:hover {
   margin-bottom: 0;
 }
 
-/* Author-written Markdown: keep lists narrow enough for the pop-up width */
+/* Author-written Markdown: keep lists narrow enough for the pop-up width.
+   (Not the contribution cards, which sit flush with the text.) */
 .schedule-popover__details ul,
-.schedule-popover__details ol,
+.schedule-popover__details ol:not(.contrib-list),
 .schedule-list__details ul,
-.schedule-list__details ol {
+.schedule-list__details ol:not(.contrib-list) {
   padding-left: 1.1rem;
   margin-bottom: 0.4rem;
 }
@@ -727,6 +750,10 @@ a.schedule-chip--link:hover {
 .schedule-list__room {
   font-weight: 500;
   color: var(--color-primary);
+}
+
+.schedule-list__title .schedule-title__more {
+  font-size: 0.85rem;
 }
 
 .schedule-list__details {
