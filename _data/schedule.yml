@@ -163,11 +163,13 @@ events:
     details: |
       **Speakers:**
 
+      - **Dr. Wolfgang Richter** Moderator <br>
+      - **Dorothee Bär** Federal Minister of Research, Technology and Space (Video) <br>
+      - **Dr. Henry Marx** Berlin State Secretary for Higher Education and Research <br>
       - **Prof. Dr. Fatma Deniz** President of TU Berlin <br>
-      - **Prof. Dr. Volker Markl** Director of BIFOLD <br>
-      - **Dr. Claudio Iacopino** Head of Φ-lab Explore Office, European Space Agency <br>
-      - **Prof. Dr. Begüm Demir** Deputy Director of BIFOLD <br>
-      - **Dr. Nicolas Longépé** EO Data Scientist at Φ-lab Explore Office, European Space Agency
+      - **Dr. Claudio Iacopino** Head of ESA Φ-lab Explore Office<br>
+      - **Prof. Dr. Volker Markl** BIFOLD Director <br>
+      - **Prof. Dr. Begüm Demir** BIFOLD Deputy Director & **Dr. Nicolas Longépé** EO Data Scientist at ESA Φ-lab Explore Office
   - day: day1
     room: lecture-hall
     start: "13:45"
