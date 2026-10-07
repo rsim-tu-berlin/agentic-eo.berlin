@@ -232,8 +232,8 @@ events:
     title: "Featured Demo 1"
     type: demo
     details: |
-      Earthward: A Human-in-the-Loop Architecture for Traceable, Explainable Agentic EO Workflows – Earthward
-      **Presented by** Sudhakaran Chithamanan, Aravindh S. Subramanian
+      Earthward: A Human-in-the-Loop Architecture for Traceable, Explainable Agentic EO Workflows - Earthward
+      **Presented by** Sudhakaran Chithamanan, Sahil, Srinivas Sakthiaruna
 
   - day: day1
     room: rudolf-virchow
@@ -242,7 +242,7 @@ events:
     title: "Featured Demo 2"
     type: demo
     details: |
-      Saferplaces Agentic AI - An Agentic Geospatial Copilot for Flood Risk Intelligence and Map-Based Decision Support – GECOsistema SRL
+      Saferplaces Agentic AI - An Agentic Geospatial Copilot for Flood Risk Intelligence and Map-Based Decision Support - GECOsistema SRL
       **Presented by** Tommaso Redaelli
 
   - day: day1
@@ -443,7 +443,7 @@ events:
     title: "Featured Demo 7"
     type: demo
     details: |
-      From Pixels to Risk: Agentic Earth Observation for Explainable Climate Intelligence – Independent
+      From Data & Pixels to Risk Context: Agentic Earth Observation for Explainable Climate Intelligence
       **Presented by** Claudio Giorgio Giancaterino
 
   - day: day1
@@ -453,7 +453,7 @@ events:
     title: "Featured Demo 8"
     type: demo
     details: |
-      GEONOVA: An Agentic EO Copilot for Geospatial Embeddings and Downstream Model Adaptation – Geonova P.C.
+      GEONOVA: An Agentic EO Copilot for Geospatial Embeddings and Downstream Model Adaptation - Geonova P.C.
       **Presented by** George Arvanitakis, Georgios Tsimiklis, Elisavet Parselia, Eleftheria Tetoula Tsonga, Dionysos Kampouris, Christos Tsekes
 
   - day: day1
@@ -463,7 +463,7 @@ events:
     title: "Featured Demo 9"
     type: demo
     details: |
-      Axis Spatial Migration Engine: From Fragmented EO/GIS Projects to Verified Pipelines – Axis Spatial
+      Axis Spatial Migration Engine: From Fragmented EO/GIS Projects to Verified Pipelines - Axis Spatial
       **Presented by** Najah Pokkiri
 
   - day: day1
@@ -473,7 +473,7 @@ events:
     title: "Featured Demo 10"
     type: demo
     details: |
-      BlazerOps: Reinforcement Learning Environment for Accelerated Spatial ML Development – hyades.space
+      BlazerOps: Reinforcement Learning Environment for Accelerated Spatial ML Development - hyades.space
       **Presented by** Ashin Alex, Harshil Magan
 
   - { day: day1, room: foyer,         start: "18:30", end: "20:45", title: "Welcome Reception", type: break }
@@ -678,10 +678,10 @@ events:
     items:
       - label: "Demo 1 · Foyer"
         title: "Earthward: A Human-in-the-Loop Architecture for Traceable, Explainable Agentic EO Workflows"
-        presenters: "Sudhakaran Chithamanan, Aravindh S. Subramanian"
+        presenters: "Sudhakaran Chithamanan, Sahil, Srinivas Sakthiaruna"
         affiliation: "Earthward"
       - label: "Demo 7 · Foyer"
-        title: "From Pixels to Risk: Agentic Earth Observation for Explainable Climate Intelligence"
+        title: "From Data & Pixels to Risk Context: Agentic Earth Observation for Explainable Climate Intelligence"
         presenters: "Claudio Giorgio Giancaterino"
         affiliation: "Independent"
       - label: "Demo 2 · Wandelhalle"
