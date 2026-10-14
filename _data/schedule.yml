@@ -574,7 +574,7 @@ events:
       - start: "10:57"
         end: "11:09"
         title: "Autonomous Agentic Command and Control for Satellite Constellations: An AI-Accelerated Engineering Demonstration"
-        presenters: "Alessio Auddino, Francesco Corallo"
+        presenters: "Alessio Auddino"
         affiliation: "Thales Alenia Space Italia"
       - start: "11:09"
         end: "11:21"
