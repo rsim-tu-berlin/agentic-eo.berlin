@@ -779,7 +779,7 @@ events:
       - title: "Autonomous Geospatial Intelligence: An Agentic Workflow for End-to-End Feature Interpretation And Large-Scale Scene Monitoring"
         presenters: "Marie-Charlotte Teulières"
         affiliation: "Airbus Defense and Space Geo"
-      - title: "EOMAS – A Multi Agent System-Backed Assistant for Earth Observation"
+      - title: "EOMAS - A Multi Agent System-Backed Assistant for Earth Observation"
         presenters: "Hans Meine"
         affiliation: "Fraunhofer Institute for Digital Medicine MEVIS and OHB Digital Services"
       - title: "An Interactive Multi-Agent System for User-Driven And Context-Aware Hyperspectral Image Compression"
@@ -801,7 +801,7 @@ events:
         presenters: "Mark Boer, Jordy de Lange"
         affiliation: "Spheer"
       - title: "Multi-Satellite Task Orchestration for Wildfire Monitoring with On-Board Visual-Language Models"
-        presenters: "Riccardo D’Ercole (ESA Φ-lab), Ana-Maria Pelin (Φ-lab and TU Delft)"
+        presenters: "Riccardo D'Ercole (ESA Φ-lab), Ana-Maria Pelin (Φ-lab and TU Delft)"
         affiliation: ""
       - title: "Provenance-First Geospatial Composition: A Scaffold-Based Builder as a Trust-Bearing Counterpoint to Agentic Autonomy in Earth Observation"
         presenters: "Sudhakaran Chithamanan (Earthward, 33 Blueprints Collective), Aravindh S. Subramanian (Technical University of Munich, Earthward)"
@@ -847,7 +847,7 @@ events:
     title: "Featured Demo 15"
     type: demo
     details: |
-      Portable Agentic openEO: From Natural Language to Executable Earth Observation Workflows – EURAC Research Italy
+      Portable Agentic openEO: From Natural Language to Executable Earth Observation Workflows - EURAC Research Italy
       **Presented by** Suriyah Dhinakaran
 
   - day: day2
@@ -877,8 +877,8 @@ events:
     title: "Featured Demo 18"
     type: demo
     details: |
-      Generative Geospatial User Interfaces: Dynamic Dashboard and Storytelling Generation via Agent-to-UI Streaming – EOX IT Services GmbH
-      **Presented by** Silvester Pari, Lubomír Doležal
+      Generative Geospatial User Interfaces: Dynamic Dashboard and Storytelling Generation via Agent-to-UI Streaming - EOX IT Services GmbH
+      **Presented by** Lubomír Doležal, Josef Prenner
 
   - day: day2
     room: werner-koerte
@@ -887,7 +887,7 @@ events:
     title: "Featured Demo 19"
     type: demo
     details: |
-      Operating an EO Constellation with AI Agents – Aistralys
+      Operating an EO Constellation with AI Agents - Aistralys
       **Presented by** Alexandru Moloceniuc
 
   - day: day2
@@ -897,7 +897,7 @@ events:
     title: "Featured Demo 20"
     type: demo
     details: |
-      FLAP-0: An Interactive Platform for Agentic Earth Observation – Barcelona Supercomputing Center and Universitat Politècnica de Catalunya
+      FLAP-0: An Interactive Platform for Agentic Earth Observation - Barcelona Supercomputing Center and Universitat Politècnica de Catalunya
       **Presented by** Leonidas Kosmidis, Iker Fernandez Andonegui, Marc Solé i Bonet
 
   # ----- Day 3 -------------------------------------------------------------
@@ -935,7 +935,7 @@ events:
     items:
       - label: "Demo 18"
         title: "Generative Geospatial User Interfaces: Dynamic Dashboard and Storytelling Generation via Agent-to-UI Streaming"
-        presenters: "Silvester Pari, Lubomír Doležal"
+        presenters: "Lubomír Doležal, Josef Prenner"
         affiliation: "EOX IT Services GmbH"
       - label: "Demo 19"
         title: "Operating an EO Constellation with AI Agents"
