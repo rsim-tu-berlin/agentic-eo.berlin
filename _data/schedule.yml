@@ -167,8 +167,8 @@ events:
       - **Dorothee Bär** Federal Minister of Research, Technology and Space (Video) <br>
       - **Dr. Henry Marx** Berlin State Secretary for Higher Education and Research <br>
       - **Prof. Dr. Fatma Deniz** President of TU Berlin <br>
+      - **Prof. Dr. Volker Markl** BIFOLD Director <br>      
       - **Dr. Claudio Iacopino** Head of ESA Φ-lab Explore Office<br>
-      - **Prof. Dr. Volker Markl** BIFOLD Director <br>
       - **Prof. Dr. Begüm Demir** BIFOLD Deputy Director & **Dr. Nicolas Longépé** EO Data Scientist at ESA Φ-lab Explore Office
   - day: day1
     room: lecture-hall
@@ -253,6 +253,7 @@ events:
     speaker: ""
     type: talk
     summary: |
+      **Chair:** Dr. Anca Anghelea, ESA
       This session focuses on agents that transform EO observations into actionable decisions. This session illustrates the evolution: from Observation, analysis, prioritization, decision support and Earth Action.
     items:
       - start: "15:00"
@@ -479,7 +480,17 @@ events:
   # ----- Day 2 -----------------------------------------------------------------------------------
   # -----------------------------------------------------------------------------------------------
   - { day: day2, room: foyer,          start: "08:00", end: "08:45", title: "Welcome Coffee", type: break }
-  - { day: day2, room: lecture-hall,   start: "08:45", end: "09:30", title: "Keynote: The Rise of Agentic AI: Ecosystem, Trends and Implications for Science and Industry", speaker: "Mistral AI", type: keynote }
+  - day: day2 
+    room: lecture-hall
+    start: "08:45"
+    end: "09:30"
+    title: "Keynote: The Rise of Agentic AI: Ecosystem, Trends and Implications for Science and Industry"
+    type: keynote
+    speaker: |
+      Dr. Jacopo Chevallard
+      Mistral AI
+    details: |
+      **Chair:** Dr. Nicolas Longépé, ESA Φ-lab
   - day: day2
     room: lecture-hall
     start: "09:30"
@@ -489,7 +500,8 @@ events:
     speaker: |
       Dr. Steve Chien
       Jet Propulsion Laboratory (JPL), NASA
-
+    details: |
+      **Chair:** Dr. Nicolas Longépé, ESA Φ-lab
   - day: day2
     room: foyer
     start: "10:15"
@@ -563,6 +575,7 @@ events:
     speaker: ""
     type: talk
     summary: |
+      **Chair:** Dr. Steve Chien, JPL/NASA
       This session represents the most visionary part of the programme, around Cognitive Cloud Computing in Space (3CS), EO Virtual Constellations and autonomous missions.
       "How do we move agentic EO from the cloud to autonomous constellations operating in orbit?"
     items:
@@ -620,6 +633,8 @@ events:
     speaker: |
       Prof. Dr. Manling Li
       Northwestern University & Amazon Scholar
+    details: |
+      **Chair:** Dr. Bertrand Le Saux, European Commission
 
   - day: day2
     room: lecture-hall
@@ -629,6 +644,7 @@ events:
     speaker: ""
     type: talk
     summary: |
+      **Chair:** Dr. Bertrand Le Saux, European Commission
       This session addresses perhaps the most critical scientific question emerging from the workshop: “How should EO agents be built, evaluated, validated and trusted?”.
       This session is likely to generate discussion about evaluation, reproducibility, hallucinations, validation, governance, or trust.
     items:
@@ -728,7 +744,14 @@ events:
       SAI4EO: From Conversational Remote-Sensing Tool Use to Agentic, Artifact-Grounded Geospatial Intelligence – Planetek Italia
       **Presented by** Nicolò Taggio
 
-  - { day: day2, room: lecture-hall,   start: "16:15", end: "17:15", title: "Technical deep dives: Building with Mistral Open Agentic AI tools: From Scientific Discovery to Operational Services", type: hands-on }
+  - day: day2
+    room: lecture-hall
+    start: "16:15"
+    end: "17:15"
+    title: "Technical deep dives: Building with Mistral Open Agentic AI tools: From Scientific Discovery to Operational Services"
+    type: hands-on
+    details: |
+      **Chair:** Prof. Dr. Ioannis Papoutsis, National Technical University of Athens
 
   - day: day2
     room: lecture-hall
@@ -739,6 +762,8 @@ events:
     speaker: |
       Prof. Dr. James Zou
       Stanford University
+    details: |
+      **Chair:** Prof. Dr. Ioannis Papoutsis, National Technical University of Athens
 
   - day: day2
     room: von-langenbeck
@@ -886,6 +911,8 @@ events:
     speaker: |
       Davide Crapis
       Ethereum Foundation
+    details: |
+      **Chair:** Dr. Andrzej Kucik, ESA
   - day: day3
     room: lecture-hall
     start: "09:45"
@@ -895,6 +922,8 @@ events:
     speaker: |
       Dr. Christopher Forrest Brown
       Google DeepMind
+    details: |
+      **Chair:** Dr. Andrzej Kucik, ESA
 
   - day: day3
     room: foyer
@@ -959,6 +988,7 @@ events:
     title: "Oral Session 4: Multi-Modal Large Models, Datasets and Agentic Earth Intelligence"
     speaker: ""
     summary: |
+      **Chair:** Prof. Dr. Yifang Ban, KTH
       This session focuses on the scientific foundations that enable agentic EO systems: Vision-language models, geospatial foundation models, embeddings, semantic reasoning, multimodal grounding, and automated scientific discovery.
       This session addresses: “How can foundation models become reasoning engines for Earth Intelligence?”
     items:
@@ -969,7 +999,7 @@ events:
         affiliation: "LiveEO"
       - start: "11:12"
         end: "11:24"
-        title: "BIGEARTHNET.TXT: A Large-Scale Multi-Sensor Image-Text Dataset and Benchmark for Earth Observation"
+        title: "BigEarthNet.txt: A Large-Scale Multi-Sensor Image-Text Dataset and Benchmark for Earth Observation"
         presenters: "Johann-Ludwig Herzog, Mathis Jürgen Adler"
         affiliation: "BIFOLD and Technische Universität Berlin"
       - start: "11:24"
