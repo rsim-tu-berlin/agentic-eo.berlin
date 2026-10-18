@@ -575,7 +575,7 @@ events:
     speaker: ""
     type: talk
     summary: |
-      **Chair:** Dr. Steve Chien, JPL/NASA
+      **Chair:** Dr. Mikhail Klassen, Planet Labs
       This session represents the most visionary part of the programme, around Cognitive Cloud Computing in Space (3CS), EO Virtual Constellations and autonomous missions.
       "How do we move agentic EO from the cloud to autonomous constellations operating in orbit?"
     items:
@@ -619,7 +619,7 @@ events:
 
       - **Prof. Dr. Ioannis Papoutsis** National Technical University of Athens
       - **Dr. Bertrand Le Saux** DG Connect at the European Commission
-      - **Mikhail Klassen** Planet Labs
+      - **Dr. Mikhail Klassen** Planet Labs
   
   - { day: day2, room: lecture-hall,  start: "12:30", end: "12:45", title: "Group Photo Shoot", speaker: "", type: break }
   - { day: day2, room: foyer,         start: "12:45", end: "14:00", title: "Hosted Lunch", type: break }
@@ -988,7 +988,7 @@ events:
     title: "Oral Session 4: Multi-Modal Large Models, Datasets and Agentic Earth Intelligence"
     speaker: ""
     summary: |
-      **Chair:** Prof. Dr. Yifang Ban, KTH
+      **Chair:** Prof. Dr. Begüm Demir, BIFOLD
       This session focuses on the scientific foundations that enable agentic EO systems: Vision-language models, geospatial foundation models, embeddings, semantic reasoning, multimodal grounding, and automated scientific discovery.
       This session addresses: “How can foundation models become reasoning engines for Earth Intelligence?”
     items:
