@@ -10,7 +10,6 @@ description: "Photos and video from the Agentic AI for Earth Observation Worksho
 
 <p class="text-justify">
   Thank you to everyone who joined us in Berlin! The first Agentic AI for Earth Observation Workshop, co-hosted by BIFOLD and ESA Φ-lab from 19 to 21 October 2026, brought together more than 500 participants from academia, industry and government at the Langenbeck-Virchow-Haus to discuss how autonomous AI agents can change the way we acquire, process and act on satellite and geospatial data.
-  Read the key takeaways in the <a href="{{ recap.source_url }}" target="_blank" rel="noopener">BIFOLD news article</a>.
 </p>
 
 <h3 class="section-heading mt-5">Video</h3>
