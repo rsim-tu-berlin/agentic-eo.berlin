@@ -79,6 +79,20 @@
 #
 # Tip: keep times zero-padded ("09:00", not "9:00") so they sort correctly.
 #
+# ---------------------------------------------------------------------------
+# PRESENTATION SLIDES (oral sessions)
+#
+# An oral session with `session_number: N` shows a slides link on each talk.
+# Put the PDFs in assets/slides/oral/ named  <session>_<talk>.pdf  (or
+# <session>_<talk>_<anything>.pdf), where <talk> is the talk's position in
+# `items:` (1 = first). For example
+#   assets/slides/oral/1_3.pdf  -> Oral Session 1, third talk.
+# The link appears automatically once the file is there. Talks without a PDF
+# (not yet received, or no consent to share) show nothing.
+#
+# Any other session (e.g. a keynote) gets a slides link by adding the path:
+#   slides: /assets/slides/keynotes/chien.pdf
+#
 # Events are written as one-line flow mappings below. An event with `details`
 # needs the block form instead, because the text is too long for one line.
 #
@@ -250,6 +264,7 @@ events:
     start: "15:00"
     end: "16:00"
     title: "Oral Session 1: Agentic Decision Intelligence and Earth Action"
+    session_number: 1
     speaker: ""
     type: talk
     summary: |
@@ -263,8 +278,8 @@ events:
         affiliation: "Indra Space"
       - start: "15:12"
         end: "15:24"
-        title: "Multi-Agent Early Extreme Event Detection From IoT to Earth Observation Tasking"
-        presenters: "Arnaud Le Carvennec, Axel Gruyez"
+        title: "Transformer and Agent based extreme event detection"
+        presenters: "Axel Gruyez, Marie Leconte, Nicolas Longépé, Arnaud Le Carvennec"
         affiliation: "CS Group"
       - start: "15:24"
         end: "15:36"
@@ -497,6 +512,7 @@ events:
     end: "10:15"
     title: "Keynote: FAME - Traditional and Agentic AI in Space"
     type: keynote
+    slides: /assets/slides/keynotes/chien.pdf
     speaker: |
       Dr. Steve Chien
       Jet Propulsion Laboratory (JPL), NASA
@@ -572,6 +588,7 @@ events:
     start: "10:45"
     end: "11:45"
     title: "Oral Session 2: Autonomous EO Systems, Space Operations and Cognitive Computing in Space"
+    session_number: 2
     speaker: ""
     type: talk
     summary: |
@@ -641,6 +658,7 @@ events:
     start: "14:30"
     end: "15:45"
     title: "Oral Session 3: Design, Development and Evaluation of AI Agents"
+    session_number: 3
     speaker: ""
     type: talk
     summary: |
@@ -908,6 +926,7 @@ events:
     end: "09:45"
     title: "Keynote: Building Robust Economic Capabilities in AI Agents"
     type: keynote
+    slides: /assets/slides/keynotes/crapis.pdf
     speaker: |
       Davide Crapis
       Ethereum Foundation
@@ -986,6 +1005,7 @@ events:
     start: "11:00"
     end: "12:00"
     title: "Oral Session 4: Multi-Modal Large Models, Datasets and Agentic Earth Intelligence"
+    session_number: 4
     speaker: ""
     summary: |
       **Chair:** Prof. Dr. Begüm Demir, BIFOLD

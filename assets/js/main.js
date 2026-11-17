@@ -300,7 +300,66 @@ function initScheduleDetails() {
       content: function () {
         return buildContent(tile);
       },
-      trigger: "hover focus",
+      // Opened and closed by bindPopoverHover() so it stays open while the
+      // pointer is on the pop-up itself (it can hold links, e.g. talk slides).
+      trigger: "manual",
+    });
+  }
+
+  // Show on hover/focus; hide shortly after the pointer has left BOTH the tile
+  // and its pop-up, so the pointer can travel onto the pop-up to click a link.
+  // Bound once per tile; handlers look the instance up, so a disposed and
+  // re-created popover (see sync) needs no rebinding.
+  function bindPopoverHover(tile) {
+    if (tile.dataset.popoverBound) {
+      return;
+    }
+    tile.dataset.popoverBound = "1";
+    let hideTimer = null;
+
+    function tipEl() {
+      const id = tile.getAttribute("aria-describedby");
+      return id ? document.getElementById(id) : null;
+    }
+
+    function cancelHide() {
+      window.clearTimeout(hideTimer);
+    }
+
+    function show() {
+      cancelHide();
+      const popover = bootstrap.Popover.getInstance(tile);
+      const tip = tipEl();
+      if (popover && !(tip && tip.classList.contains("show"))) {
+        popover.show();
+      }
+    }
+
+    function hideSoon() {
+      cancelHide();
+      hideTimer = window.setTimeout(function () {
+        const tip = tipEl();
+        if (tile.matches(":hover") || (tip && tip.matches(":hover"))) {
+          return;
+        }
+        const popover = bootstrap.Popover.getInstance(tile);
+        if (popover) {
+          popover.hide();
+        }
+      }, 200);
+    }
+
+    tile.addEventListener("mouseenter", show);
+    tile.addEventListener("mouseleave", hideSoon);
+    tile.addEventListener("focus", show);
+    tile.addEventListener("blur", hideSoon);
+    tile.addEventListener("shown.bs.popover", function () {
+      const tip = tipEl();
+      if (tip) {
+        // Same function references each time, so re-adding never duplicates.
+        tip.addEventListener("mouseenter", cancelHide);
+        tip.addEventListener("mouseleave", hideSoon);
+      }
     });
   }
 
@@ -328,6 +387,7 @@ function initScheduleDetails() {
       if (hasMore && !popover) {
         tile.setAttribute("tabindex", "0");
         createPopover(tile);
+        bindPopoverHover(tile);
       } else if (!hasMore && popover) {
         popover.dispose();
         tile.removeAttribute("tabindex");

@@ -841,6 +841,21 @@ a.schedule-chip--link:hover {
   font-style: italic;
 }
 
+/* Oral-session talk slides: shown only when the PDF exists */
+.contrib-card__slides {
+  font-size: 0.8rem;
+  margin: 0.35rem 0 0;
+}
+
+.contrib-card__slides a {
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.contrib-card__slides a::before {
+  content: "\2193\00a0"; /* ↓ */
+}
+
 /* Narrow contexts — the agenda row and the 310px pop-up — go single column. */
 .contrib-disclosure > summary {
   cursor: pointer;
