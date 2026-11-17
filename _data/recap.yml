@@ -1,0 +1,103 @@
+# Event recap: video + photo gallery shown on /recap/ and the homepage teaser.
+# Source: https://www.bifold.berlin/news-events/news/view/news-detail/photo-recap-agentic-ai-for-earth-observation
+# Images live in /assets/images/recap/{full,thumb}/<file>. `featured: true`
+# photos (first four) appear on the homepage teaser.
+
+source_url: "https://www.bifold.berlin/news-events/news/view/news-detail/photo-recap-agentic-ai-for-earth-observation"
+
+video:
+  youtube_id: RA4tW664X9w
+  title: "Agentic AI for Earth Observation 2026 – Video recap"
+
+default_credit: "BIFOLD / Michael Setzpfandt"
+
+sections:
+  - title: "Workshop"
+    photos:
+      - file: day1-4151.jpg
+        alt: "Participants chatting over coffee in the foyer"
+      - file: day1-4175.jpg
+        alt: "A participant with a coffee cup listening attentively"
+      - file: day1-4192.jpg
+        alt: "Attendees in conversation before the opening session"
+      - file: day1-4215.jpg
+        alt: "Organisers and speakers in front of the BIFOLD and ESA Φ-lab backdrop"
+      - file: day1-4229.jpg
+        alt: "Front row of the audience listening in the lecture hall"
+      - file: day1-4288.jpg
+        alt: "Full lecture hall during a video address on the big screen"
+        featured: true
+      - file: day1-4422.jpg
+        alt: "Speaker with a headset microphone addressing the audience"
+      - file: day1-4448.jpg
+        alt: "Speaker at the BIFOLD and ESA Φ-lab lectern"
+      - file: day1-4695.jpg
+        alt: "Speaker gesturing while presenting at the lectern"
+      - file: day1-4792.jpg
+        alt: "Speaker presenting at the lectern"
+      - file: day1-4829.jpg
+        alt: "Audience seated in the blue rows of the lecture hall"
+      - file: day1-4898.jpg
+        alt: "Two session chairs at the lectern in front of the audience"
+      - file: day1-5067.jpg
+        alt: "Speaker gesturing during a talk"
+      - file: day1-5146.jpg
+        alt: "Audience member asking a question during Q&A"
+      - file: day2-5172.jpg
+        alt: "Panellist speaking into a microphone during the panel discussion"
+      - file: day2-5284.jpg
+        alt: "Panellists discussing on stage"
+      - file: day2-5381.jpg
+        alt: "Panel discussion on stage in the lecture hall"
+        featured: true
+      - file: day2-5430.jpg
+        alt: "Panel moderator holding a microphone"
+      - file: day2-5445.jpg
+        alt: "Wide view of the historic lecture hall with its glass ceiling during the panel"
+      - file: day2-5621.jpg
+        alt: "Audience member asking a question from the floor"
+      - file: day2-5665.jpg
+        alt: "Participant asking a question from the audience"
+      - file: day2-5701.jpg
+        alt: "Panellist answering a question"
+      - file: day2-5709.jpg
+        alt: "Panellist speaking with a microphone"
+      - file: day2-5789.jpg
+        alt: "Group photo of all workshop participants in the lecture hall"
+        featured: true
+      - file: day2-5804.jpg
+        alt: "Participants talking around a table during the break"
+      - file: day2-5831.jpg
+        alt: "Participants networking during the break"
+      - file: day2-5849.jpg
+        alt: "Participant in discussion during the break"
+      - file: day2-5879.jpg
+        alt: "Participants in conversation in the foyer"
+      - file: day2-6065.jpg
+        alt: "Speaker presenting at the lectern"
+      - file: day2-6158.jpg
+        alt: "Speaker presenting with a clicker"
+      - file: day2-6221.jpg
+        alt: "Audience applauding in the lecture hall"
+      - file: day2-6257.jpg
+        alt: "Speaker at the lectern looking out at the audience"
+      - file: posters-1.jpg
+        alt: "Busy poster session with participants gathered around poster boards"
+        credit: "BIFOLD"
+  - title: "Hackathon"
+    photos:
+      - file: hackathon-7852.jpg
+        alt: "Hackathon participants coding with a large screen showing code"
+      - file: hackathon-7864.jpg
+        alt: "Two hackathon participants discussing code on a laptop"
+      - file: hackathon-8034.jpg
+        alt: "Hackathon participant working on a laptop"
+      - file: hackathon-8180.jpg
+        alt: "Group photo of the hackathon participants"
+        featured: true
+      - file: hackathon-8319.jpg
+        alt: "Smiling hackathon participant working on a laptop"
+      - file: hackathon-8383.jpg
+        alt: "Hackathon participants working in the lounge area"
+      - file: hackathon-8399.jpg
+        alt: "Hackathon participant coding in the lounge area"

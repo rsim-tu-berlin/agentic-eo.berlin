@@ -1,0 +1,21 @@
+{% comment %}
+  Single shared lightbox for [data-lightbox-item] links on the page.
+  Driven by initPhotoLightbox() in assets/js/main.js; without JS each link
+  simply opens the full-size image.
+{% endcomment %}
+<div class="modal fade photo-lightbox" id="photoLightbox" tabindex="-1" aria-label="Photo viewer" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body p-0 position-relative">
+        <button type="button" class="btn-close btn-close-white photo-lightbox__close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <img class="photo-lightbox__img" src="" alt="" data-lightbox-img>
+        <button type="button" class="photo-lightbox__nav photo-lightbox__nav--prev" data-lightbox-prev aria-label="Previous photo">&#8249;</button>
+        <button type="button" class="photo-lightbox__nav photo-lightbox__nav--next" data-lightbox-next aria-label="Next photo">&#8250;</button>
+      </div>
+      <div class="photo-lightbox__caption d-flex justify-content-between gap-3">
+        <span data-lightbox-alt></span>
+        <span class="text-nowrap"><span data-lightbox-credit></span> · <span data-lightbox-count></span></span>
+      </div>
+    </div>
+  </div>
+</div>

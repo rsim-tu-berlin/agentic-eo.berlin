@@ -1,0 +1,12 @@
+{% comment %} Responsive YouTube embed for the recap video (privacy-enhanced youtube-nocookie domain). {% endcomment %}
+{% assign recap_video = site.data.recap.video %}
+<div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm bg-dark">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/{{ recap_video.youtube_id }}"
+    title="{{ recap_video.title | escape }}"
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    style="border: 0;"></iframe>
+</div>

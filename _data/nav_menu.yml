@@ -1,5 +1,7 @@
 - name: Home
   url: /
+- name: Recap
+  url: /recap/
 - name: Dates
   url: /dates/
 - name: About

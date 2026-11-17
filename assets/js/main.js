@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initScheduleDetails();
   initPrintDisclosures();
   initPosterSearch();
+  initPhotoLightbox();
 });
 
 // Schedule day/room filtering. Drives the desktop timetable grid, the
@@ -440,4 +441,71 @@ function initPosterSearch() {
   input.addEventListener("input", apply);
   input.addEventListener("search", apply);
   apply();
+}
+
+// Recap gallery lightbox: one shared Bootstrap modal for every
+// [data-lightbox-item] link. Links point at the full-size image, so without JS
+// they still work. Values come from data-* attributes rendered by Jekyll.
+function initPhotoLightbox() {
+  const modalEl = document.getElementById("photoLightbox");
+  const items = Array.prototype.slice.call(
+    document.querySelectorAll("[data-lightbox-item]")
+  );
+  if (!modalEl || items.length === 0 || typeof bootstrap === "undefined") {
+    return;
+  }
+
+  const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+  const img = modalEl.querySelector("[data-lightbox-img]");
+  const altEl = modalEl.querySelector("[data-lightbox-alt]");
+  const creditEl = modalEl.querySelector("[data-lightbox-credit]");
+  const countEl = modalEl.querySelector("[data-lightbox-count]");
+  let current = 0;
+
+  function show(index) {
+    current = (index + items.length) % items.length;
+    const item = items[current];
+    img.src = item.getAttribute("href");
+    img.alt = item.dataset.alt || "";
+    altEl.textContent = item.dataset.alt || "";
+    creditEl.textContent = item.dataset.credit || "";
+    countEl.textContent = current + 1 + " / " + items.length;
+
+    // Warm the cache for the neighbours so arrowing feels instant.
+    [current - 1, current + 1].forEach(function (i) {
+      const neighbour = items[(i + items.length) % items.length];
+      new Image().src = neighbour.getAttribute("href");
+    });
+  }
+
+  items.forEach(function (item, index) {
+    item.addEventListener("click", function (event) {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) {
+        return; // let "open in new tab" etc. behave normally
+      }
+      event.preventDefault();
+      show(index);
+      modal.show();
+    });
+  });
+
+  modalEl.querySelector("[data-lightbox-prev]").addEventListener("click", function () {
+    show(current - 1);
+  });
+  modalEl.querySelector("[data-lightbox-next]").addEventListener("click", function () {
+    show(current + 1);
+  });
+
+  modalEl.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowLeft") {
+      show(current - 1);
+    } else if (event.key === "ArrowRight") {
+      show(current + 1);
+    }
+  });
+
+  // Return focus to the thumbnail of the photo last viewed.
+  modalEl.addEventListener("hidden.bs.modal", function () {
+    items[current].focus();
+  });
 }

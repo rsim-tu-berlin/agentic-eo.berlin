@@ -1,0 +1,45 @@
+{% comment %} Homepage teaser for /recap/: video + four featured photos. Toggle with `show_recap_teaser` in index.md. {% endcomment %}
+{% assign recap = site.data.recap %}
+{% assign recap_url = '/recap/' | relative_url %}
+<section class="recap-teaser py-5">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-2 mb-4">
+      <div>
+        <p class="recap-teaser__eyebrow mb-1">Thank you for joining us!</p>
+        <h2 class="section-heading mb-0">Workshop Recap: Photos &amp; Video</h2>
+      </div>
+      <a class="btn btn-primary recap-teaser__cta d-none d-md-inline-block" href="{{ recap_url }}">See all photos &amp; video &rarr;</a>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-6">
+        {% include recap-video.html %}
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-2">
+          {% assign shown = 0 %}
+          {% for section in recap.sections %}
+            {% for photo in section.photos %}
+              {% if photo.featured and shown < 4 %}
+              {% assign shown = shown | plus: 1 %}
+              <div class="col-6">
+                <a class="recap-thumb recap-thumb--fill" href="{{ recap_url }}">
+                  <img
+                    src="{{ '/assets/images/recap/thumb/' | append: photo.file | relative_url }}"
+                    alt="{{ photo.alt | escape }}"
+                    loading="lazy"
+                    decoding="async"
+                    width="640" height="427"
+                  >
+                </a>
+              </div>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4 d-md-none">
+      <a class="btn btn-primary recap-teaser__cta" href="{{ recap_url }}">See all photos &amp; video &rarr;</a>
+    </div>
+  </div>
+</section>
