@@ -111,12 +111,17 @@
             {% include schedule-contributions.html items=event.items compact=true slides_session=event.session_number %}
           </div>
           {% endif %}
-          {% elsif event.details and event.details != "" or event.slides and event.slides != "" %}
+          {% else %}
+          {% assign has_details = false %}
+          {% if event.details and event.details != "" %}{% assign has_details = true %}{% endif %}
+          {% if event.slides and event.slides != "" %}{% assign has_details = true %}{% endif %}
+          {% if has_details %}
           {% comment %} Tiles are too short to show a slides link reliably, so it goes in the pop-up. {% endcomment %}
           <div class="tt-event__details d-none" data-event-details>
             {{ event.details | markdownify }}
             {% if event.slides and event.slides != "" %}<p class="contrib-card__slides"><a href="{{ event.slides | relative_url }}" target="_blank" rel="noopener">Slides (PDF)</a></p>{% endif %}
           </div>
+          {% endif %}
           {% endif %}
         </div>
         {% endif %}

@@ -190,10 +190,10 @@ events:
     end: "14:30"
     title: "Keynote: Agentic AI for Earth Observation and Climate Resilience"
     type: keynote
+    slides: /assets/slides/keynotes/khan.pdf
     speaker: |
       Prof. Dr. Salman Khan
       Mohamed bin Zayed University of Artificial Intelligence
-
   - day: day1
     room: foyer
     start: "14:30"
